@@ -2979,7 +2979,792 @@ table {
 }
 
 /* ============================================================
-   38. Responsive Breakpoints
+   38. Missing Component Styles (Formatting Fix)
+   ============================================================ */
+
+/* --- Tab 1: Overview Hero Content --- */
+.overview-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.overview-hero-sub {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 12px;
+}
+
+.overview-hero-sub strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* --- Tab 1: Cover Cards ("What We'll Cover") --- */
+.cover-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.cover-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+}
+
+.cover-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+.cover-card p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.cover-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* --- Tab 1: Leak List (Top 5 Revenue Leaks) --- */
+.leak-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.leak-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.leak-item:last-child {
+  border-bottom: none;
+}
+
+.leak-rank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.leak-content {
+  flex: 1;
+}
+
+.leak-content h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--color-text);
+}
+
+.leak-content p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.leak-impact {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-danger);
+  background: var(--color-danger-bg);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* --- Tab 1 & 7: FOMO Strip --- */
+.fomo-strip {
+  display: flex;
+  gap: 20px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  padding: 32px 28px;
+  border-radius: var(--radius-lg);
+  margin-top: 24px;
+}
+
+.fomo-strip .fomo-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.fomo-strip .fomo-value {
+  color: #ffffff;
+}
+
+.fomo-strip .fomo-label {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* --- Tab 2: Score Overview & Breakdown --- */
+.score-overview {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.score-gauge-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+  text-align: center;
+}
+
+.score-gauge-wrapper svg {
+  width: 160px;
+  height: 160px;
+}
+
+.score-rating {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 16px;
+  border-radius: 20px;
+  margin-top: 12px;
+}
+
+.score-rating.critical {
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+.score-rating.good {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.score-rating.warning {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.score-note {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-top: 10px;
+  max-width: 220px;
+  line-height: 1.5;
+}
+
+.score-breakdown {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.score-component {
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.score-component:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.score-comp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.score-comp-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.score-comp-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.score-comp-max {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.score-comp-note {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.score-bar {
+  height: 8px;
+  background: var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.score-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s ease;
+  background: var(--color-primary);
+}
+
+.score-bar-fill.critical { background: var(--color-danger); }
+.score-bar-fill.warning  { background: var(--color-warning); }
+.score-bar-fill.good     { background: var(--color-success); }
+
+.hard-cap-alert {
+  background: var(--color-warning-bg);
+  border: 1px solid var(--color-warning);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--color-warning-text);
+  margin-top: 16px;
+}
+
+/* --- Tab 2: Funnel Percentage & Drop Labels --- */
+.funnel-pct {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  min-width: 50px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.funnel-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.funnel-drop {
+  font-size: 12px;
+  color: var(--color-danger);
+  padding: 4px 0 4px 16px;
+  font-weight: 500;
+}
+
+/* --- Tab 2: Checkout Funnel --- */
+.checkout-funnel {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.checkout-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkout-step span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  min-width: 50px;
+  text-align: right;
+}
+
+.checkout-bar {
+  height: 36px;
+  background: var(--color-primary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  min-width: 120px;
+  transition: var(--transition);
+}
+
+.checkout-bar.warning {
+  background: var(--color-warning);
+  color: var(--color-warning-text);
+}
+
+.checkout-bar.purchase {
+  background: var(--color-success);
+}
+
+.checkout-drop {
+  font-size: 12px;
+  color: var(--color-danger);
+  padding: 4px 0 4px 16px;
+  font-weight: 500;
+}
+
+/* --- Tab 2: PageSpeed Cards --- */
+.pagespeed-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.pagespeed-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--color-text);
+}
+
+.ps-score {
+  font-size: 48px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.ps-score span {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.ps-score.critical { color: var(--color-danger); }
+.ps-score.warning  { color: var(--color-warning); }
+.ps-score.good     { color: var(--color-success); }
+
+.ps-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ps-table tr {
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.ps-table tr:last-child {
+  border-bottom: none;
+}
+
+.ps-table td {
+  padding: 8px 6px;
+  font-size: 13px;
+}
+
+.ps-table td:first-child {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.ps-table td:last-child {
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+.ps-table td.critical { color: var(--color-danger); font-weight: 600; }
+.ps-table td.warning  { color: var(--color-warning); font-weight: 600; }
+.ps-table td.good     { color: var(--color-success); font-weight: 600; }
+
+/* --- Tab 2: Performance Issues --- */
+.perf-issues {
+  border-top: 2px solid var(--color-border);
+  padding-top: 20px;
+}
+
+.perf-issues h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* --- Tab 2: Metric Detail & Status extras --- */
+.metric-detail {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.metric-status.neutral {
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+td.positive {
+  color: var(--color-success);
+  font-weight: 600;
+}
+
+tr.total-row {
+  border-top: 2px solid var(--color-text);
+  font-weight: 700;
+}
+
+tr.total-row td {
+  padding-top: 12px;
+  font-weight: 700;
+}
+
+tr.subtotal-row {
+  border-top: 1px solid var(--color-border);
+  font-weight: 600;
+}
+
+tr.subtotal-row td {
+  font-weight: 600;
+}
+
+/* --- Tab 3: Audit Tables & Summary --- */
+.audit-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.audit-table thead {
+  background: var(--color-bg-light);
+}
+
+.audit-table th {
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-muted);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.audit-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--color-border-light);
+  vertical-align: top;
+}
+
+.audit-table td:first-child {
+  font-weight: 500;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  width: 60px;
+}
+
+.audit-table td:nth-child(2) {
+  font-weight: 500;
+  min-width: 160px;
+}
+
+.audit-table tbody tr:hover {
+  background: var(--color-bg-light);
+}
+
+.audit-summary {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: var(--color-bg-light);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* --- Tab 3: Status Badges (for mockup table) --- */
+.status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-badge.status-good {
+  background: var(--color-success-bg);
+  color: var(--color-success-text);
+}
+
+.status-badge.status-critical {
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+/* --- Tab 4: App Cost Summary --- */
+.app-cost-summary {
+  background: var(--color-primary-light);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  padding: 14px 20px;
+  font-size: 14px;
+  color: var(--color-primary-dark);
+  margin-top: 16px;
+}
+
+/* --- Tab 4: Critical Text --- */
+.critical-text {
+  color: var(--color-danger);
+  font-weight: 600;
+}
+
+/* --- Tab 4: GA4 Actionable Numbers & Effort --- */
+.actionable-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.actionable-effort {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 6px;
+  padding: 2px 8px;
+  background: var(--color-bg-light);
+  border-radius: 4px;
+}
+
+.priority-high {
+  border-left: 3px solid var(--color-danger);
+  padding-left: 16px;
+}
+
+.priority-medium {
+  border-left: 3px solid var(--color-warning);
+  padding-left: 16px;
+}
+
+/* --- Tab 5: Theme Summary --- */
+.theme-summary {
+  background: var(--color-bg-light);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  border: 1px solid var(--color-border-light);
+}
+
+/* --- Tab 5: Recommendation Cards --- */
+.recommendation-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  transition: var(--transition);
+}
+
+.recommendation-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.recommendation-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--color-text);
+}
+
+.recommendation-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recommendation-card ul li {
+  padding: 5px 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  position: relative;
+  padding-left: 20px;
+}
+
+.recommendation-card ul li::before {
+  content: '•';
+  position: absolute;
+  left: 4px;
+  color: var(--color-text-faint);
+}
+
+.recommendation-card.primary {
+  border-color: var(--color-success);
+  border-width: 2px;
+  background: linear-gradient(to bottom, var(--color-success-bg), var(--color-bg));
+}
+
+.recommendation-card.primary h4 {
+  color: var(--color-success-text);
+}
+
+.recommendation-card.primary ul li::before {
+  content: '✓';
+  color: var(--color-success);
+  font-weight: 700;
+}
+
+/* --- Tab 5: Check List (Strengths/Gaps) --- */
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.check-list li {
+  padding: 6px 0;
+  font-size: 13px;
+  position: relative;
+  padding-left: 24px;
+  line-height: 1.5;
+}
+
+.check-list li.pass::before {
+  content: '✓';
+  position: absolute;
+  left: 2px;
+  color: var(--color-success);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.check-list li.fail::before {
+  content: '✗';
+  position: absolute;
+  left: 2px;
+  color: var(--color-danger);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* --- Tab 6: Info Callout --- */
+.info-callout {
+  background: var(--color-info-bg);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  font-size: 13px;
+  color: var(--color-info-text);
+  line-height: 1.6;
+  border-left: 4px solid #3b82f6;
+}
+
+/* --- Tab 7: ROI Highlight --- */
+.roi-highlight {
+  background: var(--color-bg-light);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  border: 1px solid var(--color-border-light);
+}
+
+/* --- Tab 7: FOMO Card Accent Variant --- */
+.fomo-card.accent {
+  border-color: var(--color-tertiary);
+}
+
+.fomo-card.accent::before {
+  background: var(--color-tertiary);
+}
+
+.fomo-card.accent .fomo-value {
+  color: var(--color-tertiary);
+}
+
+/* --- Tab 8: Step Timeline --- */
+.step-timeline {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-top: 12px;
+}
+
+/* --- Tab 8: Checklist Grid --- */
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: var(--color-bg-light);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-light);
+}
+
+.checklist-item h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.checklist-item p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.checklist-check {
+  font-size: 20px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+/* --- Tab 8: CTA Block --- */
+.cta-block {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.cta-contact {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  margin: 4px 0;
+}
+
+.cta-contact strong {
+  color: var(--color-text);
+}
+
+/* ============================================================
+   39. Responsive Breakpoints
    ============================================================ */
 
 /* Tablet and below (1024px) */
@@ -3098,6 +3883,22 @@ table {
 
   .next-steps-grid {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .score-overview {
+    flex-direction: column;
+  }
+
+  .score-gauge-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .fomo-strip {
+    flex-direction: column;
+  }
+
+  .checklist-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -3221,6 +4022,27 @@ table {
 
   .comparison-grid {
     grid-template-columns: 1fr;
+  }
+
+  .leak-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .leak-rank {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    font-size: 14px;
+  }
+
+  .audit-table th:nth-child(4),
+  .audit-table td:nth-child(4) {
+    display: none;
+  }
+
+  .ps-score {
+    font-size: 36px;
   }
 }
 
@@ -3359,6 +4181,40 @@ table {
   .funnel-bar .funnel-drop {
     width: auto;
     font-size: 12px;
+  }
+
+  .checkout-bar {
+    font-size: 11px;
+    min-width: 80px;
+    padding: 0 8px;
+    height: 30px;
+  }
+
+  .overview-hero-sub {
+    font-size: 14px;
+  }
+
+  .cover-card {
+    padding: 16px 14px;
+  }
+
+  .cover-icon {
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+
+  .fomo-strip {
+    padding: 20px 16px;
+    gap: 12px;
+  }
+
+  .score-gauge-wrapper svg {
+    width: 120px;
+    height: 120px;
+  }
+
+  .checklist-grid {
+    grid-template-columns: 1fr;
   }
 }
 

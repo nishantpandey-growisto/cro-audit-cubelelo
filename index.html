@@ -374,7 +374,7 @@
             <div class="metric-status good">Strongest performer</div>
           </div>
         </div>
-        <div class="callout critical mt-24">
+        <div class="callout danger mt-24">
           <strong>Desktop Add-to-Cart: 5.3% vs Mobile 21.1%</strong> &mdash; Desktop users view products at the same rate as mobile (41% vs 40%) but add to cart at <strong>4x lower rate</strong>. The desktop product page experience is fundamentally broken.
         </div>
       </div>
@@ -491,7 +491,7 @@
       </div>
 
       <!-- Homepage Analysis -->
-      <div class="sub-content active" id="homepage-analysis">
+      <div class="sub-tab-content active" id="homepage-analysis">
         <div class="section-card">
           <h3 class="section-title">Homepage Audit</h3>
           <p class="section-subtitle">Homepage drives 41% of revenue from 15.5% of sessions &mdash; optimization here has outsized impact</p>
@@ -525,7 +525,7 @@
       </div>
 
       <!-- Collection Page Analysis -->
-      <div class="sub-content" id="collection-analysis">
+      <div class="sub-tab-content" id="collection-analysis">
         <div class="section-card">
           <h3 class="section-title">Collection Page Audit</h3>
           <p class="section-subtitle">Bestsellers collection: 37 products, 7 filter types</p>
@@ -558,7 +558,7 @@
       </div>
 
       <!-- PDP Analysis -->
-      <div class="sub-content" id="pdp-analysis">
+      <div class="sub-tab-content" id="pdp-analysis">
         <div class="section-card">
           <h3 class="section-title">Product Detail Page Audit</h3>
           <p class="section-subtitle">GAN 356 ME 3x3 &mdash; 2025 New Year Edition</p>
@@ -604,7 +604,7 @@
       </div>
 
       <!-- Cart Analysis -->
-      <div class="sub-content" id="cart-analysis">
+      <div class="sub-tab-content" id="cart-analysis">
         <div class="section-card">
           <h3 class="section-title">Cart Page / Drawer Audit</h3>
           <p class="section-subtitle">Cart drawer powered by Corner widget</p>
@@ -635,14 +635,14 @@
             <span class="status-warn">&#9888; 1 Partial</span>
             <span class="status-fail">&#10007; 5 Missing</span>
           </div>
-          <div class="callout critical mt-16">
+          <div class="callout danger mt-16">
             <strong>Missing shipping estimator + delivery date in cart directly contributes to 38.7% shipping-step checkout abandonment.</strong> Users don&rsquo;t know shipping costs or delivery timeline until they reach checkout.
           </div>
         </div>
       </div>
 
       <!-- Checkout Analysis -->
-      <div class="sub-content" id="checkout-analysis">
+      <div class="sub-tab-content" id="checkout-analysis">
         <div class="section-card">
           <h3 class="section-title">Checkout Flow Audit</h3>
           <p class="section-subtitle">GoKwik-powered checkout &mdash; 32.4% completion rate</p>
@@ -674,7 +674,7 @@
       </div>
 
       <!-- Technical SEO Analysis -->
-      <div class="sub-content" id="seo-analysis">
+      <div class="sub-tab-content" id="seo-analysis">
         <div class="section-card">
           <h3 class="section-title">Technical SEO Audit</h3>
           <p class="section-subtitle">Lighthouse SEO Score: 92/100</p>
@@ -710,7 +710,7 @@
       </div>
 
       <!-- Tracking Analysis -->
-      <div class="sub-content" id="tracking-analysis">
+      <div class="sub-tab-content" id="tracking-analysis">
         <div class="section-card">
           <h3 class="section-title">Tracking &amp; Analytics Audit</h3>
           <table class="audit-table">
@@ -738,7 +738,7 @@
             <span class="status-warn">&#9888; 3 Partial</span>
             <span class="status-fail">&#10007; 4 Missing</span>
           </div>
-          <div class="callout critical mt-16">
+          <div class="callout danger mt-16">
             <strong>Critical: No email/SMS marketing platform installed.</strong> This is the #1 retention fix for a store with 91% first-time purchasers. Klaviyo alone could drive +&#8377;1.8L/month in repeat revenue.
           </div>
         </div>
@@ -922,7 +922,7 @@
 
       <div class="section-card">
         <h3 class="section-title">Recommendation</h3>
-        <div class="callout good">
+        <div class="callout success">
           <strong>Stay on Eurus + Heavy Customization</strong>
           <p class="mt-8">Given that Eurus was purchased 8-9 months ago, has existing customizations, and the store has 1000+ SKUs with 150 collections &mdash; a theme migration carries significant risk. The performance issues are largely from app scripts (Snapmint errors, PageFly overhead, Corner widget) rather than the theme itself.</p>
           <p class="mt-8"><strong>Strategy:</strong> Keep Eurus, fix performance bottlenecks, add missing features via customization + targeted apps. This is lower risk, lower cost, and faster to implement than a full theme switch.</p>
@@ -1009,7 +1009,7 @@
           </div>
           <div class="browser-body">
             <div class="iframe-loading" id="mockupLoading">
-              <div class="loading-spinner"></div>
+              <div class="spinner"></div>
               <div class="loading-text">Loading mockup&hellip;</div>
             </div>
             <iframe
@@ -1119,7 +1119,7 @@
             <tr><td>Month 12</td><td>&#8377;3L (ongoing)</td><td>+&#8377;96&ndash;144L</td><td class="positive"><strong>+&#8377;91&ndash;138L</strong></td></tr>
           </tbody>
         </table>
-        <div class="callout neutral mt-16">
+        <div class="callout info mt-16">
           <strong>Conservative estimates.</strong> Revenue uplift assumes gradual improvement: ~30% of target in month 1, ramping to full target by month 3 as email flows mature and page speed fixes take effect. Actual results may be higher.
         </div>
       </div>
@@ -1276,7 +1276,7 @@
     function switchSubTab(btn, contentId) {
       btn.parentElement.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
       btn.classList.add('active');
-      document.querySelectorAll('.sub-content').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.sub-tab-content').forEach(c => c.classList.remove('active'));
       document.getElementById(contentId).classList.add('active');
     }
 
