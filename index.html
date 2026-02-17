@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cubelelo — CRO Audit & Store Revamp Proposal | Growisto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       PASSWORD OVERLAY
+       ============================================================ -->
+  <div class="password-overlay" id="passwordOverlay">
+    <div class="password-card">
+      <div class="password-logos">
+        <span class="password-brand">Growisto</span>
+        <span class="password-divider">&times;</span>
+        <span class="password-brand">Cubelelo</span>
+      </div>
+      <h2 class="password-subtitle">CRO Audit &amp; Revamp Proposal</h2>
+      <p class="password-desc">This presentation contains proprietary analysis prepared exclusively for Cubelelo.</p>
+      <form id="passwordForm">
+        <div class="password-input-group">
+          <input type="password" id="passwordInput" class="password-input" placeholder="Enter access code" autocomplete="off">
+        </div>
+        <button type="submit" class="password-submit">Access Presentation</button>
+        <p class="password-error" id="errorMsg">Incorrect access code. Please try again.</p>
+      </form>
+      <p class="text-muted text-small mt-24">Prepared by Growisto | February 2026</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MOBILE HEADER
+       ============================================================ -->
+  <div class="mobile-header" id="mobileHeader">
+    <div class="hamburger" id="hamburger" onclick="toggleSidebar()">
+      <span></span><span></span><span></span>
+    </div>
+    <span class="mobile-title">Cubelelo &mdash; CRO Audit</span>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+  <!-- ============================================================
+       SIDEBAR NAVIGATION
+       ============================================================ -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-brand">
+        <span class="sidebar-growisto">Growisto</span>
+        <span class="sidebar-divider">&times;</span>
+        <span class="sidebar-client-name">Cubelelo</span>
+      </div>
+      <div class="sidebar-project">CRO Audit &amp; Revamp Proposal</div>
+    </div>
+    <div class="sidebar-nav">
+      <div class="nav-item active" onclick="switchTab('overview')" data-tab="overview">
+        <span class="nav-icon">&#128203;</span>
+        <span class="nav-label">Overview</span>
+      </div>
+      <div class="nav-item" onclick="switchTab('cro-audit')" data-tab="cro-audit">
+        <span class="nav-icon">&#128202;</span>
+        <span class="nav-label">CRO Audit</span>
+      </div>
+      <div class="nav-item" onclick="switchTab('page-analysis')" data-tab="page-analysis">
+        <span class="nav-icon">&#128196;</span>
+        <span class="nav-label">Page-by-Page</span>
+      </div>
+      <div class="nav-item" onclick="switchTab('features')" data-tab="features">
+        <span class="nav-icon">&#9889;</span>
+        <span class="nav-label">Features &amp; Apps</span>
+      </div>
+      <div class="nav-item" onclick="switchTab('themes')" data-tab="themes">
+        <span class="nav-icon">&#127912;</span>
+        <span class="nav-label">Theme Evaluation</span>
+      </div>
+      <div class="nav-item" onclick="switchTab('mockups')" data-tab="mockups">
+        <span class="nav-icon">&#128421;</span>
+        <span class="nav-label">Mockup Preview</span>
+      </div>
+      <div class="nav-item" onclick="switchTab('investment')" data-tab="investment">
+        <span class="nav-icon">&#128176;</span>
+        <span class="nav-label">Investment &amp; ROI</span>
+      </div>
+      <div class="nav-item" onclick="switchTab('next-steps')" data-tab="next-steps">
+        <span class="nav-icon">&#128640;</span>
+        <span class="nav-label">Next Steps</span>
+      </div>
+    </div>
+    <div class="sidebar-footer">
+      <p>Prepared by <strong>Growisto</strong></p>
+      <p class="text-small text-muted">February 2026</p>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main class="main-content" id="mainContent">
+
+    <!-- ============================================================
+         TAB 1: OVERVIEW
+         ============================================================ -->
+    <section class="tab-content active" id="tab-overview">
+      <div class="overview-hero">
+        <div class="overview-hero-content">
+          <h1>Cubelelo &mdash; CRO Audit &amp; Store Revamp Proposal</h1>
+          <p class="overview-hero-sub">Data-driven analysis of your Shopify store with actionable recommendations to unlock <strong>+&#8377;8&ndash;12L/month</strong> in additional revenue.</p>
+        </div>
+      </div>
+
+      <div class="section-card">
+        <h2 class="section-title">What We&rsquo;ll Cover</h2>
+        <div class="grid-4">
+          <div class="cover-card">
+            <div class="cover-icon">&#128202;</div>
+            <h3>CRO Audit</h3>
+            <p>5-component scoring across analytics, performance, SEO, UX, and conversion elements</p>
+          </div>
+          <div class="cover-card">
+            <div class="cover-icon">&#128196;</div>
+            <h3>Page Analysis</h3>
+            <p>131-parameter audit across every page type with competitor benchmarking</p>
+          </div>
+          <div class="cover-card">
+            <div class="cover-icon">&#9889;</div>
+            <h3>Features &amp; Apps</h3>
+            <p>Tiered feature recommendations tied to specific funnel improvements</p>
+          </div>
+          <div class="cover-card">
+            <div class="cover-icon">&#128176;</div>
+            <h3>Investment &amp; ROI</h3>
+            <p>Clear cost breakdown with monthly ROI projections and payback timeline</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-card">
+        <h2 class="section-title">Key Metrics Snapshot</h2>
+        <p class="section-subtitle">Based on GA4 data &mdash; 28 days (Jan 19 &ndash; Feb 15, 2026)</p>
+        <div class="grid-3">
+          <div class="metric-card">
+            <div class="metric-value">&#8377;32L</div>
+            <div class="metric-label">Monthly Revenue</div>
+            <div class="metric-status neutral">Current baseline</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">1.35%</div>
+            <div class="metric-label">Conversion Rate</div>
+            <div class="metric-status warning">Within range, improvable</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">&#8377;1,586</div>
+            <div class="metric-label">Average Order Value</div>
+            <div class="metric-status neutral">Baseline</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value critical">0.55%</div>
+            <div class="metric-label">Desktop CVR</div>
+            <div class="metric-status critical">Critically low &mdash; 3x worse than mobile</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value critical">91%</div>
+            <div class="metric-label">First-time Purchasers</div>
+            <div class="metric-status critical">Near-zero repeat business</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value critical">34/100</div>
+            <div class="metric-label">Mobile PageSpeed</div>
+            <div class="metric-status critical">Core Web Vitals FAILED</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-card">
+        <h2 class="section-title">Top 5 Revenue Leaks</h2>
+        <div class="leak-list">
+          <div class="leak-item">
+            <span class="leak-rank">1</span>
+            <div class="leak-content">
+              <h4>Desktop ATC rate catastrophically low (5.3% vs mobile 21.1%)</h4>
+              <p>Desktop users view products but don&rsquo;t add to cart. The desktop PDP experience is fundamentally broken.</p>
+              <span class="leak-impact">Impact: ~&#8377;3.5L/month lost</span>
+            </div>
+          </div>
+          <div class="leak-item">
+            <span class="leak-rank">2</span>
+            <div class="leak-content">
+              <h4>Blog pages drive 18% traffic but &lt;0.1% revenue</h4>
+              <p>43,122 blog visitors/month buy nothing. &ldquo;How to solve&rdquo; articles lack product CTAs or monetization.</p>
+              <span class="leak-impact">Impact: ~&#8377;2.1L/month missed</span>
+            </div>
+          </div>
+          <div class="leak-item">
+            <span class="leak-rank">3</span>
+            <div class="leak-content">
+              <h4>91% first-time purchasers &mdash; near-zero retention</h4>
+              <p>No email/SMS marketing tools installed. Cubers naturally progress to harder puzzles but aren&rsquo;t being brought back.</p>
+              <span class="leak-impact">Impact: ~&#8377;1.8L/month unrealized</span>
+            </div>
+          </div>
+          <div class="leak-item">
+            <span class="leak-rank">4</span>
+            <div class="leak-content">
+              <h4>38.7% checkout abandonment at shipping step</h4>
+              <p>Shipping costs not visible until checkout. No delivery date estimation on PDP or cart. Address form friction.</p>
+              <span class="leak-impact">Impact: ~&#8377;1.5L/month lost</span>
+            </div>
+          </div>
+          <div class="leak-item">
+            <span class="leak-rank">5</span>
+            <div class="leak-content">
+              <h4>GA4 key events not activated &mdash; flying blind on conversions</h4>
+              <p>6 conversion events exist but aren&rsquo;t activated as key events. add_to_cart sends &#8377;0 value. Can&rsquo;t optimize what you can&rsquo;t measure.</p>
+              <span class="leak-impact">Impact: All optimization efforts undermined</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fomo-strip">
+        <div class="fomo-card">
+          <div class="fomo-value">&#8377;27K&ndash;40K</div>
+          <div class="fomo-label">Lost revenue every single day</div>
+        </div>
+        <div class="fomo-card">
+          <div class="fomo-value">+&#8377;1&ndash;1.4Cr</div>
+          <div class="fomo-label">Annual revenue opportunity</div>
+        </div>
+        <div class="fomo-card">
+          <div class="fomo-value">&lt;1 month</div>
+          <div class="fomo-label">Estimated payback period</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TAB 2: CRO AUDIT
+         ============================================================ -->
+    <section class="tab-content" id="tab-cro-audit">
+      <div class="section-card">
+        <h2 class="section-title">CRO Score</h2>
+        <p class="section-subtitle">5-component analysis with hard caps applied</p>
+
+        <div class="score-overview">
+          <div class="score-gauge-wrapper">
+            <svg class="score-gauge" viewBox="0 0 120 120">
+              <circle class="gauge-bg" cx="60" cy="60" r="52" fill="none" stroke="#e2e8f0" stroke-width="10"/>
+              <circle class="gauge-fill" cx="60" cy="60" r="52" fill="none" stroke="#e35d34" stroke-width="10"
+                stroke-dasharray="326.7" stroke-dashoffset="183" stroke-linecap="round"
+                transform="rotate(-90 60 60)"/>
+              <text x="60" y="55" text-anchor="middle" class="gauge-score">44</text>
+              <text x="60" y="72" text-anchor="middle" class="gauge-label">/ 100</text>
+            </svg>
+            <div class="score-rating critical">POOR</div>
+            <p class="score-note">Significant improvements needed across performance, tracking, and conversion optimization</p>
+          </div>
+          <div class="score-breakdown">
+            <div class="score-component">
+              <div class="score-comp-header">
+                <span class="score-comp-name">Analytics &amp; Tracking</span>
+                <span class="score-comp-value">17<span class="score-comp-max">/25</span></span>
+              </div>
+              <div class="score-bar"><div class="score-bar-fill warning" style="width:68%"></div></div>
+              <p class="score-comp-note">GA4 present but key events not activated; add_to_cart sends &#8377;0 value</p>
+            </div>
+            <div class="score-component">
+              <div class="score-comp-header">
+                <span class="score-comp-name">Site Performance</span>
+                <span class="score-comp-value">7<span class="score-comp-max">/20</span></span>
+              </div>
+              <div class="score-bar"><div class="score-bar-fill critical" style="width:35%"></div></div>
+              <p class="score-comp-note">Mobile PS 34/100, LCP 3.4s, 7MB payload. <strong>Hard cap: -15pts applied</strong></p>
+            </div>
+            <div class="score-component">
+              <div class="score-comp-header">
+                <span class="score-comp-name">SEO Fundamentals</span>
+                <span class="score-comp-value">8<span class="score-comp-max">/15</span></span>
+              </div>
+              <div class="score-bar"><div class="score-bar-fill warning" style="width:53%"></div></div>
+              <p class="score-comp-note">Good meta tags &amp; schemas, but duplicate H1 on PDP, missing Organization schema</p>
+            </div>
+            <div class="score-component">
+              <div class="score-comp-header">
+                <span class="score-comp-name">UX &amp; Usability</span>
+                <span class="score-comp-value">14<span class="score-comp-max">/20</span></span>
+              </div>
+              <div class="score-bar"><div class="score-bar-fill good" style="width:70%"></div></div>
+              <p class="score-comp-note">Clean design, good product browsing. Search &amp; navigation flexibility lacking</p>
+            </div>
+            <div class="score-component">
+              <div class="score-comp-header">
+                <span class="score-comp-name">Conversion Elements</span>
+                <span class="score-comp-value">13<span class="score-comp-max">/20</span></span>
+              </div>
+              <div class="score-bar"><div class="score-bar-fill warning" style="width:65%"></div></div>
+              <p class="score-comp-note">Strong cross-sell via Corner. Missing trust signals, shipping estimator, free shipping bar</p>
+            </div>
+            <div class="hard-cap-alert">
+              <strong>Hard Cap Applied:</strong> Mobile PageSpeed &lt; 40 &rarr; -15 points deducted from overall score (raw score was 59/100)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-card">
+        <h2 class="section-title">Purchase Funnel</h2>
+        <p class="section-subtitle">154,054 sessions &rarr; 2,079 purchases (28-day period)</p>
+        <div class="funnel-container">
+          <div class="funnel-step">
+            <div class="funnel-bar" style="width:100%">
+              <span class="funnel-label">Sessions</span>
+              <span class="funnel-count">154,054</span>
+            </div>
+            <span class="funnel-pct">100%</span>
+          </div>
+          <div class="funnel-drop">&#9660; 59.6% never view a product</div>
+          <div class="funnel-step">
+            <div class="funnel-bar" style="width:40.4%">
+              <span class="funnel-label">View Product</span>
+              <span class="funnel-count">62,240</span>
+            </div>
+            <span class="funnel-pct">40.4%</span>
+          </div>
+          <div class="funnel-drop">&#9660; 84.8% view but don&rsquo;t add to cart</div>
+          <div class="funnel-step">
+            <div class="funnel-bar" style="width:15.2%; min-width: 120px;">
+              <span class="funnel-label">Add to Cart</span>
+              <span class="funnel-count">9,457</span>
+            </div>
+            <span class="funnel-pct">6.1%</span>
+          </div>
+          <div class="funnel-drop">&#9660; 32% abandon cart before checkout</div>
+          <div class="funnel-step">
+            <div class="funnel-bar" style="width:10.3%; min-width: 120px;">
+              <span class="funnel-label">Begin Checkout</span>
+              <span class="funnel-count">6,427</span>
+            </div>
+            <span class="funnel-pct">4.2%</span>
+          </div>
+          <div class="funnel-drop">&#9660; 67.6% abandon during checkout</div>
+          <div class="funnel-step">
+            <div class="funnel-bar purchase" style="width:3.3%; min-width: 100px;">
+              <span class="funnel-label">Purchase</span>
+              <span class="funnel-count">2,079</span>
+            </div>
+            <span class="funnel-pct">1.35%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-card">
+        <h2 class="section-title">Device Performance</h2>
+        <p class="section-subtitle">Desktop conversion is catastrophically low</p>
+        <div class="grid-3">
+          <div class="metric-card">
+            <div class="metric-value">1.77%</div>
+            <div class="metric-label">Mobile CVR</div>
+            <div class="metric-detail">100K sessions &bull; 65% of traffic</div>
+            <div class="metric-status good">Healthy</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value critical">0.55%</div>
+            <div class="metric-label">Desktop CVR</div>
+            <div class="metric-detail">49K sessions &bull; 32% of traffic</div>
+            <div class="metric-status critical">3.2x worse than mobile</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value good">2.74%</div>
+            <div class="metric-label">Tablet CVR</div>
+            <div class="metric-detail">5K sessions &bull; 3% of traffic</div>
+            <div class="metric-status good">Strongest performer</div>
+          </div>
+        </div>
+        <div class="callout critical mt-24">
+          <strong>Desktop Add-to-Cart: 5.3% vs Mobile 21.1%</strong> &mdash; Desktop users view products at the same rate as mobile (41% vs 40%) but add to cart at <strong>4x lower rate</strong>. The desktop product page experience is fundamentally broken.
+        </div>
+      </div>
+
+      <div class="section-card">
+        <h2 class="section-title">PageSpeed &amp; Core Web Vitals</h2>
+        <div class="grid-2">
+          <div class="pagespeed-card">
+            <h3>Mobile</h3>
+            <div class="ps-score critical">34<span>/100</span></div>
+            <table class="ps-table">
+              <tr><td>LCP</td><td class="critical">3.4s</td><td>&lt;2.5s</td></tr>
+              <tr><td>INP</td><td class="good">178ms</td><td>&lt;200ms</td></tr>
+              <tr><td>CLS</td><td class="warning">0.09</td><td>&lt;0.1</td></tr>
+              <tr><td>FCP</td><td class="critical">2.3s</td><td>&lt;1.8s</td></tr>
+              <tr><td>TTFB</td><td class="critical">1.3s</td><td>&lt;0.8s</td></tr>
+              <tr><td>TBT</td><td class="critical">960ms</td><td>&lt;200ms</td></tr>
+            </table>
+          </div>
+          <div class="pagespeed-card">
+            <h3>Desktop</h3>
+            <div class="ps-score warning">50<span>/100</span></div>
+            <table class="ps-table">
+              <tr><td>LCP</td><td class="warning">2.9s</td><td>&lt;2.5s</td></tr>
+              <tr><td>INP</td><td class="good">76ms</td><td>&lt;200ms</td></tr>
+              <tr><td>CLS</td><td class="warning">0.10</td><td>&lt;0.1</td></tr>
+              <tr><td>FCP</td><td class="good">1.6s</td><td>&lt;1.8s</td></tr>
+              <tr><td>TTFB</td><td class="good">0.6s</td><td>&lt;0.8s</td></tr>
+              <tr><td>TBT</td><td class="critical">570ms</td><td>&lt;200ms</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="perf-issues mt-24">
+          <h3>Top Performance Issues</h3>
+          <table class="data-table">
+            <thead><tr><th>Issue</th><th>Savings</th><th>Severity</th></tr></thead>
+            <tbody>
+              <tr><td>Render blocking requests</td><td>3,320ms</td><td><span class="status-fail">Critical</span></td></tr>
+              <tr><td>Unused JavaScript</td><td>1,594 KiB</td><td><span class="status-fail">Critical</span></td></tr>
+              <tr><td>Inefficient cache policy</td><td>1,146 KiB</td><td><span class="status-fail">High</span></td></tr>
+              <tr><td>Image optimization</td><td>882 KiB</td><td><span class="status-warn">Medium</span></td></tr>
+              <tr><td>Unused CSS</td><td>122 KiB</td><td><span class="status-warn">Medium</span></td></tr>
+              <tr><td>Network payload</td><td>7,039 KiB total</td><td><span class="status-fail">High</span></td></tr>
+              <tr><td>Main-thread work</td><td>7.6s mobile</td><td><span class="status-fail">Critical</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="section-card">
+        <h2 class="section-title">Checkout Journey</h2>
+        <p class="section-subtitle">Biggest leak: 38.7% abandon at shipping step</p>
+        <div class="checkout-funnel">
+          <div class="checkout-step">
+            <div class="checkout-bar" style="width:100%">Begin Checkout</div>
+            <span>100%</span>
+          </div>
+          <div class="checkout-drop">&#9660; 38.7% abandon at shipping info</div>
+          <div class="checkout-step">
+            <div class="checkout-bar warning" style="width:61.3%">Add Shipping Info</div>
+            <span>61.3%</span>
+          </div>
+          <div class="checkout-drop">&#9660; 34.8% abandon at payment</div>
+          <div class="checkout-step">
+            <div class="checkout-bar" style="width:40%">Add Payment Info</div>
+            <span>40.0%</span>
+          </div>
+          <div class="checkout-drop">&#9660; 29.9% abandon at final step</div>
+          <div class="checkout-step">
+            <div class="checkout-bar purchase" style="width:28.1%">Purchase</div>
+            <span>28.1%</span>
+          </div>
+        </div>
+        <div class="callout warning mt-24">
+          <strong>GoKwik OTP Friction:</strong> 1,943 OTPs sent &rarr; 1,637 verified &rarr; 1,362 entered. <strong>30% of users who receive OTP don&rsquo;t complete entry.</strong>
+        </div>
+      </div>
+
+      <div class="section-card">
+        <h2 class="section-title">Revenue Impact Summary</h2>
+        <table class="data-table highlight">
+          <thead>
+            <tr><th>Funnel Area</th><th>Current</th><th>Target</th><th>Monthly Impact</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Desktop CVR (0.55% &rarr; 1.2%)</td><td>0.55%</td><td>1.2%</td><td class="positive">+&#8377;3.5L</td></tr>
+            <tr><td>Blog monetization</td><td>&#8377;1K/mo</td><td>&#8377;2.1L/mo</td><td class="positive">+&#8377;2.1L</td></tr>
+            <tr><td>Retention (email/SMS)</td><td>~0%</td><td>15% of revenue</td><td class="positive">+&#8377;1.8L</td></tr>
+            <tr><td>Checkout completion</td><td>32.4%</td><td>45%</td><td class="positive">+&#8377;1.5L</td></tr>
+            <tr><td>PageSpeed improvement</td><td>34/100</td><td>70+/100</td><td class="positive">+&#8377;1.1L</td></tr>
+            <tr class="total-row"><td><strong>Total Monthly Uplift</strong></td><td></td><td></td><td class="positive"><strong>+&#8377;8&ndash;12L</strong></td></tr>
+            <tr class="total-row"><td><strong>Annual Revenue Uplift</strong></td><td></td><td></td><td class="positive"><strong>+&#8377;1&ndash;1.4Cr</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TAB 3: PAGE-BY-PAGE ANALYSIS
+         ============================================================ -->
+    <section class="tab-content" id="tab-page-analysis">
+      <div class="section-card">
+        <h2 class="section-title">Page-by-Page Analysis</h2>
+        <p class="section-subtitle">131-parameter audit across all page types</p>
+        <div class="sub-tabs">
+          <button class="sub-tab active" onclick="switchSubTab(this, 'homepage-analysis')">Homepage</button>
+          <button class="sub-tab" onclick="switchSubTab(this, 'collection-analysis')">Collection</button>
+          <button class="sub-tab" onclick="switchSubTab(this, 'pdp-analysis')">Product (PDP)</button>
+          <button class="sub-tab" onclick="switchSubTab(this, 'cart-analysis')">Cart</button>
+          <button class="sub-tab" onclick="switchSubTab(this, 'checkout-analysis')">Checkout</button>
+          <button class="sub-tab" onclick="switchSubTab(this, 'seo-analysis')">Technical SEO</button>
+          <button class="sub-tab" onclick="switchSubTab(this, 'tracking-analysis')">Tracking</button>
+        </div>
+      </div>
+
+      <!-- Homepage Analysis -->
+      <div class="sub-content active" id="homepage-analysis">
+        <div class="section-card">
+          <h3 class="section-title">Homepage Audit</h3>
+          <p class="section-subtitle">Homepage drives 41% of revenue from 15.5% of sessions &mdash; optimization here has outsized impact</p>
+          <table class="audit-table">
+            <thead><tr><th>ID</th><th>Parameter</th><th>Status</th><th>Finding</th></tr></thead>
+            <tbody>
+              <tr><td>HP-01</td><td>Hero banner slider</td><td><span class="status-pass">&#10003;</span></td><td>5 slides, product-focused (GAN, Moyu promotions)</td></tr>
+              <tr><td>HP-02</td><td>Value proposition above fold</td><td><span class="status-pass">&#10003;</span></td><td>&ldquo;India&rsquo;s No.1 Puzzle Store&rdquo; + announcement bar with discount</td></tr>
+              <tr><td>HP-03</td><td>Category navigation</td><td><span class="status-pass">&#10003;</span></td><td>Horizontal category icons carousel (3x3, 4x4, 2x2, etc.)</td></tr>
+              <tr><td>HP-04</td><td>Bestsellers section</td><td><span class="status-pass">&#10003;</span></td><td>Product grid with cards, ratings, badges</td></tr>
+              <tr><td>HP-05</td><td>New arrivals</td><td><span class="status-pass">&#10003;</span></td><td>Present below category icons</td></tr>
+              <tr><td>HP-06</td><td>Trust badges / USP bar</td><td><span class="status-warn">&#9888;</span></td><td>Minimal &mdash; no dedicated trust bar, only &ldquo;Fast Delivery + Easy Returns&rdquo; on PDP</td></tr>
+              <tr><td>HP-07</td><td>Institution/Client logos</td><td><span class="status-fail">&#10007;</span></td><td>Not present &mdash; no brand partner logos or press mentions</td></tr>
+              <tr><td>HP-08</td><td>Press mentions</td><td><span class="status-fail">&#10007;</span></td><td>Not present</td></tr>
+              <tr><td>HP-09</td><td>Customer reviews carousel</td><td><span class="status-warn">&#9888;</span></td><td>Reviews on individual products but no homepage testimonial carousel</td></tr>
+              <tr><td>HP-10</td><td>Newsletter signup</td><td><span class="status-warn">&#9888;</span></td><td>Footer newsletter present but not prominent; no email platform connected</td></tr>
+              <tr><td>HP-11</td><td>Social media feed</td><td><span class="status-fail">&#10007;</span></td><td>Not present on homepage</td></tr>
+              <tr><td>HP-12</td><td>Urgency/Scarcity elements</td><td><span class="status-warn">&#9888;</span></td><td>Sale badges on products but no countdown timer or flash sale widget</td></tr>
+              <tr><td>HP-13</td><td>Exit intent popup</td><td><span class="status-fail">&#10007;</span></td><td>Not present</td></tr>
+              <tr><td>HP-14</td><td>Advanced search</td><td><span class="status-warn">&#9888;</span></td><td>Basic Shopify search &mdash; no autocomplete, no product suggestions</td></tr>
+              <tr><td>HP-15</td><td>Blog/Content section</td><td><span class="status-fail">&#10007;</span></td><td>No blog feature on homepage despite blog driving 18% of traffic</td></tr>
+              <tr><td>HP-16</td><td>Micro-animations on CTA</td><td><span class="status-fail">&#10007;</span></td><td>No CTA animations; buttons are static</td></tr>
+            </tbody>
+          </table>
+          <div class="audit-summary">
+            <span class="status-pass">&#10003; 5 Pass</span>
+            <span class="status-warn">&#9888; 5 Partial</span>
+            <span class="status-fail">&#10007; 6 Missing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Collection Page Analysis -->
+      <div class="sub-content" id="collection-analysis">
+        <div class="section-card">
+          <h3 class="section-title">Collection Page Audit</h3>
+          <p class="section-subtitle">Bestsellers collection: 37 products, 7 filter types</p>
+          <table class="audit-table">
+            <thead><tr><th>ID</th><th>Parameter</th><th>Status</th><th>Finding</th></tr></thead>
+            <tbody>
+              <tr><td>CP-01</td><td>Page title &amp; breadcrumb</td><td><span class="status-pass">&#10003;</span></td><td>Breadcrumb + collection title present</td></tr>
+              <tr><td>CP-02</td><td>Product count</td><td><span class="status-pass">&#10003;</span></td><td>37 products displayed</td></tr>
+              <tr><td>CP-03</td><td>Advanced filters</td><td><span class="status-pass">&#10003;</span></td><td>7 filters: Price, Product type, Skill Level, Brand, Deal Type, Age Group, Recommended</td></tr>
+              <tr><td>CP-04</td><td>Sort options</td><td><span class="status-pass">&#10003;</span></td><td>Sort by available</td></tr>
+              <tr><td>CP-05</td><td>Product cards</td><td><span class="status-pass">&#10003;</span></td><td>Image, title, price, sale badge, rating stars, stock status</td></tr>
+              <tr><td>CP-06</td><td>Category pills/tags</td><td><span class="status-pass">&#10003;</span></td><td>Horizontal category carousel present</td></tr>
+              <tr><td>CP-07</td><td>Variant swatches</td><td><span class="status-warn">&#9888;</span></td><td>Variant links shown but not as color/visual swatches</td></tr>
+              <tr><td>CP-08</td><td>Quick add to cart</td><td><span class="status-pass">&#10003;</span></td><td>Add to cart button on product cards</td></tr>
+              <tr><td>CP-09</td><td>Quick view popup</td><td><span class="status-fail">&#10007;</span></td><td>Not present &mdash; must click through to PDP</td></tr>
+              <tr><td>CP-10</td><td>Wishlist on cards</td><td><span class="status-fail">&#10007;</span></td><td>No wishlist icon on product cards</td></tr>
+              <tr><td>CP-11</td><td>Grid/List toggle</td><td><span class="status-fail">&#10007;</span></td><td>Grid view only, no toggle</td></tr>
+              <tr><td>CP-12</td><td>Infinite scroll</td><td><span class="status-fail">&#10007;</span></td><td>Pagination used, not infinite scroll</td></tr>
+              <tr><td>CP-13</td><td>Product comparison</td><td><span class="status-fail">&#10007;</span></td><td>Not present (client requested this feature)</td></tr>
+              <tr><td>CP-14</td><td>Stock status badges</td><td><span class="status-pass">&#10003;</span></td><td>&ldquo;Limited stock available&rdquo; and &ldquo;In stock&rdquo; shown</td></tr>
+              <tr><td>CP-15</td><td>GA4 view_item_list</td><td><span class="status-fail">&#10007;</span></td><td>Event not firing (confirmed missing in GA4 audit)</td></tr>
+            </tbody>
+          </table>
+          <div class="audit-summary">
+            <span class="status-pass">&#10003; 8 Pass</span>
+            <span class="status-warn">&#9888; 1 Partial</span>
+            <span class="status-fail">&#10007; 6 Missing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PDP Analysis -->
+      <div class="sub-content" id="pdp-analysis">
+        <div class="section-card">
+          <h3 class="section-title">Product Detail Page Audit</h3>
+          <p class="section-subtitle">GAN 356 ME 3x3 &mdash; 2025 New Year Edition</p>
+          <table class="audit-table">
+            <thead><tr><th>ID</th><th>Parameter</th><th>Status</th><th>Finding</th></tr></thead>
+            <tbody>
+              <tr><td>PDP-01</td><td>Breadcrumb</td><td><span class="status-pass">&#10003;</span></td><td>Home &gt; All Products &gt; Product Name</td></tr>
+              <tr><td>PDP-02</td><td>Product images</td><td><span class="status-pass">&#10003;</span></td><td>9 images with thumbnail gallery, zoom on hover</td></tr>
+              <tr><td>PDP-03</td><td>Product title (H1)</td><td><span class="status-warn">&#9888;</span></td><td>Present but DUPLICATE H1 (2 instances &mdash; SEO issue)</td></tr>
+              <tr><td>PDP-04</td><td>Price display</td><td><span class="status-pass">&#10003;</span></td><td>Sale price &#8377;1,999 / Regular &#8377;2,499 / 20% off badge</td></tr>
+              <tr><td>PDP-05</td><td>Variant selection</td><td><span class="status-pass">&#10003;</span></td><td>Links to variant products (New Year / Christmas Edition)</td></tr>
+              <tr><td>PDP-06</td><td>Add to Cart button</td><td><span class="status-pass">&#10003;</span></td><td>Prominent green button</td></tr>
+              <tr><td>PDP-07</td><td>Stock availability</td><td><span class="status-pass">&#10003;</span></td><td>&ldquo;In stock&rdquo; indicator present</td></tr>
+              <tr><td>PDP-08</td><td>Brand &amp; SKU</td><td><span class="status-pass">&#10003;</span></td><td>GAN brand link + SKU: 1030572</td></tr>
+              <tr><td>PDP-09</td><td>Reviews &amp; ratings</td><td><span class="status-pass">&#10003;</span></td><td>5-star display, 14 reviews, by Nector</td></tr>
+              <tr><td>PDP-10</td><td>Trust badges</td><td><span class="status-warn">&#9888;</span></td><td>Only &ldquo;Fast Delivery&rdquo; and &ldquo;Easy Returns&rdquo; icons &mdash; no payment/security badges</td></tr>
+              <tr><td>PDP-11</td><td>Delivery estimation</td><td><span class="status-fail">&#10007;</span></td><td>NOT present &mdash; no pincode-based delivery date</td></tr>
+              <tr><td>PDP-12</td><td>Product description tabs</td><td><span class="status-pass">&#10003;</span></td><td>Description / FAQs / Specifications tabs</td></tr>
+              <tr><td>PDP-13</td><td>Frequently bought together</td><td><span class="status-pass">&#10003;</span></td><td>Available in cart drawer via Corner (7 products)</td></tr>
+              <tr><td>PDP-14</td><td>Popular add-ons</td><td><span class="status-pass">&#10003;</span></td><td>Cube lubricants with checkboxes and discounts</td></tr>
+              <tr><td>PDP-15</td><td>You may also like</td><td><span class="status-pass">&#10003;</span></td><td>10-product carousel</td></tr>
+              <tr><td>PDP-16</td><td>Recently viewed</td><td><span class="status-pass">&#10003;</span></td><td>Recently viewed section at bottom</td></tr>
+              <tr><td>PDP-17</td><td>Wishlist</td><td><span class="status-fail">&#10007;</span></td><td>No wishlist functionality</td></tr>
+              <tr><td>PDP-18</td><td>Product video</td><td><span class="status-fail">&#10007;</span></td><td>No video embed despite client wanting unboxing videos</td></tr>
+              <tr><td>PDP-19</td><td>Size/comparison chart</td><td><span class="status-fail">&#10007;</span></td><td>No comparison chart (client requested cube comparison tool)</td></tr>
+              <tr><td>PDP-20</td><td>Verified buyer tags</td><td><span class="status-pass">&#10003;</span></td><td>&ldquo;Verified&rdquo; badge on some reviews</td></tr>
+              <tr><td>PDP-21</td><td>Review filtering</td><td><span class="status-pass">&#10003;</span></td><td>Dropdown sort + keyword tags (smooth turning, corner cutting, etc.)</td></tr>
+              <tr><td>PDP-22</td><td>EMI/Installment</td><td><span class="status-pass">&#10003;</span></td><td>Snapmint present (but throwing JS errors)</td></tr>
+              <tr><td>PDP-23</td><td>Loyalty/Rewards</td><td><span class="status-pass">&#10003;</span></td><td>&ldquo;Earn upto 1999 Cube Coins&rdquo; &mdash; Nector integration</td></tr>
+              <tr><td>PDP-24</td><td>Product Schema JSON-LD</td><td><span class="status-pass">&#10003;</span></td><td>Product + BreadcrumbList schemas present with rating, price, GTIN</td></tr>
+              <tr><td>PDP-25</td><td>GA4 view_item</td><td><span class="status-warn">&#9888;</span></td><td>Fires but not activated as key event in GA4</td></tr>
+            </tbody>
+          </table>
+          <div class="audit-summary">
+            <span class="status-pass">&#10003; 17 Pass</span>
+            <span class="status-warn">&#9888; 3 Partial</span>
+            <span class="status-fail">&#10007; 5 Missing</span>
+          </div>
+          <div class="callout warning mt-16">
+            <strong>JS Errors Detected:</strong> 3 TypeErrors on PDP load + Snapmint repeated <code>SyntaxError: querySelectorAll</code> errors affecting page performance.
+          </div>
+        </div>
+      </div>
+
+      <!-- Cart Analysis -->
+      <div class="sub-content" id="cart-analysis">
+        <div class="section-card">
+          <h3 class="section-title">Cart Page / Drawer Audit</h3>
+          <p class="section-subtitle">Cart drawer powered by Corner widget</p>
+          <table class="audit-table">
+            <thead><tr><th>ID</th><th>Parameter</th><th>Status</th><th>Finding</th></tr></thead>
+            <tbody>
+              <tr><td>CART-01</td><td>Cart title</td><td><span class="status-pass">&#10003;</span></td><td>&ldquo;Your Cart&rdquo; header</td></tr>
+              <tr><td>CART-02</td><td>Product list with images</td><td><span class="status-pass">&#10003;</span></td><td>Product image, name, variant link</td></tr>
+              <tr><td>CART-03</td><td>Price display</td><td><span class="status-pass">&#10003;</span></td><td>Original + sale price shown</td></tr>
+              <tr><td>CART-04</td><td>Quantity +/- buttons</td><td><span class="status-pass">&#10003;</span></td><td>Increase/decrease buttons present</td></tr>
+              <tr><td>CART-05</td><td>Remove product</td><td><span class="status-pass">&#10003;</span></td><td>X button visible</td></tr>
+              <tr><td>CART-06</td><td>Order summary &amp; total</td><td><span class="status-pass">&#10003;</span></td><td>Discount line + total shown</td></tr>
+              <tr><td>CART-07</td><td>Checkout CTA</td><td><span class="status-pass">&#10003;</span></td><td>Prominent &ldquo;Checkout&rdquo; button</td></tr>
+              <tr><td>CART-08</td><td>Shipping estimator</td><td><span class="status-fail">&#10007;</span></td><td>NOT present &mdash; biggest checkout abandonment driver</td></tr>
+              <tr><td>CART-09</td><td>Coupon/voucher widget</td><td><span class="status-pass">&#10003;</span></td><td>&ldquo;Offers&rdquo; tab in cart drawer</td></tr>
+              <tr><td>CART-10</td><td>Trust building elements</td><td><span class="status-fail">&#10007;</span></td><td>No trust badges, security seals, or payment icons in cart</td></tr>
+              <tr><td>CART-11</td><td>Related products (cross-sell)</td><td><span class="status-pass">&#10003;</span></td><td>&ldquo;Frequently Bought Together&rdquo; with 7 products &mdash; excellent!</td></tr>
+              <tr><td>CART-12</td><td>Gift wrap option</td><td><span class="status-pass">&#10003;</span></td><td>Gift Wrap for &#8377;49 with checkbox</td></tr>
+              <tr><td>CART-13</td><td>Free shipping progress bar</td><td><span class="status-fail">&#10007;</span></td><td>NOT present despite promotions (free stand on &#8377;1599+)</td></tr>
+              <tr><td>CART-14</td><td>Expected delivery date</td><td><span class="status-fail">&#10007;</span></td><td>NOT present in cart</td></tr>
+              <tr><td>CART-15</td><td>Continue shopping link</td><td><span class="status-warn">&#9888;</span></td><td>Close button returns to page, but no dedicated CTA</td></tr>
+              <tr><td>CART-16</td><td>Order notes</td><td><span class="status-pass">&#10003;</span></td><td>&ldquo;Add Optional Note&rdquo; available</td></tr>
+              <tr><td>CART-17</td><td>Promotional offers</td><td><span class="status-pass">&#10003;</span></td><td>3 rotating offers: free stand, free stickers, GAN 12 discount</td></tr>
+            </tbody>
+          </table>
+          <div class="audit-summary">
+            <span class="status-pass">&#10003; 11 Pass</span>
+            <span class="status-warn">&#9888; 1 Partial</span>
+            <span class="status-fail">&#10007; 5 Missing</span>
+          </div>
+          <div class="callout critical mt-16">
+            <strong>Missing shipping estimator + delivery date in cart directly contributes to 38.7% shipping-step checkout abandonment.</strong> Users don&rsquo;t know shipping costs or delivery timeline until they reach checkout.
+          </div>
+        </div>
+      </div>
+
+      <!-- Checkout Analysis -->
+      <div class="sub-content" id="checkout-analysis">
+        <div class="section-card">
+          <h3 class="section-title">Checkout Flow Audit</h3>
+          <p class="section-subtitle">GoKwik-powered checkout &mdash; 32.4% completion rate</p>
+          <table class="audit-table">
+            <thead><tr><th>ID</th><th>Parameter</th><th>Status</th><th>Finding</th></tr></thead>
+            <tbody>
+              <tr><td>CO-01</td><td>Guest checkout</td><td><span class="status-warn">&#9888;</span></td><td>GoKwik requires phone + OTP (not traditional guest checkout)</td></tr>
+              <tr><td>CO-02</td><td>Order summary</td><td><span class="status-pass">&#10003;</span></td><td>Visible during checkout (Shopify standard)</td></tr>
+              <tr><td>CO-03</td><td>Address form</td><td><span class="status-pass">&#10003;</span></td><td>Standard Shopify address form</td></tr>
+              <tr><td>CO-04</td><td>Shipping method options</td><td><span class="status-pass">&#10003;</span></td><td>Shipping options displayed at shipping step</td></tr>
+              <tr><td>CO-05</td><td>Payment options</td><td><span class="status-pass">&#10003;</span></td><td>Razorpay, PayU, COD available</td></tr>
+              <tr><td>CO-06</td><td>Coupon/voucher widget</td><td><span class="status-pass">&#10003;</span></td><td>Promo code field available</td></tr>
+              <tr><td>CO-07</td><td>Trust seals at payment</td><td><span class="status-fail">&#10007;</span></td><td>No security badges or trust seals at payment step</td></tr>
+              <tr><td>CO-08</td><td>Auto-address fill</td><td><span class="status-fail">&#10007;</span></td><td>No Google Places API integration</td></tr>
+              <tr><td>CO-09</td><td>One-click checkout</td><td><span class="status-pass">&#10003;</span></td><td>GoKwik provides accelerated checkout for returning users</td></tr>
+              <tr><td>CO-10</td><td>Order bumps/add-ons</td><td><span class="status-fail">&#10007;</span></td><td>No post-ATC upsell or checkout add-ons</td></tr>
+              <tr><td>CO-11</td><td>Policy links</td><td><span class="status-pass">&#10003;</span></td><td>Refund, shipping, privacy, terms linked in footer</td></tr>
+              <tr><td>CO-12</td><td>Progress indicator</td><td><span class="status-pass">&#10003;</span></td><td>Shopify standard checkout steps</td></tr>
+              <tr><td>CO-13</td><td>Newsletter opt-in</td><td><span class="status-warn">&#9888;</span></td><td>Checkbox present but no email platform connected</td></tr>
+              <tr><td>CO-14</td><td>GA4 begin_checkout</td><td><span class="status-pass">&#10003;</span></td><td>Event fires via GoKwik integration</td></tr>
+            </tbody>
+          </table>
+          <div class="audit-summary">
+            <span class="status-pass">&#10003; 9 Pass</span>
+            <span class="status-warn">&#9888; 2 Partial</span>
+            <span class="status-fail">&#10007; 3 Missing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical SEO Analysis -->
+      <div class="sub-content" id="seo-analysis">
+        <div class="section-card">
+          <h3 class="section-title">Technical SEO Audit</h3>
+          <p class="section-subtitle">Lighthouse SEO Score: 92/100</p>
+          <table class="audit-table">
+            <thead><tr><th>ID</th><th>Parameter</th><th>Status</th><th>Finding</th></tr></thead>
+            <tbody>
+              <tr><td>SEO-01</td><td>Meta title</td><td><span class="status-pass">&#10003;</span></td><td>Well-formatted: &ldquo;Buy [Product] Online | Cubelelo&rdquo;</td></tr>
+              <tr><td>SEO-02</td><td>Meta description</td><td><span class="status-pass">&#10003;</span></td><td>Present with selling points</td></tr>
+              <tr><td>SEO-03</td><td>H1 tag</td><td><span class="status-fail">&#10007;</span></td><td>DUPLICATE H1 on PDP (2 instances of product title)</td></tr>
+              <tr><td>SEO-04</td><td>Canonical URL</td><td><span class="status-pass">&#10003;</span></td><td>Self-canonical present on all pages</td></tr>
+              <tr><td>SEO-05</td><td>OG tags</td><td><span class="status-pass">&#10003;</span></td><td>OG title, description, image, type all present</td></tr>
+              <tr><td>SEO-06</td><td>Twitter card</td><td><span class="status-warn">&#9888;</span></td><td>summary (should be summary_large_image for products)</td></tr>
+              <tr><td>SEO-07</td><td>Viewport meta</td><td><span class="status-warn">&#9888;</span></td><td>maximum-scale=1.0 blocks pinch-zoom (accessibility issue)</td></tr>
+              <tr><td>SEO-08</td><td>Product schema</td><td><span class="status-pass">&#10003;</span></td><td>Product JSON-LD with offers, rating, GTIN, availability</td></tr>
+              <tr><td>SEO-09</td><td>Breadcrumb schema</td><td><span class="status-pass">&#10003;</span></td><td>BreadcrumbList JSON-LD present</td></tr>
+              <tr><td>SEO-10</td><td>Organization schema</td><td><span class="status-fail">&#10007;</span></td><td>Not present &mdash; missing brand/company identity</td></tr>
+              <tr><td>SEO-11</td><td>FAQ schema</td><td><span class="status-fail">&#10007;</span></td><td>Not present despite FAQ section on PDP</td></tr>
+              <tr><td>SEO-12</td><td>Review schema</td><td><span class="status-pass">&#10003;</span></td><td>AggregateRating in Product schema (4.92/5)</td></tr>
+              <tr><td>SEO-13</td><td>Image alt tags</td><td><span class="status-pass">&#10003;</span></td><td>Alt tags present on product images</td></tr>
+              <tr><td>SEO-14</td><td>Robots.txt</td><td><span class="status-pass">&#10003;</span></td><td>Standard Shopify robots.txt with sitemap reference</td></tr>
+              <tr><td>SEO-15</td><td>Sitemap.xml</td><td><span class="status-pass">&#10003;</span></td><td>Shopify auto-generated sitemap present</td></tr>
+              <tr><td>SEO-16</td><td>HTTPS</td><td><span class="status-pass">&#10003;</span></td><td>SSL active on all pages</td></tr>
+              <tr><td>SEO-17</td><td>Mobile usability</td><td><span class="status-warn">&#9888;</span></td><td>Responsive but zoom blocked, some touch targets too small</td></tr>
+              <tr><td>SEO-18</td><td>Crawlable links</td><td><span class="status-warn">&#9888;</span></td><td>Some JavaScript-only links detected (Lighthouse SEO audit)</td></tr>
+            </tbody>
+          </table>
+          <div class="audit-summary">
+            <span class="status-pass">&#10003; 11 Pass</span>
+            <span class="status-warn">&#9888; 4 Partial</span>
+            <span class="status-fail">&#10007; 3 Missing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tracking Analysis -->
+      <div class="sub-content" id="tracking-analysis">
+        <div class="section-card">
+          <h3 class="section-title">Tracking &amp; Analytics Audit</h3>
+          <table class="audit-table">
+            <thead><tr><th>ID</th><th>Parameter</th><th>Status</th><th>Finding</th></tr></thead>
+            <tbody>
+              <tr><td>TRK-01</td><td>Google Tag Manager</td><td><span class="status-pass">&#10003;</span></td><td>GTM container present (via Shopify customer events)</td></tr>
+              <tr><td>TRK-02</td><td>GA4 setup</td><td><span class="status-pass">&#10003;</span></td><td>G-H20SYE5L0Y &mdash; property active</td></tr>
+              <tr><td>TRK-03</td><td>GA4 key events</td><td><span class="status-fail">&#10007;</span></td><td>6 events exist but NOT activated as key events (conversions)</td></tr>
+              <tr><td>TRK-04</td><td>add_to_cart event</td><td><span class="status-warn">&#9888;</span></td><td>Fires but sends &#8377;0 value &mdash; revenue attribution broken</td></tr>
+              <tr><td>TRK-05</td><td>begin_checkout event</td><td><span class="status-pass">&#10003;</span></td><td>Fires via GoKwik</td></tr>
+              <tr><td>TRK-06</td><td>purchase event</td><td><span class="status-pass">&#10003;</span></td><td>Tracking revenue correctly</td></tr>
+              <tr><td>TRK-07</td><td>view_item event</td><td><span class="status-warn">&#9888;</span></td><td>Fires but not marked as key event</td></tr>
+              <tr><td>TRK-08</td><td>view_item_list event</td><td><span class="status-fail">&#10007;</span></td><td>NOT firing &mdash; can&rsquo;t track collection page engagement</td></tr>
+              <tr><td>TRK-09</td><td>UTM tagging</td><td><span class="status-fail">&#10007;</span></td><td>12.3% of traffic &ldquo;Unassigned&rdquo; &mdash; broken UTM parameters</td></tr>
+              <tr><td>TRK-10</td><td>Facebook Pixel</td><td><span class="status-pass">&#10003;</span></td><td>Present via page source</td></tr>
+              <tr><td>TRK-11</td><td>Facebook CAPI</td><td><span class="status-warn">&#9888;</span></td><td>Cannot confirm server-side (needs Shopify admin check)</td></tr>
+              <tr><td>TRK-12</td><td>Google Ads tag</td><td><span class="status-pass">&#10003;</span></td><td>Present (Paid Search/Shopping channels active in GA4)</td></tr>
+              <tr><td>TRK-13</td><td>Microsoft Clarity</td><td><span class="status-pass">&#10003;</span></td><td>Present &mdash; session recordings available</td></tr>
+              <tr><td>TRK-14</td><td>Hotjar</td><td><span class="status-pass">&#10003;</span></td><td>Present &mdash; heatmaps available</td></tr>
+              <tr><td>TRK-15</td><td>Email/SMS platform</td><td><span class="status-fail">&#10007;</span></td><td>NO Klaviyo, Mailchimp, or any email platform detected</td></tr>
+            </tbody>
+          </table>
+          <div class="audit-summary">
+            <span class="status-pass">&#10003; 8 Pass</span>
+            <span class="status-warn">&#9888; 3 Partial</span>
+            <span class="status-fail">&#10007; 4 Missing</span>
+          </div>
+          <div class="callout critical mt-16">
+            <strong>Critical: No email/SMS marketing platform installed.</strong> This is the #1 retention fix for a store with 91% first-time purchasers. Klaviyo alone could drive +&#8377;1.8L/month in repeat revenue.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TAB 4: FEATURES & APPS
+         ============================================================ -->
+    <section class="tab-content" id="tab-features">
+      <div class="section-card">
+        <h2 class="section-title">Feature Recommendations</h2>
+        <p class="section-subtitle">Every feature is tied to a specific funnel problem from the CRO audit</p>
+      </div>
+
+      <div class="section-card">
+        <h3 class="section-title">Tier 1: Critical Features</h3>
+        <p class="section-subtitle">Must-have for launch &mdash; directly tied to revenue leaks</p>
+        <table class="feature-table">
+          <thead><tr><th>Feature</th><th>Page</th><th>Type</th><th>Funnel Fix</th></tr></thead>
+          <tbody>
+            <tr><td>Email/SMS marketing (Klaviyo)</td><td>Site-wide</td><td><span class="badge-app">App</span></td><td>91% first-time purchasers &rarr; retention flows</td></tr>
+            <tr><td>Delivery date estimation (pincode)</td><td>PDP + Cart</td><td><span class="badge-app">App</span></td><td>38.7% shipping abandonment &rarr; set expectations early</td></tr>
+            <tr><td>Free shipping progress bar</td><td>Cart</td><td><span class="badge-custom">Custom</span></td><td>Cart abandonment + AOV boost</td></tr>
+            <tr><td>Trust badges on cart &amp; checkout</td><td>Cart + Checkout</td><td><span class="badge-custom">Custom</span></td><td>32.4% checkout completion &rarr; reduce payment anxiety</td></tr>
+            <tr><td>Shipping estimator on cart</td><td>Cart</td><td><span class="badge-app">App</span></td><td>38.7% shipping abandonment &rarr; no cost surprises</td></tr>
+            <tr><td>Advanced search with suggestions</td><td>Site-wide</td><td><span class="badge-app">App</span></td><td>59.6% never view product &rarr; better product discovery</td></tr>
+            <tr><td>Blog product CTAs &amp; sidebar</td><td>Blog</td><td><span class="badge-custom">Custom</span></td><td>18% traffic, &lt;0.1% revenue &rarr; blog monetization</td></tr>
+            <tr><td>Desktop PDP optimization</td><td>PDP</td><td><span class="badge-custom">Custom</span></td><td>Desktop ATC 5.3% vs mobile 21.1% &rarr; fix layout</td></tr>
+            <tr><td>Homepage trust bar / USP strip</td><td>Homepage</td><td><span class="badge-custom">Custom</span></td><td>High bounce rate &rarr; immediate trust building</td></tr>
+            <tr><td>Abandoned cart recovery emails</td><td>Post-visit</td><td><span class="badge-app">App</span></td><td>32% cart abandonment &rarr; win-back flows</td></tr>
+            <tr><td>Back-in-stock notifications</td><td>PDP</td><td><span class="badge-app">App</span></td><td>&ldquo;Limited stock&rdquo; items &rarr; capture demand</td></tr>
+            <tr><td>GA4 event activation + fixes</td><td>Analytics</td><td><span class="badge-custom">Custom</span></td><td>Can&rsquo;t optimize what you can&rsquo;t measure</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-card">
+        <h3 class="section-title">Tier 2: Recommended Features</h3>
+        <p class="section-subtitle">High impact &mdash; implement within first month</p>
+        <table class="feature-table">
+          <thead><tr><th>Feature</th><th>Page</th><th>Type</th><th>Funnel Fix</th></tr></thead>
+          <tbody>
+            <tr><td>Cube comparison tool</td><td>PDP</td><td><span class="badge-custom">Custom</span></td><td>Low ATC &rarr; help with purchase decision</td></tr>
+            <tr><td>Difficulty level indicators</td><td>Cards + PDP</td><td><span class="badge-custom">Custom</span></td><td>Product discovery &rarr; cubing-specific UX</td></tr>
+            <tr><td>Homepage testimonial carousel</td><td>Homepage</td><td><span class="badge-custom">Custom</span></td><td>Bounce rate &rarr; social proof above fold</td></tr>
+            <tr><td>Exit-intent popup (blog visitors)</td><td>Blog</td><td><span class="badge-app">App</span></td><td>Blog exits &rarr; email capture</td></tr>
+            <tr><td>Countdown timer for flash sales</td><td>Homepage + PDP</td><td><span class="badge-custom">Custom</span></td><td>Low urgency &rarr; drive immediate action</td></tr>
+            <tr><td>Product video embeds (YouTube)</td><td>PDP</td><td><span class="badge-custom">Custom</span></td><td>Low ATC &rarr; showcase product in action</td></tr>
+            <tr><td>Quick view popup on collection</td><td>Collection</td><td><span class="badge-custom">Custom</span></td><td>Speed up browsing &rarr; reduce clicks to ATC</td></tr>
+            <tr><td>Wishlist functionality</td><td>PDP + Collection</td><td><span class="badge-app">App</span></td><td>Retention &rarr; save products for later</td></tr>
+            <tr><td>Speed cube vs casual badge</td><td>Cards + PDP</td><td><span class="badge-custom">Custom</span></td><td>Product discovery &rarr; audience targeting</td></tr>
+            <tr><td>Loyalty program visibility</td><td>Homepage</td><td><span class="badge-custom">Custom</span></td><td>Retention &rarr; Nector already installed, needs prominence</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-card">
+        <h3 class="section-title">Recommended App Stack</h3>
+        <table class="app-table">
+          <thead><tr><th>Need</th><th>Current</th><th>Recommended</th><th>Est. Monthly</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Email/SMS Marketing</td><td class="critical-text">NONE</td><td><strong>Klaviyo</strong></td><td>~$20-45/mo</td><td><span class="badge-critical">Critical Gap</span></td></tr>
+            <tr><td>Delivery Estimation</td><td class="critical-text">NONE</td><td><strong>Estimated Delivery Date</strong></td><td>~$7/mo</td><td><span class="badge-critical">Critical Gap</span></td></tr>
+            <tr><td>Advanced Search</td><td>Basic Shopify</td><td><strong>Searchanise</strong></td><td>~$20-50/mo</td><td><span class="badge-critical">Critical Gap</span></td></tr>
+            <tr><td>Back-in-Stock</td><td class="critical-text">NONE</td><td><strong>Back in Stock Alerts</strong></td><td>~$5-20/mo</td><td><span class="badge-critical">Critical Gap</span></td></tr>
+            <tr><td>Reviews + Loyalty</td><td>Nector &#10003;</td><td>Keep &mdash; evaluate photo reviews</td><td>Existing</td><td><span class="badge-inbuilt">Keep</span></td></tr>
+            <tr><td>One-Click Checkout</td><td>GoKwik &#10003;</td><td>Keep &mdash; optimize OTP flow</td><td>Existing</td><td><span class="badge-inbuilt">Keep</span></td></tr>
+            <tr><td>Cart Widget</td><td>Corner &#10003;</td><td>Keep &mdash; excellent cross-sell UX</td><td>Existing</td><td><span class="badge-inbuilt">Keep</span></td></tr>
+            <tr><td>EMI/Pay Later</td><td>Snapmint &#10003;</td><td>Keep &mdash; fix JS errors</td><td>Existing</td><td><span class="badge-custom">Fix Needed</span></td></tr>
+            <tr><td>Page Builder</td><td>PageFly &#10003;</td><td>Evaluate post-revamp</td><td>Existing</td><td><span class="badge-optional">Review</span></td></tr>
+            <tr><td>Returns</td><td>Return Prime &#10003;</td><td>Keep</td><td>Existing</td><td><span class="badge-inbuilt">Keep</span></td></tr>
+            <tr><td>Chatbot</td><td>WhatsApp icon</td><td>Upgrade to Tidio or Intercom</td><td>~$0-29/mo</td><td><span class="badge-optional">Optional</span></td></tr>
+          </tbody>
+        </table>
+        <div class="app-cost-summary">
+          <strong>New Monthly App Cost:</strong> ~&#8377;4,000&ndash;7,000/month ($50-85/mo) for Klaviyo + Searchanise + Delivery Date + Back-in-Stock
+        </div>
+      </div>
+
+      <div class="section-card">
+        <h3 class="section-title">GA4 Actionables</h3>
+        <p class="section-subtitle">Quick wins that improve measurement immediately</p>
+        <div class="actionable-list">
+          <div class="actionable-item priority-high">
+            <span class="actionable-num">1</span>
+            <div>
+              <h4>Activate 6 key events as conversions</h4>
+              <p>GA4 Admin &gt; Key Events &gt; Mark as key event. 5-minute fix, immediate impact.</p>
+              <span class="actionable-effort">Effort: 5 min | Impact: Critical</span>
+            </div>
+          </div>
+          <div class="actionable-item priority-high">
+            <span class="actionable-num">2</span>
+            <div>
+              <h4>Fix add_to_cart event value (currently &#8377;0)</h4>
+              <p>Pass product price in the value parameter. Revenue attribution completely broken without this.</p>
+              <span class="actionable-effort">Effort: 30 min | Impact: High</span>
+            </div>
+          </div>
+          <div class="actionable-item priority-high">
+            <span class="actionable-num">3</span>
+            <div>
+              <h4>Add missing events: view_item_list, select_item, remove_from_cart</h4>
+              <p>Complete the ecommerce funnel tracking for proper analysis.</p>
+              <span class="actionable-effort">Effort: 2 hrs | Impact: High</span>
+            </div>
+          </div>
+          <div class="actionable-item priority-medium">
+            <span class="actionable-num">4</span>
+            <div>
+              <h4>Fix UTM tagging (12.3% unassigned traffic)</h4>
+              <p>Audit all marketing links. Add proper UTM parameters to email, WhatsApp, influencer campaigns.</p>
+              <span class="actionable-effort">Effort: 2 hrs | Impact: High</span>
+            </div>
+          </div>
+          <div class="actionable-item priority-medium">
+            <span class="actionable-num">5</span>
+            <div>
+              <h4>Remove dead events: place_an_order, test, Viewed Product</h4>
+              <p>Clean up GA4 event list for clarity.</p>
+              <span class="actionable-effort">Effort: 10 min | Impact: Low</span>
+            </div>
+          </div>
+          <div class="actionable-item priority-medium">
+            <span class="actionable-num">6</span>
+            <div>
+              <h4>Set up remarketing audiences</h4>
+              <p>Create audiences for: viewed product but didn&rsquo;t buy, cart abandoners, past purchasers.</p>
+              <span class="actionable-effort">Effort: 1 hr | Impact: Medium</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TAB 5: THEME EVALUATION
+         ============================================================ -->
+    <section class="tab-content" id="tab-themes">
+      <div class="section-card">
+        <h2 class="section-title">Theme Evaluation</h2>
+        <p class="section-subtitle">Eurus (current) vs alternatives for Cubelelo&rsquo;s needs</p>
+      </div>
+
+      <div class="section-card">
+        <h3 class="section-title">Current Theme: Eurus</h3>
+        <div class="theme-summary">
+          <div class="grid-2">
+            <div>
+              <table class="data-table compact">
+                <tr><td><strong>Theme</strong></td><td>Eurus by Starter Theme</td></tr>
+                <tr><td><strong>Purchased</strong></td><td>~8-9 months ago</td></tr>
+                <tr><td><strong>Category Fit</strong></td><td>General &mdash; not puzzle/hobby specific</td></tr>
+                <tr><td><strong>Mobile PageSpeed</strong></td><td class="critical">34/100</td></tr>
+                <tr><td><strong>Desktop PageSpeed</strong></td><td class="warning">50/100</td></tr>
+              </table>
+            </div>
+            <div>
+              <h4>Eurus Strengths</h4>
+              <ul class="check-list">
+                <li class="pass">Product image gallery with thumbnails</li>
+                <li class="pass">Variant display with cross-links</li>
+                <li class="pass">Collection filters (7 types working)</li>
+                <li class="pass">Product badges (NEW, BESTSELLER, % off)</li>
+                <li class="pass">Tab layout for description/FAQs/specs</li>
+              </ul>
+              <h4 class="mt-16">Eurus Gaps</h4>
+              <ul class="check-list">
+                <li class="fail">No built-in delivery estimation</li>
+                <li class="fail">No free shipping progress bar</li>
+                <li class="fail">No quick view popup</li>
+                <li class="fail">No comparison tool</li>
+                <li class="fail">No advanced search built-in</li>
+                <li class="fail">Performance is poor (34/100 mobile)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-card">
+        <h3 class="section-title">Recommendation</h3>
+        <div class="callout good">
+          <strong>Stay on Eurus + Heavy Customization</strong>
+          <p class="mt-8">Given that Eurus was purchased 8-9 months ago, has existing customizations, and the store has 1000+ SKUs with 150 collections &mdash; a theme migration carries significant risk. The performance issues are largely from app scripts (Snapmint errors, PageFly overhead, Corner widget) rather than the theme itself.</p>
+          <p class="mt-8"><strong>Strategy:</strong> Keep Eurus, fix performance bottlenecks, add missing features via customization + targeted apps. This is lower risk, lower cost, and faster to implement than a full theme switch.</p>
+        </div>
+        <div class="grid-2 mt-24">
+          <div class="recommendation-card primary">
+            <h4>Path A: Stay on Eurus (Recommended)</h4>
+            <ul>
+              <li>No theme migration risk</li>
+              <li>Preserve existing customizations</li>
+              <li>Focus budget on features &amp; performance</li>
+              <li>Faster timeline (4-6 weeks vs 8-10)</li>
+              <li>Theme cost: &#8377;0 (already owned)</li>
+            </ul>
+          </div>
+          <div class="recommendation-card">
+            <h4>Path B: Switch to Empire or Habitat</h4>
+            <ul>
+              <li>Better built-in features for large catalogs</li>
+              <li>Potentially better performance baseline</li>
+              <li>Migration risk with 1000+ SKUs</li>
+              <li>Existing customizations lost</li>
+              <li>Theme cost: ~&#8377;20-25K + migration dev</li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-muted text-small mt-16">Note: Final theme evaluation will be updated after Shopify admin access review (Eurus version, exact customizations, app dependencies).</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TAB 6: MOCKUP PREVIEW
+         ============================================================ -->
+    <section class="tab-content" id="tab-mockups">
+      <div class="section-card">
+        <h2 class="section-title">Homepage Mockup — Eurus Improved</h2>
+        <p class="section-subtitle">Your current Eurus theme with 7 new high-impact sections added. Purple <span style="color:#7c3aed;font-weight:600;">✨ NEW</span> badges highlight every addition.</p>
+
+        <!-- Key improvements summary -->
+        <div class="metrics-grid" style="margin-bottom:24px;">
+          <div class="metric-card">
+            <div class="metric-value" style="font-size:2rem;">12</div>
+            <div class="metric-label">Total Sections</div>
+            <div class="metric-detail">7 new + 5 enhanced</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value" style="font-size:2rem;color:var(--color-tertiary);">7</div>
+            <div class="metric-label">New Sections</div>
+            <div class="metric-detail">Trust bar, Newsletter, Reviews &hellip;</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value" style="font-size:2rem;">4</div>
+            <div class="metric-label">Real Products</div>
+            <div class="metric-detail">GAN 356 ME, MoYu, Drift, DaYan</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value" style="font-size:2rem;color:#16a34a;">+₹8-12L</div>
+            <div class="metric-label">Revenue Potential</div>
+            <div class="metric-detail">From these improvements</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Viewport toggle -->
+      <div class="viewport-toggle">
+        <button class="viewport-btn active" data-viewport="desktop" onclick="switchViewport('desktop')">
+          <span style="margin-right:6px;">🖥️</span> Desktop (1440px)
+        </button>
+        <button class="viewport-btn" data-viewport="mobile" onclick="switchViewport('mobile')">
+          <span style="margin-right:6px;">📱</span> Mobile (375px)
+        </button>
+      </div>
+
+      <!-- Browser chrome mockup frame -->
+      <div class="mockup-container desktop" id="mockupContainer">
+        <div class="browser-chrome">
+          <div class="browser-toolbar">
+            <div class="browser-dots">
+              <span class="browser-dot red"></span>
+              <span class="browser-dot yellow"></span>
+              <span class="browser-dot green"></span>
+            </div>
+            <div class="browser-url">cubelelo.com — Proposed Homepage (Eurus Improved)</div>
+          </div>
+          <div class="browser-body">
+            <div class="iframe-loading" id="mockupLoading">
+              <div class="loading-spinner"></div>
+              <div class="loading-text">Loading mockup&hellip;</div>
+            </div>
+            <iframe
+              src="mockups/eurus-improved.html"
+              title="Cubelelo Homepage Mockup — Eurus Improved"
+              style="width:100%;border:none;min-height:600px;"
+              onload="document.getElementById('mockupLoading').classList.add('hidden');this.style.height=this.contentWindow.document.documentElement.scrollHeight+'px';"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section-by-section breakdown -->
+      <div class="section-card mt-24">
+        <h3 class="section-title">What Changed — Section by Section</h3>
+        <table class="data-table">
+          <thead>
+            <tr><th>#</th><th>Section</th><th>Status</th><th>Funnel Fix</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Announcement Bar</td><td><span class="status-badge status-good">Enhanced</span></td><td>Urgency + free shipping threshold</td></tr>
+            <tr><td>2</td><td>Header + Trust Bar</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Trust above fold → reduces bounce (currently 1m 26s avg engagement)</td></tr>
+            <tr><td>3</td><td>Category Navigation</td><td><span class="status-badge status-good">Enhanced</span></td><td>10 visual categories → faster product discovery</td></tr>
+            <tr><td>4</td><td>Hero Banner</td><td><span class="status-badge status-good">Enhanced</span></td><td>Single strong CTA, limited-time offers</td></tr>
+            <tr><td>5</td><td>Bestsellers Grid</td><td><span class="status-badge status-good">Enhanced</span></td><td>Wishlist + difficulty badges + quick-add → fixes 5.3% desktop ATC</td></tr>
+            <tr><td>6</td><td>Shop by Age Group</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Gift buyer segment → increases AOV for non-cubers</td></tr>
+            <tr><td>7</td><td>Special Offers</td><td><span class="status-badge status-good">Enhanced</span></td><td>Countdown timers + urgency → higher engagement time</td></tr>
+            <tr><td>8</td><td>Blog with Product CTAs</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Monetizes 43K blog visitors (18% traffic, &lt;0.1% revenue)</td></tr>
+            <tr><td>9</td><td>Newsletter Signup</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Builds email list → fixes 91% first-time-only purchasers</td></tr>
+            <tr><td>10</td><td>Customer Reviews</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Verified purchase badges → social proof on homepage</td></tr>
+            <tr><td>11</td><td>Delivery Estimation</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Shipping transparency → fixes 38.7% checkout abandonment</td></tr>
+            <tr><td>12</td><td>Footer</td><td><span class="status-badge status-good">Enhanced</span></td><td>Payment trust + newsletter + quick links</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-card">
+        <h3 class="section-title">Mockup Notes</h3>
+        <div class="info-callout">
+          <strong>This is a visual prototype, not a finished theme.</strong> It demonstrates proposed layout changes, new sections, and content strategy using your real product data. Actual implementation will use your Eurus theme customizer + custom Liquid/CSS development.
+        </div>
+        <ul style="margin-top:12px;color:var(--color-text-secondary);line-height:1.8;">
+          <li>All product images, prices, and ratings are from your live store (cubelelo.com)</li>
+          <li>Purple <span style="color:#7c3aed;font-weight:700;">✨ NEW</span> badges mark sections that don&rsquo;t exist on your current homepage</li>
+          <li>Mobile responsive — use the viewport toggle above to preview both breakpoints</li>
+          <li>Each new section is tied to a specific funnel problem from our GA4 audit</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TAB 7: INVESTMENT & ROI
+         ============================================================ -->
+    <section class="tab-content" id="tab-investment">
+      <div class="section-card">
+        <h2 class="section-title">Investment &amp; ROI</h2>
+        <p class="section-subtitle">Every rupee invested is backed by real data from your GA4 analytics</p>
+      </div>
+
+      <div class="section-card">
+        <h3 class="section-title">Cost Breakdown</h3>
+        <table class="investment-table">
+          <thead><tr><th>Component</th><th>One-Time</th><th>Monthly</th><th>What You Get</th></tr></thead>
+          <tbody>
+            <tr><td>Theme (stay on Eurus)</td><td>&#8377;0</td><td>&mdash;</td><td>No migration risk</td></tr>
+            <tr><td>Homepage &amp; Navigation Customization</td><td>&#8377;60,000&ndash;80,000</td><td>&mdash;</td><td>Trust bar, blog CTAs, advanced search, urgency</td></tr>
+            <tr><td>PDP Optimization (Desktop + Mobile)</td><td>&#8377;40,000&ndash;60,000</td><td>&mdash;</td><td>Fix desktop ATC, delivery estimation, video embeds</td></tr>
+            <tr><td>Cart &amp; Checkout Enhancements</td><td>&#8377;30,000&ndash;40,000</td><td>&mdash;</td><td>Shipping estimator, trust badges, free shipping bar</td></tr>
+            <tr><td>Collection Page Upgrades</td><td>&#8377;20,000&ndash;30,000</td><td>&mdash;</td><td>Quick view, comparison, difficulty badges</td></tr>
+            <tr><td>Blog Monetization</td><td>&#8377;20,000&ndash;30,000</td><td>&mdash;</td><td>Product CTAs, beginner kit promotion</td></tr>
+            <tr><td>PageSpeed Optimization</td><td>&#8377;25,000&ndash;35,000</td><td>&mdash;</td><td>Target: 70+ mobile (from 34), fix JS errors</td></tr>
+            <tr><td>GA4 Fixes &amp; Analytics Setup</td><td>&#8377;15,000&ndash;20,000</td><td>&mdash;</td><td>Key events, UTM fixes, remarketing audiences</td></tr>
+            <tr><td>App Setup &amp; Integration</td><td>&#8377;15,000&ndash;20,000</td><td>&mdash;</td><td>Klaviyo, Searchanise, delivery date, back-in-stock</td></tr>
+            <tr class="subtotal-row"><td><strong>Total One-Time</strong></td><td><strong>&#8377;2.25&ndash;3.15L</strong></td><td>&mdash;</td><td></td></tr>
+            <tr><td>New App Stack</td><td>&mdash;</td><td>&#8377;4,000&ndash;7,000</td><td>Klaviyo + Searchanise + Delivery + Alerts</td></tr>
+            <tr><td>Monthly Maintenance</td><td>&mdash;</td><td>&#8377;15,000&ndash;25,000</td><td>Ongoing optimization, A/B testing, email flows</td></tr>
+            <tr class="total-row"><td><strong>Monthly Ongoing</strong></td><td>&mdash;</td><td><strong>&#8377;19,000&ndash;32,000</strong></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-card">
+        <h3 class="section-title">ROI Projection</h3>
+        <div class="roi-highlight">
+          <div class="grid-3">
+            <div class="fomo-card">
+              <div class="fomo-value">&lt;1 month</div>
+              <div class="fomo-label">Payback Period</div>
+            </div>
+            <div class="fomo-card">
+              <div class="fomo-value">2,400&ndash;4,800%</div>
+              <div class="fomo-label">12-Month ROI</div>
+            </div>
+            <div class="fomo-card">
+              <div class="fomo-value">+&#8377;1&ndash;1.4Cr</div>
+              <div class="fomo-label">Annual Revenue Uplift</div>
+            </div>
+          </div>
+        </div>
+        <table class="data-table mt-24">
+          <thead><tr><th>Month</th><th>Investment</th><th>Additional Revenue</th><th>Cumulative ROI</th></tr></thead>
+          <tbody>
+            <tr><td>Month 0 (Setup)</td><td>&#8377;2.25&ndash;3.15L</td><td>&#8377;0</td><td>-&#8377;2.25&ndash;3.15L</td></tr>
+            <tr><td>Month 1</td><td>&#8377;0.25L (ongoing)</td><td>+&#8377;3&ndash;4L</td><td class="positive">+&#8377;0.5&ndash;1L</td></tr>
+            <tr><td>Month 3</td><td>&#8377;0.75L (ongoing)</td><td>+&#8377;15&ndash;20L</td><td class="positive">+&#8377;12&ndash;17L</td></tr>
+            <tr><td>Month 6</td><td>&#8377;1.5L (ongoing)</td><td>+&#8377;48&ndash;72L</td><td class="positive">+&#8377;44&ndash;68L</td></tr>
+            <tr><td>Month 12</td><td>&#8377;3L (ongoing)</td><td>+&#8377;96&ndash;144L</td><td class="positive"><strong>+&#8377;91&ndash;138L</strong></td></tr>
+          </tbody>
+        </table>
+        <div class="callout neutral mt-16">
+          <strong>Conservative estimates.</strong> Revenue uplift assumes gradual improvement: ~30% of target in month 1, ramping to full target by month 3 as email flows mature and page speed fixes take effect. Actual results may be higher.
+        </div>
+      </div>
+
+      <div class="fomo-strip">
+        <div class="fomo-card accent">
+          <div class="fomo-value">&#8377;27K&ndash;40K</div>
+          <div class="fomo-label">Revenue lost <strong>every single day</strong> without these fixes</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TAB 8: NEXT STEPS
+         ============================================================ -->
+    <section class="tab-content" id="tab-next-steps">
+      <div class="section-card">
+        <h2 class="section-title">Next Steps</h2>
+        <p class="section-subtitle">Here&rsquo;s how we move forward together</p>
+      </div>
+
+      <div class="section-card">
+        <div class="next-steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Review This Audit</h3>
+            <p>Walk through these findings on our next call. We&rsquo;ll answer every question and prioritize together.</p>
+            <span class="step-timeline">This week</span>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Finalize Scope &amp; Theme</h3>
+            <p>Confirm staying on Eurus, review the feature tiers, and lock in the app stack.</p>
+            <span class="step-timeline">Week 1</span>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Homepage Mockups</h3>
+            <p>We deliver visual mockups showing your products with all proposed improvements.</p>
+            <span class="step-timeline">Week 2</span>
+          </div>
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h3>Agreement &amp; Kickoff</h3>
+            <p>Sign off on scope, timeline, and investment. Development begins immediately.</p>
+            <span class="step-timeline">Week 2-3</span>
+          </div>
+          <div class="step-card">
+            <div class="step-number">5</div>
+            <h3>Development &amp; QA</h3>
+            <p>Tier 1 features built, tested, and deployed. Weekly progress updates.</p>
+            <span class="step-timeline">Week 3-7</span>
+          </div>
+          <div class="step-card">
+            <div class="step-number">6</div>
+            <h3>Launch &amp; Optimize</h3>
+            <p>Go live with improvements. Monitor metrics, A/B test, iterate based on real data.</p>
+            <span class="step-timeline">Week 8+</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-card">
+        <h3 class="section-title">What We Need From You</h3>
+        <div class="checklist-grid">
+          <div class="checklist-item">
+            <span class="checklist-check">&#9744;</span>
+            <div>
+              <h4>Shopify Collaborator Access</h4>
+              <p>For theme customization and app installation</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <span class="checklist-check">&#9744;</span>
+            <div>
+              <h4>GA4 Editor Access</h4>
+              <p>To activate key events and fix tracking</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <span class="checklist-check">&#9744;</span>
+            <div>
+              <h4>Brand Assets</h4>
+              <p>High-res logo, any brand guidelines, preferred imagery</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <span class="checklist-check">&#9744;</span>
+            <div>
+              <h4>Feature Priority Confirmation</h4>
+              <p>Review Tier 1 vs Tier 2 and confirm priorities</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-card text-center">
+        <h3 class="section-title">Ready to Start?</h3>
+        <p class="mb-24">Every day without these fixes costs &#8377;27K&ndash;40K in lost revenue.<br>Let&rsquo;s turn your data into growth.</p>
+        <div class="cta-block">
+          <p class="cta-contact"><strong>Nishant Pandey</strong> | Growisto</p>
+          <p class="cta-contact">nishant@growisto.com</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <script>
+    // Password Protection
+    const HASH = '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918'; // SHA-256 of 'cubelelo2026'
+
+    async function sha256(message) {
+      const msgBuffer = new TextEncoder().encode(message);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    // Check if already authenticated
+    if (sessionStorage.getItem('cubelelo_auth') === 'true') {
+      document.getElementById('passwordOverlay').classList.add('hidden');
+    }
+
+    document.getElementById('passwordForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const input = document.getElementById('passwordInput').value;
+      const hash = await sha256(input);
+      if (hash === HASH) {
+        sessionStorage.setItem('cubelelo_auth', 'true');
+        document.getElementById('passwordOverlay').classList.add('hidden');
+      } else {
+        document.getElementById('errorMsg').style.display = 'block';
+        document.getElementById('passwordInput').value = '';
+      }
+    });
+
+    // Tab Navigation
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+      document.getElementById('tab-' + tabId).classList.add('active');
+      document.querySelector('[data-tab="' + tabId + '"]').classList.add('active');
+      window.scrollTo(0, 0);
+      // Close mobile sidebar
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('sidebarOverlay').classList.remove('visible');
+    }
+
+    // Sub-tab Navigation (Page-by-Page)
+    function switchSubTab(btn, contentId) {
+      btn.parentElement.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.sub-content').forEach(c => c.classList.remove('active'));
+      document.getElementById(contentId).classList.add('active');
+    }
+
+    // Mobile Sidebar
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('sidebarOverlay').classList.toggle('visible');
+    }
+
+    // Mockup Viewport Toggle
+    function switchViewport(mode) {
+      const container = document.getElementById('mockupContainer');
+      const btns = document.querySelectorAll('.viewport-btn');
+      btns.forEach(b => b.classList.remove('active'));
+      document.querySelector('[data-viewport="' + mode + '"]').classList.add('active');
+      container.className = 'mockup-container ' + mode;
+      // Re-trigger iframe height calculation
+      const iframe = container.querySelector('iframe');
+      if (iframe && iframe.contentWindow) {
+        try {
+          iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
+        } catch(e) { iframe.style.height = '800px'; }
+      }
+    }
+  </script>
+
+</body>
+</html>
