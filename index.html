@@ -139,12 +139,12 @@
 
       <div class="section-card">
         <h2 class="section-title">Key Metrics Snapshot</h2>
-        <p class="section-subtitle">Based on GA4 data &mdash; 28 days (Jan 19 &ndash; Feb 15, 2026)</p>
+        <p class="section-subtitle">Based on GA4 + Shopify Admin data &mdash; 28 days (Jan 19 &ndash; Feb 15, 2026)</p>
         <div class="grid-3">
           <div class="metric-card">
-            <div class="metric-value">&#8377;32L</div>
-            <div class="metric-label">Monthly Revenue</div>
-            <div class="metric-status neutral">Current baseline</div>
+            <div class="metric-value">&#8377;36.5L</div>
+            <div class="metric-label">Monthly Revenue (Shopify)</div>
+            <div class="metric-status neutral">GA4 shows &#8377;32L &mdash; GoKwik gap</div>
           </div>
           <div class="metric-card">
             <div class="metric-value">1.35%</div>
@@ -152,9 +152,9 @@
             <div class="metric-status warning">Within range, improvable</div>
           </div>
           <div class="metric-card">
-            <div class="metric-value">&#8377;1,586</div>
-            <div class="metric-label">Average Order Value</div>
-            <div class="metric-status neutral">Baseline</div>
+            <div class="metric-value">&#8377;1,286</div>
+            <div class="metric-label">Average Order Value (Shopify)</div>
+            <div class="metric-status neutral">GA4 inflated at &#8377;1,586 (fewer tracked orders)</div>
           </div>
           <div class="metric-card">
             <div class="metric-value critical">0.55%</div>
@@ -162,9 +162,9 @@
             <div class="metric-status critical">Critically low &mdash; 3x worse than mobile</div>
           </div>
           <div class="metric-card">
-            <div class="metric-value critical">91%</div>
-            <div class="metric-label">First-time Purchasers</div>
-            <div class="metric-status critical">Near-zero repeat business</div>
+            <div class="metric-value warning">36%</div>
+            <div class="metric-label">Returning Customers (Shopify)</div>
+            <div class="metric-status warning">Lifetime repeats healthy; GA4 28-day window shows 9%</div>
           </div>
           <div class="metric-card">
             <div class="metric-value critical">34/100</div>
@@ -196,8 +196,8 @@
           <div class="leak-item">
             <span class="leak-rank">3</span>
             <div class="leak-content">
-              <h4>91% first-time purchasers &mdash; near-zero retention</h4>
-              <p>No email/SMS marketing tools installed. Cubers naturally progress to harder puzzles but aren&rsquo;t being brought back.</p>
+              <h4>No email/SMS marketing &mdash; repeat revenue left on the table</h4>
+              <p>Shopify shows 36% lifetime returning customers, but only 9% return within 28 days (GA4). No email/SMS tools installed to nurture repeat buyers. Cubers naturally upgrade &mdash; this should be higher.</p>
               <span class="leak-impact">Impact: ~&#8377;1.8L/month unrealized</span>
             </div>
           </div>
@@ -305,9 +305,168 @@
         </div>
       </div>
 
+      <!-- GA4 vs Shopify Verification Section -->
+      <div class="section-card" id="shopify-verification">
+        <h2 class="section-title">GA4 vs Shopify Data Verification</h2>
+        <p class="section-subtitle">Shopify Admin data cross-referenced with GA4 &mdash; Jan 19 &ndash; Feb 15, 2026</p>
+        <div class="callout info">
+          <strong>Why two data sources?</strong> GA4 tracks user behavior (browsing, clicks, events) while Shopify is the source of truth for transactions. Cubelelo uses <strong>GoKwik</strong> for 98.5% of checkout, which bypasses Shopify&rsquo;s native checkout &mdash; causing GA4 to undercount purchases and revenue.
+        </div>
+        <table class="data-table mt-24">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>GA4</th>
+              <th>Shopify</th>
+              <th>Delta</th>
+              <th>Why It Differs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Revenue</strong></td>
+              <td>&#8377;32.97L</td>
+              <td><strong>&#8377;36.49L</strong></td>
+              <td class="positive">+&#8377;3.5L (+10.7%)</td>
+              <td>GoKwik orders don&rsquo;t always fire GA4 purchase event</td>
+            </tr>
+            <tr>
+              <td><strong>Gross Sales</strong></td>
+              <td>&mdash;</td>
+              <td><strong>&#8377;39.86L</strong></td>
+              <td>&mdash;</td>
+              <td>Before &#8377;2.64L discounts &amp; &#8377;3.02L returns</td>
+            </tr>
+            <tr>
+              <td><strong>Orders</strong></td>
+              <td>2,079</td>
+              <td><strong>2,894</strong></td>
+              <td class="critical-text">+815 (+39.2%)</td>
+              <td>815 orders invisible to GA4 (GoKwik + Draft + Kwikchat)</td>
+            </tr>
+            <tr>
+              <td><strong>Sessions</strong></td>
+              <td>154,054</td>
+              <td>256,848</td>
+              <td>+102K (+66.7%)</td>
+              <td>Different session definitions &amp; bot filtering</td>
+            </tr>
+            <tr>
+              <td><strong>CVR</strong></td>
+              <td>1.35%</td>
+              <td>1.13%</td>
+              <td>&mdash;</td>
+              <td>GA4: fewer sessions + orders. Shopify: all sessions + orders</td>
+            </tr>
+            <tr>
+              <td><strong>AOV</strong></td>
+              <td>&#8377;1,586</td>
+              <td><strong>&#8377;1,286</strong></td>
+              <td>-&#8377;300 (-18.9%)</td>
+              <td>GA4 inflated: fewer tracked orders with similar revenue</td>
+            </tr>
+            <tr>
+              <td><strong>ATC Rate</strong></td>
+              <td>6.1%</td>
+              <td>6.16%</td>
+              <td>&asymp; same</td>
+              <td>Remarkably consistent despite different session bases</td>
+            </tr>
+            <tr>
+              <td><strong>Returning Customers</strong></td>
+              <td>~9% (28-day)</td>
+              <td>36.35% (lifetime)</td>
+              <td>+27 pts</td>
+              <td>Different windows: GA4 = 28-day visits, Shopify = lifetime purchases</td>
+            </tr>
+            <tr>
+              <td><strong>Mobile %</strong></td>
+              <td>65%</td>
+              <td>68.5%</td>
+              <td>+3.5 pts</td>
+              <td>Slight session counting differences</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="grid-2 mt-24">
+          <div class="callout danger">
+            <strong>Revenue Gap: &#8377;3.5&ndash;7L/month missing from GA4</strong>
+            <p class="mt-8">Client stated &#8377;40&ndash;45L/month. Shopify Gross Sales: &#8377;39.86L confirms this. GA4 shows only &#8377;32.97L because GoKwik bypasses Shopify checkout for 98.5% of orders, preventing the GA4 <code>purchase</code> event from firing consistently.</p>
+          </div>
+          <div class="callout warning">
+            <strong>815 &ldquo;Ghost&rdquo; Orders</strong>
+            <p class="mt-8">GA4 tracked 2,079 purchases but Shopify recorded 2,894. The 815 missing orders come from: GoKwik checkout (majority), Draft Orders (&#8377;31.9K), and Kwikchat/WhatsApp (&#8377;13.6K).</p>
+          </div>
+        </div>
+
+        <h3 class="section-title mt-24">Sales by Channel (Shopify)</h3>
+        <div class="grid-4" style="margin-top:12px;">
+          <div class="metric-card">
+            <div class="metric-value" style="font-size:1.5rem;">98.5%</div>
+            <div class="metric-label">GoKwik</div>
+            <div class="metric-detail">&#8377;35.9L &mdash; external checkout</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value" style="font-size:1.5rem;">0.9%</div>
+            <div class="metric-label">Draft Orders</div>
+            <div class="metric-detail">&#8377;31.9K &mdash; manual</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value" style="font-size:1.5rem;">0.4%</div>
+            <div class="metric-label">Kwikchat</div>
+            <div class="metric-detail">&#8377;13.6K &mdash; WhatsApp</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value" style="font-size:1.5rem;">0.1%</div>
+            <div class="metric-label">Online Store</div>
+            <div class="metric-detail">&#8377;4.9K &mdash; Shopify native</div>
+          </div>
+        </div>
+
+        <h3 class="section-title mt-24">Shopify Conversion Funnel</h3>
+        <p class="section-subtitle">Only 19 of 2,894 orders used Shopify&rsquo;s native checkout &mdash; GoKwik handles the rest</p>
+        <div class="funnel-container">
+          <div class="funnel-step">
+            <div class="funnel-bar" style="width:100%">
+              <span class="funnel-label">Sessions (Shopify)</span>
+              <span class="funnel-count">256,848</span>
+            </div>
+            <span class="funnel-pct">100%</span>
+          </div>
+          <div class="funnel-drop">&#9660; 93.8% don&rsquo;t add to cart</div>
+          <div class="funnel-step">
+            <div class="funnel-bar" style="width:6.16%;">
+              <span class="funnel-label">Added to Cart</span>
+              <span class="funnel-count">15,823</span>
+            </div>
+            <span class="funnel-pct">6.16%</span>
+          </div>
+          <div class="funnel-drop">&#9660; 71.4% don&rsquo;t reach checkout</div>
+          <div class="funnel-step">
+            <div class="funnel-bar" style="width:1.76%; min-width: 120px;">
+              <span class="funnel-label">Reached Checkout</span>
+              <span class="funnel-count">4,521</span>
+            </div>
+            <span class="funnel-pct">1.76%</span>
+          </div>
+          <div class="funnel-drop">&#9660; 99.6% complete via GoKwik (not Shopify native)</div>
+          <div class="funnel-step">
+            <div class="funnel-bar purchase" style="width:1.13%; min-width: 100px;">
+              <span class="funnel-label">All Orders (GoKwik + Native)</span>
+              <span class="funnel-count">2,894</span>
+            </div>
+            <span class="funnel-pct">1.13%</span>
+          </div>
+        </div>
+        <div class="callout info mt-16">
+          <strong>GoKwik Impact:</strong> Shopify&rsquo;s native funnel shows 0% checkout completion because GoKwik intercepts the checkout externally. The actual conversion rate is <strong>1.13%</strong> (2,894 orders &divide; 256,848 sessions). GA4&rsquo;s <strong>1.35%</strong> CVR is based on its smaller session count (154K) and fewer tracked orders (2,079).
+        </div>
+      </div>
+
       <div class="section-card">
-        <h2 class="section-title">Purchase Funnel</h2>
-        <p class="section-subtitle">154,054 sessions &rarr; 2,079 purchases (28-day period)</p>
+        <h2 class="section-title">Purchase Funnel (GA4)</h2>
+        <p class="section-subtitle">154,054 sessions &rarr; 2,079 purchases (28-day period) &mdash; behavioral events only</p>
         <div class="funnel-container">
           <div class="funnel-step">
             <div class="funnel-bar" style="width:100%">
@@ -739,7 +898,7 @@
             <span class="status-fail">&#10007; 4 Missing</span>
           </div>
           <div class="callout danger mt-16">
-            <strong>Critical: No email/SMS marketing platform installed.</strong> This is the #1 retention fix for a store with 91% first-time purchasers. Klaviyo alone could drive +&#8377;1.8L/month in repeat revenue.
+            <strong>Critical: No email/SMS marketing platform installed.</strong> Shopify data confirms 36% lifetime returning customers, but GA4 shows only 9% return within 28 days. No email/SMS tools to nurture repeat buying. Klaviyo alone could drive +&#8377;1.8L/month in repeat revenue.
           </div>
         </div>
       </div>
@@ -760,7 +919,7 @@
         <table class="feature-table">
           <thead><tr><th>Feature</th><th>Page</th><th>Type</th><th>Funnel Fix</th></tr></thead>
           <tbody>
-            <tr><td>Email/SMS marketing (Klaviyo)</td><td>Site-wide</td><td><span class="badge-app">App</span></td><td>91% first-time purchasers &rarr; retention flows</td></tr>
+            <tr><td>Email/SMS marketing (Klaviyo)</td><td>Site-wide</td><td><span class="badge-app">App</span></td><td>No email/SMS tool installed; only 9% return within 28 days &rarr; retention flows</td></tr>
             <tr><td>Delivery date estimation (pincode)</td><td>PDP + Cart</td><td><span class="badge-app">App</span></td><td>38.7% shipping abandonment &rarr; set expectations early</td></tr>
             <tr><td>Free shipping progress bar</td><td>Cart</td><td><span class="badge-custom">Custom</span></td><td>Cart abandonment + AOV boost</td></tr>
             <tr><td>Trust badges on cart &amp; checkout</td><td>Cart + Checkout</td><td><span class="badge-custom">Custom</span></td><td>32.4% checkout completion &rarr; reduce payment anxiety</td></tr>
@@ -805,17 +964,20 @@
             <tr><td>Delivery Estimation</td><td class="critical-text">NONE</td><td><strong>Estimated Delivery Date</strong></td><td>~$7/mo</td><td><span class="badge-critical">Critical Gap</span></td></tr>
             <tr><td>Advanced Search</td><td>Basic Shopify</td><td><strong>Searchanise</strong></td><td>~$20-50/mo</td><td><span class="badge-critical">Critical Gap</span></td></tr>
             <tr><td>Back-in-Stock</td><td class="critical-text">NONE</td><td><strong>Back in Stock Alerts</strong></td><td>~$5-20/mo</td><td><span class="badge-critical">Critical Gap</span></td></tr>
-            <tr><td>Reviews + Loyalty</td><td>Nector &#10003;</td><td>Keep &mdash; evaluate photo reviews</td><td>Existing</td><td><span class="badge-inbuilt">Keep</span></td></tr>
+            <tr><td>Reviews + Loyalty</td><td>Nector ($120/mo) &#10003;</td><td>Keep &mdash; evaluate photo reviews</td><td>$120/mo (verified)</td><td><span class="badge-inbuilt">Keep</span></td></tr>
             <tr><td>One-Click Checkout</td><td>GoKwik &#10003;</td><td>Keep &mdash; optimize OTP flow</td><td>Existing</td><td><span class="badge-inbuilt">Keep</span></td></tr>
-            <tr><td>Cart Widget</td><td>Corner &#10003;</td><td>Keep &mdash; excellent cross-sell UX</td><td>Existing</td><td><span class="badge-inbuilt">Keep</span></td></tr>
+            <tr><td>Cart Widget</td><td>Corner Cart ($29/mo) &#10003;</td><td>Keep &mdash; excellent cross-sell UX</td><td>$29/mo (verified)</td><td><span class="badge-inbuilt">Keep</span></td></tr>
             <tr><td>EMI/Pay Later</td><td>Snapmint &#10003;</td><td>Keep &mdash; fix JS errors</td><td>Existing</td><td><span class="badge-custom">Fix Needed</span></td></tr>
-            <tr><td>Page Builder</td><td>PageFly &#10003;</td><td>Evaluate post-revamp</td><td>Existing</td><td><span class="badge-optional">Review</span></td></tr>
-            <tr><td>Returns</td><td>Return Prime &#10003;</td><td>Keep</td><td>Existing</td><td><span class="badge-inbuilt">Keep</span></td></tr>
+            <tr><td>Page Builder</td><td>PageFly ($19/mo) &#10003;</td><td>Evaluate post-revamp</td><td>$19/mo (verified)</td><td><span class="badge-optional">Review</span></td></tr>
+            <tr><td>Returns</td><td>Return Prime ($13/mo) &#10003;</td><td>Keep</td><td>$13/mo (verified)</td><td><span class="badge-inbuilt">Keep</span></td></tr>
             <tr><td>Chatbot</td><td>WhatsApp icon</td><td>Upgrade to Tidio or Intercom</td><td>~$0-29/mo</td><td><span class="badge-optional">Optional</span></td></tr>
           </tbody>
         </table>
         <div class="app-cost-summary">
           <strong>New Monthly App Cost:</strong> ~&#8377;4,000&ndash;7,000/month ($50-85/mo) for Klaviyo + Searchanise + Delivery Date + Back-in-Stock
+        </div>
+        <div class="callout info mt-16">
+          <strong>Verified from Shopify Admin:</strong> Current monthly app spend is <strong>~$234/month (&#8377;19,500)</strong> across 26 installed apps. Biggest cost: Nector Loyalty ($120/mo). This means total app spend after adding recommended tools would be ~$284&ndash;320/month (&#8377;23,500&ndash;26,500). <strong>No email/SMS marketing tool confirmed &mdash; validates the #1 critical gap above.</strong>
         </div>
       </div>
 
@@ -890,11 +1052,14 @@
           <div class="grid-2">
             <div>
               <table class="data-table compact">
-                <tr><td><strong>Theme</strong></td><td>Eurus by Starter Theme</td></tr>
-                <tr><td><strong>Purchased</strong></td><td>~8-9 months ago</td></tr>
+                <tr><td><strong>Theme</strong></td><td>Eurus by Starter Store</td></tr>
+                <tr><td><strong>Live Theme Name</strong></td><td>&ldquo;Secret Santa&rdquo; (renamed Eurus for seasonal campaign)</td></tr>
+                <tr><td><strong>Current Version</strong></td><td>Older build &mdash; <strong>v6.8.1 update available</strong></td></tr>
+                <tr><td><strong>Unpublished</strong></td><td>Eurus 9.3 in library (v9.8.0 available &mdash; far behind)</td></tr>
                 <tr><td><strong>Category Fit</strong></td><td>General &mdash; not puzzle/hobby specific</td></tr>
                 <tr><td><strong>Mobile PageSpeed</strong></td><td class="critical">34/100</td></tr>
                 <tr><td><strong>Desktop PageSpeed</strong></td><td class="warning">50/100</td></tr>
+                <tr><td><strong>Shopify Web Perf (P75)</strong></td><td>LCP 2,692ms &#x1f7e0; | INP 192ms &#x1f7e2; | CLS 0.11</td></tr>
               </table>
             </div>
             <div>
@@ -949,7 +1114,9 @@
             </ul>
           </div>
         </div>
-        <p class="text-muted text-small mt-16">Note: Final theme evaluation will be updated after Shopify admin access review (Eurus version, exact customizations, app dependencies).</p>
+        <div class="callout info mt-16">
+          <strong>Verified from Shopify Admin:</strong> The live theme is an older Eurus fork renamed &ldquo;Secret Santa&rdquo; for a seasonal campaign. A newer Eurus 9.3 sits unpublished. The store has a pattern of renaming themes per season (Republic Day 2026, BXG10 Sale, etc.). Recommendation stands: stay on Eurus, update to latest version, and customize heavily.
+        </div>
       </div>
     </section>
 
@@ -1038,7 +1205,7 @@
             <tr><td>6</td><td>Shop by Age Group</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Gift buyer segment → increases AOV for non-cubers</td></tr>
             <tr><td>7</td><td>Special Offers</td><td><span class="status-badge status-good">Enhanced</span></td><td>Countdown timers + urgency → higher engagement time</td></tr>
             <tr><td>8</td><td>Blog with Product CTAs</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Monetizes 43K blog visitors (18% traffic, &lt;0.1% revenue)</td></tr>
-            <tr><td>9</td><td>Newsletter Signup</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Builds email list → fixes 91% first-time-only purchasers</td></tr>
+            <tr><td>9</td><td>Newsletter Signup</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Builds email list &rarr; no email tool currently installed</td></tr>
             <tr><td>10</td><td>Customer Reviews</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Verified purchase badges → social proof on homepage</td></tr>
             <tr><td>11</td><td>Delivery Estimation</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Shipping transparency → fixes 38.7% checkout abandonment</td></tr>
             <tr><td>12</td><td>Footer</td><td><span class="status-badge status-good">Enhanced</span></td><td>Payment trust + newsletter + quick links</td></tr>
@@ -1066,7 +1233,7 @@
     <section class="tab-content" id="tab-investment">
       <div class="section-card">
         <h2 class="section-title">Investment &amp; ROI</h2>
-        <p class="section-subtitle">Every rupee invested is backed by real data from your GA4 analytics</p>
+        <p class="section-subtitle">Every rupee invested is backed by real data from your GA4 analytics + verified Shopify Admin data</p>
       </div>
 
       <div class="section-card">
@@ -1185,11 +1352,11 @@
       <div class="section-card">
         <h3 class="section-title">What We Need From You</h3>
         <div class="checklist-grid">
-          <div class="checklist-item">
-            <span class="checklist-check">&#9744;</span>
+          <div class="checklist-item" style="opacity:0.7;">
+            <span class="checklist-check" style="color:#16a34a;">&#9745;</span>
             <div>
-              <h4>Shopify Collaborator Access</h4>
-              <p>For theme customization and app installation</p>
+              <h4><s>Shopify Collaborator Access</s></h4>
+              <p>&#10003; Granted &mdash; analytics, apps, themes verified (limited: no payment/shipping settings)</p>
             </div>
           </div>
           <div class="checklist-item">
