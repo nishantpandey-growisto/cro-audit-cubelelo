@@ -56,7 +56,11 @@
       <div class="sidebar-project">CRO Audit &amp; Revamp Proposal</div>
     </div>
     <div class="sidebar-nav">
-      <div class="nav-item active" onclick="switchTab('overview')" data-tab="overview">
+      <div class="nav-item active" onclick="switchTab('agenda')" data-tab="agenda">
+        <span class="nav-icon">&#128218;</span>
+        <span class="nav-label">Agenda</span>
+      </div>
+      <div class="nav-item" onclick="switchTab('overview')" data-tab="overview">
         <span class="nav-icon">&#128203;</span>
         <span class="nav-label">Overview</span>
       </div>
@@ -101,9 +105,176 @@
   <main class="main-content" id="mainContent">
 
     <!-- ============================================================
+         TAB 0: AGENDA
+         ============================================================ -->
+    <section class="tab-content active" id="tab-agenda">
+
+      <!-- Hero -->
+      <div class="agenda-hero">
+        <div class="agenda-hero-content">
+          <p class="agenda-hero-eyebrow">Growisto &times; Cubelelo</p>
+          <h1>Store Revamp Proposal</h1>
+          <p class="agenda-hero-sub">A data-driven plan to unlock <strong>+&#8377;8&ndash;12L/month</strong> in additional revenue from your existing traffic.</p>
+        </div>
+      </div>
+
+      <!-- Revamp Journey — 4 Steps -->
+      <div class="section-card">
+        <h2 class="section-title">Our 4-Step Revamp Process</h2>
+        <p class="section-subtitle">Where we are in the journey and what&rsquo;s coming next</p>
+        <div class="journey-track">
+          <div class="journey-step completed">
+            <div class="journey-node">
+              <span class="journey-check">&#10003;</span>
+            </div>
+            <div class="journey-label">Discovery &amp; Requirements</div>
+            <div class="journey-detail">Call, questionnaire, access setup</div>
+          </div>
+          <div class="journey-connector done"></div>
+          <div class="journey-step completed">
+            <div class="journey-node">
+              <span class="journey-check">&#10003;</span>
+            </div>
+            <div class="journey-label">CRO Audit &amp; Analysis</div>
+            <div class="journey-detail">GA4 + Shopify data, 131-parameter UX audit</div>
+          </div>
+          <div class="journey-connector done"></div>
+          <div class="journey-step completed">
+            <div class="journey-node">
+              <span class="journey-check">&#10003;</span>
+            </div>
+            <div class="journey-label">Feature &amp; Theme Planning</div>
+            <div class="journey-detail">Recommendations, mockups, investment plan</div>
+          </div>
+          <div class="journey-connector upcoming"></div>
+          <div class="journey-step current">
+            <div class="journey-node">
+              <span class="journey-num">4</span>
+            </div>
+            <div class="journey-label">Agreement &amp; Implementation</div>
+            <div class="journey-detail">Scope lock, development, launch</div>
+            <span class="journey-badge">You are here</span>
+          </div>
+        </div>
+        <div class="callout success mt-16">
+          <strong>Steps 1&ndash;3 complete.</strong> This report contains the full output of our discovery, audit, and planning work. Review it, then let&rsquo;s finalize scope and kick off development.
+        </div>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="section-card">
+        <h2 class="section-title">What&rsquo;s Inside This Report</h2>
+        <p class="section-subtitle">Click any section to jump straight to it</p>
+        <div class="toc-grid">
+          <div class="toc-card" onclick="switchTab('overview')">
+            <div class="toc-number">1</div>
+            <div class="toc-body">
+              <h3>Overview</h3>
+              <p>Key metrics snapshot, top 5 revenue leaks, and the opportunity ahead</p>
+            </div>
+            <span class="toc-arrow">&#8594;</span>
+          </div>
+          <div class="toc-card" onclick="switchTab('cro-audit')">
+            <div class="toc-number">2</div>
+            <div class="toc-body">
+              <h3>CRO Audit</h3>
+              <p>5-component scoring &mdash; analytics, performance, SEO, UX, conversion</p>
+            </div>
+            <span class="toc-arrow">&#8594;</span>
+          </div>
+          <div class="toc-card" onclick="switchTab('page-analysis')">
+            <div class="toc-number">3</div>
+            <div class="toc-body">
+              <h3>Page-by-Page Analysis</h3>
+              <p>131-parameter audit across homepage, collection, PDP, cart &amp; blog</p>
+            </div>
+            <span class="toc-arrow">&#8594;</span>
+          </div>
+          <div class="toc-card" onclick="switchTab('features')">
+            <div class="toc-number">4</div>
+            <div class="toc-body">
+              <h3>Features &amp; Apps</h3>
+              <p>Tiered feature recommendations tied to specific funnel improvements</p>
+            </div>
+            <span class="toc-arrow">&#8594;</span>
+          </div>
+          <div class="toc-card" onclick="switchTab('themes')">
+            <div class="toc-number">5</div>
+            <div class="toc-body">
+              <h3>Theme Evaluation</h3>
+              <p>Stay on Eurus + customize &mdash; why migration isn&rsquo;t needed</p>
+            </div>
+            <span class="toc-arrow">&#8594;</span>
+          </div>
+          <div class="toc-card" onclick="switchTab('mockups')">
+            <div class="toc-number">6</div>
+            <div class="toc-body">
+              <h3>Mockup Preview</h3>
+              <p>Interactive homepage mockup with 12 sections (7 new) using your real products</p>
+            </div>
+            <span class="toc-arrow">&#8594;</span>
+          </div>
+          <div class="toc-card highlight" onclick="switchTab('investment')">
+            <div class="toc-number">7</div>
+            <div class="toc-body">
+              <h3>Investment &amp; ROI</h3>
+              <p>Cost breakdown, payback timeline, and 12-month revenue projection</p>
+            </div>
+            <span class="toc-arrow">&#8594;</span>
+          </div>
+          <div class="toc-card" onclick="switchTab('next-steps')">
+            <div class="toc-number">8</div>
+            <div class="toc-body">
+              <h3>Next Steps</h3>
+              <p>Timeline, what we need from you, and how we kick off</p>
+            </div>
+            <span class="toc-arrow">&#8594;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Commercials Highlight -->
+      <div class="section-card commercials-highlight">
+        <div class="commercials-header">
+          <h2 class="section-title">Commercials at a Glance</h2>
+          <p class="section-subtitle">Full breakdown in the <a href="javascript:void(0)" onclick="switchTab('investment')" class="link-accent">Investment &amp; ROI</a> tab</p>
+        </div>
+        <div class="grid-3 mt-16">
+          <div class="commercial-card">
+            <div class="commercial-icon">&#128736;</div>
+            <div class="commercial-label">One-Time Setup</div>
+            <div class="commercial-value">&#8377;2.25&ndash;3.15L</div>
+            <div class="commercial-detail">Theme customization, PDP fixes, PageSpeed, GA4 setup, app integration</div>
+          </div>
+          <div class="commercial-card">
+            <div class="commercial-icon">&#128260;</div>
+            <div class="commercial-label">Monthly Ongoing</div>
+            <div class="commercial-value">&#8377;19K&ndash;32K</div>
+            <div class="commercial-detail">Maintenance, optimization, A/B testing + new app stack</div>
+          </div>
+          <div class="commercial-card accent">
+            <div class="commercial-icon">&#128200;</div>
+            <div class="commercial-label">Expected Revenue Uplift</div>
+            <div class="commercial-value">+&#8377;8&ndash;12L/mo</div>
+            <div class="commercial-detail">Payback in &lt;1 month &mdash; 12-month ROI of 2,400&ndash;4,800%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="fomo-strip">
+        <div class="fomo-card accent">
+          <div class="fomo-value">&#8377;27K&ndash;40K</div>
+          <div class="fomo-label">Revenue lost <strong>every single day</strong> without these fixes</div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================================================
          TAB 1: OVERVIEW
          ============================================================ -->
-    <section class="tab-content active" id="tab-overview">
+    <section class="tab-content" id="tab-overview">
       <div class="overview-hero">
         <div class="overview-hero-content">
           <h1>Cubelelo &mdash; CRO Audit &amp; Store Revamp Proposal</h1>

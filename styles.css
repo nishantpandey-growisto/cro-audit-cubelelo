@@ -3099,6 +3099,411 @@ table {
   border-radius: 20px;
 }
 
+/* --- Tab 0: Agenda --- */
+
+/* Agenda Hero */
+.agenda-hero {
+  background: linear-gradient(135deg, #367588 0%, #2a5a6a 40%, #1d3d4a 100%);
+  color: var(--color-text-light);
+  border-radius: var(--radius-xl);
+  padding: 56px 48px;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.agenda-hero::after {
+  content: '';
+  position: absolute;
+  right: -80px;
+  bottom: -80px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(227, 93, 52, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.agenda-hero::before {
+  content: '';
+  position: absolute;
+  right: 60px;
+  top: -50px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.agenda-hero-eyebrow {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.7;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.agenda-hero h1 {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--color-text-light);
+  margin-bottom: 12px;
+  line-height: 1.15;
+}
+
+.agenda-hero-sub {
+  font-size: 17px;
+  opacity: 0.9;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Journey Track (4 Steps) */
+.journey-track {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  margin: 32px 0 24px;
+  padding: 0 8px;
+}
+
+.journey-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 0 0 auto;
+  width: 160px;
+  position: relative;
+}
+
+.journey-node {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  border: 3px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  transition: var(--transition);
+}
+
+.journey-step.completed .journey-node {
+  background: var(--color-success);
+  border-color: var(--color-success);
+  color: #fff;
+}
+
+.journey-step.current .journey-node {
+  background: var(--color-tertiary);
+  border-color: var(--color-tertiary);
+  color: #fff;
+  box-shadow: 0 0 0 6px rgba(227, 93, 52, 0.15);
+}
+
+.journey-check {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.journey-num {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.journey-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.journey-detail {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.journey-badge {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-tertiary);
+  background: var(--color-tertiary-light);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.journey-connector {
+  width: 48px;
+  height: 3px;
+  margin-top: 23px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.journey-connector.done {
+  background: var(--color-success);
+}
+
+.journey-connector.upcoming {
+  background: var(--color-border);
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--color-text-faint) 0,
+    var(--color-text-faint) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  background-size: 100% 100%;
+}
+
+/* TOC Grid */
+.toc-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toc-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.toc-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  transform: translateX(4px);
+}
+
+.toc-card.highlight {
+  border-color: var(--color-tertiary);
+  background: rgba(227, 93, 52, 0.03);
+}
+
+.toc-card.highlight:hover {
+  border-color: var(--color-tertiary);
+  box-shadow: 0 4px 16px rgba(227, 93, 52, 0.12);
+}
+
+.toc-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.toc-card.highlight .toc-number {
+  background: var(--color-tertiary-light);
+  color: var(--color-tertiary);
+}
+
+.toc-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.toc-body h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.toc-body p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.toc-arrow {
+  font-size: 18px;
+  color: var(--color-text-faint);
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.toc-card:hover .toc-arrow {
+  color: var(--color-primary);
+  transform: translateX(4px);
+}
+
+.toc-card.highlight:hover .toc-arrow {
+  color: var(--color-tertiary);
+}
+
+/* Commercials Highlight */
+.commercials-highlight {
+  border: 2px solid var(--color-tertiary);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, rgba(227, 93, 52, 0.02) 0%, var(--color-bg) 100%);
+}
+
+.commercial-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.commercial-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.commercial-card.accent {
+  border-color: var(--color-tertiary);
+  background: rgba(227, 93, 52, 0.04);
+}
+
+.commercial-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.commercial-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+.commercial-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.commercial-card.accent .commercial-value {
+  color: var(--color-tertiary);
+}
+
+.commercial-detail {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.link-accent {
+  color: var(--color-tertiary);
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.link-accent:hover {
+  color: var(--color-tertiary-dark);
+}
+
+/* Journey Track Responsive */
+@media (max-width: 768px) {
+  .agenda-hero {
+    padding: 36px 24px;
+  }
+
+  .agenda-hero h1 {
+    font-size: 28px;
+  }
+
+  .agenda-hero-sub {
+    font-size: 15px;
+  }
+
+  .journey-track {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+  }
+
+  .journey-step {
+    flex-direction: row;
+    width: 100%;
+    text-align: left;
+    gap: 12px;
+    padding: 0;
+  }
+
+  .journey-node {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .journey-connector {
+    width: 3px;
+    height: 24px;
+    margin: 4px 0 4px 22px;
+  }
+
+  .journey-badge {
+    margin-top: 4px;
+  }
+
+  .toc-card {
+    padding: 14px 16px;
+  }
+
+  .commercial-card {
+    padding: 20px 16px;
+  }
+
+  .commercial-value {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .agenda-hero h1 {
+    font-size: 24px;
+  }
+
+  .journey-step {
+    gap: 10px;
+  }
+
+  .journey-node {
+    width: 40px;
+    height: 40px;
+  }
+
+  .journey-connector {
+    margin-left: 18px;
+  }
+}
+
 /* --- Tab 1 & 7: FOMO Strip --- */
 .fomo-strip {
   display: flex;
@@ -4608,7 +5013,8 @@ tr.subtotal-row td {
   }
 
   .overview-hero,
-  .hero-banner {
+  .hero-banner,
+  .agenda-hero {
     background: #367588 !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
