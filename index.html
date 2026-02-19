@@ -56,38 +56,175 @@
       <div class="sidebar-project">CRO Audit &amp; Revamp Proposal</div>
     </div>
     <div class="sidebar-nav">
-      <div class="nav-item active" onclick="switchTab('agenda')" data-tab="agenda">
-        <span class="nav-icon">&#128218;</span>
-        <span class="nav-label">Agenda</span>
+
+      <!-- Agenda (no submenu) -->
+      <div class="nav-item active" data-tab="agenda">
+        <div class="nav-item-header" onclick="switchTab('agenda')">
+          <span class="nav-icon">📋</span>
+          <span class="nav-label">Agenda</span>
+          <span class="nav-progress complete">✓</span>
+        </div>
       </div>
-      <div class="nav-item" onclick="switchTab('cro-audit')" data-tab="cro-audit">
-        <span class="nav-icon">&#128202;</span>
-        <span class="nav-label">Data Analytics Review</span>
+
+      <!-- Data Analytics Review (expandable) -->
+      <div class="nav-item" data-tab="cro-audit">
+        <div class="nav-item-header" onclick="switchTab('cro-audit')">
+          <span class="nav-icon">📊</span>
+          <span class="nav-label">Data Analytics Review</span>
+          <span class="nav-chevron" onclick="event.stopPropagation();toggleNavSubmenu(this.closest('.nav-item'))">▶</span>
+        </div>
+        <div class="nav-submenu">
+          <div class="nav-sub-item" onclick="scrollToSection('cro-audit','key-metrics')">
+            <span class="nav-sub-icon">📈</span>
+            <span>Key Metrics &amp; Revenue</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('cro-audit','cro-score')">
+            <span class="nav-sub-icon">🎯</span>
+            <span>CRO Score (44/100)</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('cro-audit','shopify-verification')">
+            <span class="nav-sub-icon">🔍</span>
+            <span>GA4 vs Shopify Verification</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('cro-audit','device-perf')">
+            <span class="nav-sub-icon">📱</span>
+            <span>Device Performance</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('cro-audit','pagespeed')">
+            <span class="nav-sub-icon">⚡</span>
+            <span>PageSpeed &amp; Core Web Vitals</span>
+          </div>
+        </div>
       </div>
-      <div class="nav-item" onclick="switchTab('page-analysis')" data-tab="page-analysis">
-        <span class="nav-icon">&#128196;</span>
-        <span class="nav-label">Conversion Audit</span>
+
+      <!-- Conversion Audit (expandable) -->
+      <div class="nav-item" data-tab="page-analysis">
+        <div class="nav-item-header" onclick="switchTab('page-analysis')">
+          <span class="nav-icon">📄</span>
+          <span class="nav-label">Conversion Audit</span>
+          <span class="nav-chevron" onclick="event.stopPropagation();toggleNavSubmenu(this.closest('.nav-item'))">▶</span>
+        </div>
+        <div class="nav-submenu">
+          <div class="nav-sub-item" onclick="scrollToSection('page-analysis','homepage-analysis', true)">
+            <span class="nav-sub-icon">🏠</span>
+            <span>Homepage (16 params)</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('page-analysis','collection-analysis', true)">
+            <span class="nav-sub-icon">📦</span>
+            <span>Collection Page (15)</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('page-analysis','pdp-analysis', true)">
+            <span class="nav-sub-icon">🏷️</span>
+            <span>Product Page (25)</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('page-analysis','cart-analysis', true)">
+            <span class="nav-sub-icon">🛒</span>
+            <span>Cart (17)</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('page-analysis','checkout-analysis', true)">
+            <span class="nav-sub-icon">💳</span>
+            <span>Checkout (14)</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('page-analysis','seo-analysis', true)">
+            <span class="nav-sub-icon">🔧</span>
+            <span>Technical SEO (18)</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('page-analysis','tracking-analysis', true)">
+            <span class="nav-sub-icon">📡</span>
+            <span>Tracking (15)</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('page-analysis','performance-analysis', true)">
+            <span class="nav-sub-icon">⚡</span>
+            <span>Performance</span>
+          </div>
+        </div>
       </div>
-      <div class="nav-item" onclick="switchTab('features')" data-tab="features">
-        <span class="nav-icon">&#9889;</span>
-        <span class="nav-label">Features &amp; Apps</span>
+
+      <!-- Features & Apps (expandable) -->
+      <div class="nav-item" data-tab="features">
+        <div class="nav-item-header" onclick="switchTab('features')">
+          <span class="nav-icon">⚡</span>
+          <span class="nav-label">Features &amp; Apps</span>
+          <span class="nav-chevron" onclick="event.stopPropagation();toggleNavSubmenu(this.closest('.nav-item'))">▶</span>
+        </div>
+        <div class="nav-submenu">
+          <div class="nav-sub-item" onclick="scrollToSection('features','phase-1')">
+            <span class="nav-sub-icon">🔥</span>
+            <span>Phase 1: Quick Wins</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('features','phase-2')">
+            <span class="nav-sub-icon">⚙️</span>
+            <span>Phase 2: Core Features</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('features','puzzle-specific')">
+            <span class="nav-sub-icon">🧩</span>
+            <span>Puzzle-Specific</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('features','app-stack')">
+            <span class="nav-sub-icon">📦</span>
+            <span>App Stack</span>
+          </div>
+        </div>
       </div>
-      <div class="nav-item" onclick="switchTab('themes')" data-tab="themes">
-        <span class="nav-icon">&#127912;</span>
-        <span class="nav-label">Theme Evaluation</span>
+
+      <!-- Theme Evaluation (no submenu) -->
+      <div class="nav-item" data-tab="themes">
+        <div class="nav-item-header" onclick="switchTab('themes')">
+          <span class="nav-icon">🎨</span>
+          <span class="nav-label">Theme Evaluation</span>
+        </div>
       </div>
-      <div class="nav-item" onclick="switchTab('mockups')" data-tab="mockups">
-        <span class="nav-icon">&#128421;</span>
-        <span class="nav-label">Mockup Preview</span>
+
+      <!-- Mockup Preview (expandable) -->
+      <div class="nav-item" data-tab="mockups">
+        <div class="nav-item-header" onclick="switchTab('mockups')">
+          <span class="nav-icon">🖥️</span>
+          <span class="nav-label">Mockup Preview</span>
+          <span class="nav-chevron" onclick="event.stopPropagation();toggleNavSubmenu(this.closest('.nav-item'))">▶</span>
+        </div>
+        <div class="nav-submenu">
+          <div class="nav-sub-item" onclick="scrollToSection('mockups','mockup-homepage')">
+            <span class="nav-sub-icon">🏠</span>
+            <span>Homepage Mockup</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('mockups','mockup-pdp')">
+            <span class="nav-sub-icon">🏷️</span>
+            <span>PDP Mockup</span>
+          </div>
+        </div>
       </div>
-      <div class="nav-item" onclick="switchTab('investment')" data-tab="investment">
-        <span class="nav-icon">&#128176;</span>
-        <span class="nav-label">Investment &amp; ROI</span>
+
+      <!-- Investment & ROI (no submenu) -->
+      <div class="nav-item" data-tab="investment">
+        <div class="nav-item-header" onclick="switchTab('investment')">
+          <span class="nav-icon">💰</span>
+          <span class="nav-label">Investment &amp; ROI</span>
+        </div>
       </div>
-      <div class="nav-item" onclick="switchTab('next-steps')" data-tab="next-steps">
-        <span class="nav-icon">&#128640;</span>
-        <span class="nav-label">Next Steps</span>
+
+      <!-- Next Steps (expandable) -->
+      <div class="nav-item" data-tab="next-steps">
+        <div class="nav-item-header" onclick="switchTab('next-steps')">
+          <span class="nav-icon">🚀</span>
+          <span class="nav-label">Next Steps</span>
+          <span class="nav-chevron" onclick="event.stopPropagation();toggleNavSubmenu(this.closest('.nav-item'))">▶</span>
+        </div>
+        <div class="nav-submenu">
+          <div class="nav-sub-item" onclick="scrollToSection('next-steps','remaining-journey')">
+            <span class="nav-sub-icon">📋</span>
+            <span>Remaining Journey</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('next-steps','gantt-roadmap')">
+            <span class="nav-sub-icon">📊</span>
+            <span>Implementation Roadmap</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('next-steps','what-we-need')">
+            <span class="nav-sub-icon">✅</span>
+            <span>What We Need</span>
+          </div>
+        </div>
       </div>
+
     </div>
     <div class="sidebar-footer">
       <p>Prepared by <strong>Growisto</strong></p>
@@ -196,7 +333,7 @@
             <div class="toc-number">5</div>
             <div class="toc-body">
               <h3>Mockup Preview</h3>
-              <p>Interactive homepage &amp; PDP mockups using your real products</p>
+              <p>Interactive mockups with numbered comparison markers &mdash; hover to see what&rsquo;s new</p>
             </div>
             <span class="toc-arrow">&#8594;</span>
           </div>
@@ -261,7 +398,7 @@
     <section class="tab-content" id="tab-cro-audit">
 
       <!-- Key Metrics Snapshot (moved from Overview) -->
-      <div class="section-card">
+      <div class="section-card" id="key-metrics">
         <h2 class="section-title">Key Metrics Snapshot</h2>
         <p class="section-subtitle">GA4 + Shopify Admin data &mdash; 28 days (Jan 19 &ndash; Feb 15, 2026)</p>
         <div class="grid-3">
@@ -346,7 +483,7 @@
       </div>
 
       <!-- CRO Score -->
-      <div class="section-card">
+      <div class="section-card" id="cro-score">
         <h2 class="section-title">CRO Score</h2>
         <p class="section-subtitle">5-component analysis with hard caps applied</p>
 
@@ -589,7 +726,7 @@
         </div>
       </div>
 
-      <div class="section-card">
+      <div class="section-card" id="device-perf">
         <h2 class="section-title">Device Performance</h2>
         <p class="section-subtitle">Desktop conversion is catastrophically low</p>
         <div class="grid-3">
@@ -617,7 +754,7 @@
         </div>
       </div>
 
-      <div class="section-card">
+      <div class="section-card" id="pagespeed">
         <h2 class="section-title">PageSpeed &amp; Core Web Vitals</h2>
         <div class="grid-2">
           <div class="pagespeed-card">
@@ -1065,7 +1202,7 @@
       </div>
 
       <!-- ── PHASE 1: QUICK WINS ── -->
-      <div class="section-card">
+      <div class="section-card" id="phase-1">
         <h3 class="section-title">Phase 1: Quick Wins <span style="font-weight:400;font-size:14px;color:var(--color-text-secondary);">(Weeks 1&ndash;3)</span></h3>
         <p class="section-subtitle">High-impact features that can go live fast with minimal development</p>
         <div class="table-wrapper">
@@ -1094,7 +1231,7 @@
       </div>
 
       <!-- ── PHASE 2: MEDIUM EFFORT ── -->
-      <div class="section-card">
+      <div class="section-card" id="phase-2">
         <h3 class="section-title">Phase 2: Medium Effort <span style="font-weight:400;font-size:14px;color:var(--color-text-secondary);">(Weeks 4&ndash;8)</span></h3>
         <p class="section-subtitle">Features requiring app setup, metafield configuration, or moderate development</p>
         <div class="table-wrapper">
@@ -1145,7 +1282,7 @@
       </div>
 
       <!-- ── PUZZLE-SPECIFIC FEATURES ── -->
-      <div class="section-card">
+      <div class="section-card" id="puzzle-specific">
         <h3 class="section-title">Cubelelo-Specific: Speedcubing Features</h3>
         <p class="section-subtitle">Features unique to the speedcubing niche &mdash; no other Indian puzzle store offers these</p>
         <div class="callout info">
@@ -1169,7 +1306,7 @@
       </div>
 
       <!-- ── APP STACK ── -->
-      <div class="section-card">
+      <div class="section-card" id="app-stack">
         <h3 class="section-title">Recommended App Stack</h3>
         <table class="app-table">
           <thead><tr><th>Need</th><th>Current</th><th>Recommended</th><th>Est. Monthly</th><th>Status</th></tr></thead>
@@ -1487,21 +1624,21 @@
          TAB 6: MOCKUP PREVIEW
          ============================================================ -->
     <section class="tab-content" id="tab-mockups">
-      <div class="section-card">
-        <h2 class="section-title">Homepage Mockup &mdash; Eurus Improved</h2>
-        <p class="section-subtitle">Your current Eurus theme with 7 new high-impact sections added. Purple <span style="color:#7c3aed;font-weight:600;">NEW</span> badges highlight every addition.</p>
+      <div class="section-card" id="mockup-homepage">
+        <h2 class="section-title">Interactive Mockups &mdash; Eurus Improved</h2>
+        <p class="section-subtitle">Hover over the <span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:11px;font-weight:700;align-items:center;justify-content:center;vertical-align:middle;">1</span> numbered markers to see exactly what&rsquo;s new or enhanced compared to your current site.</p>
 
         <!-- Key improvements summary -->
         <div class="metrics-grid" style="margin-bottom:24px;">
           <div class="metric-card">
             <div class="metric-value" style="font-size:2rem;">12</div>
-            <div class="metric-label">Total Sections</div>
-            <div class="metric-detail">7 new + 5 enhanced</div>
+            <div class="metric-label">Homepage Changes</div>
+            <div class="metric-detail">7 new + 5 enhanced sections</div>
           </div>
           <div class="metric-card">
-            <div class="metric-value" style="font-size:2rem;color:var(--color-tertiary);">7</div>
-            <div class="metric-label">New Sections</div>
-            <div class="metric-detail">Trust bar, Newsletter, Reviews &hellip;</div>
+            <div class="metric-value" style="font-size:2rem;color:var(--color-tertiary);">11</div>
+            <div class="metric-label">PDP Changes</div>
+            <div class="metric-detail">9 new + 2 enhanced features</div>
           </div>
           <div class="metric-card">
             <div class="metric-value" style="font-size:2rem;">4</div>
@@ -1509,11 +1646,21 @@
             <div class="metric-detail">GAN 356 ME, MoYu, Drift, DaYan</div>
           </div>
           <div class="metric-card">
-            <div class="metric-value" style="font-size:2rem;color:#16a34a;">+₹8-12L</div>
+            <div class="metric-value" style="font-size:2rem;color:#16a34a;">+&#8377;8-12L</div>
             <div class="metric-label">Revenue Potential</div>
             <div class="metric-detail">From these improvements</div>
           </div>
         </div>
+      </div>
+
+      <!-- Mockup selector: Homepage / PDP -->
+      <div class="viewport-toggle" style="margin-bottom:0;">
+        <button class="viewport-btn active" data-mockup="homepage" onclick="switchMockup('homepage')">
+          <span style="margin-right:6px;">🏠</span> Homepage
+        </button>
+        <button class="viewport-btn" data-mockup="pdp" onclick="switchMockup('pdp')">
+          <span style="margin-right:6px;">🏷️</span> Product Page (PDP)
+        </button>
       </div>
 
       <!-- Viewport toggle -->
@@ -1535,7 +1682,7 @@
               <span class="browser-dot yellow"></span>
               <span class="browser-dot green"></span>
             </div>
-            <div class="browser-url">cubelelo.com — Proposed Homepage (Eurus Improved)</div>
+            <div class="browser-url">cubelelo.com &mdash; Proposed Homepage (Eurus Improved)</div>
           </div>
           <div class="browser-body">
             <div class="iframe-loading" id="mockupLoading">
@@ -1549,30 +1696,62 @@
               style="width:100%;border:none;height:5000px;"
               onload="document.getElementById('mockupLoading').classList.add('hidden');"
             ></iframe>
+            <iframe
+              id="pdpMockupIframe"
+              src="mockups/pdp-moyu-rs3m.html"
+              title="Cubelelo PDP Mockup — MoYu RS3M v5"
+              style="width:100%;border:none;height:6000px;display:none;"
+              onload="document.getElementById('mockupLoading').classList.add('hidden');"
+            ></iframe>
           </div>
         </div>
       </div>
 
-      <!-- Section-by-section breakdown -->
-      <div class="section-card mt-24">
-        <h3 class="section-title">What Changed — Section by Section</h3>
+      <!-- Homepage: Section-by-section breakdown -->
+      <div class="section-card mt-24" id="homepage-breakdown">
+        <h3 class="section-title">Homepage &mdash; What Changed</h3>
+        <p class="section-subtitle">12 numbered markers on the mockup above. Hover each to see the comparison.</p>
         <table class="data-table">
           <thead>
-            <tr><th>#</th><th>Section</th><th>Status</th><th>Funnel Fix</th></tr>
+            <tr><th style="width:36px;">#</th><th>Section</th><th>Status</th><th>Funnel Fix</th></tr>
           </thead>
           <tbody>
-            <tr><td>1</td><td>Announcement Bar</td><td><span class="status-badge status-good">Enhanced</span></td><td>Urgency + free shipping threshold</td></tr>
-            <tr><td>2</td><td>Header + Trust Bar</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Trust above fold → reduces bounce (currently 1m 26s avg engagement)</td></tr>
-            <tr><td>3</td><td>Category Navigation</td><td><span class="status-badge status-good">Enhanced</span></td><td>10 visual categories → faster product discovery</td></tr>
-            <tr><td>4</td><td>Hero Banner</td><td><span class="status-badge status-good">Enhanced</span></td><td>Single strong CTA, limited-time offers</td></tr>
-            <tr><td>5</td><td>Bestsellers Grid</td><td><span class="status-badge status-good">Enhanced</span></td><td>Wishlist + difficulty badges + quick-add → fixes 5.3% desktop ATC</td></tr>
-            <tr><td>6</td><td>Shop by Age Group</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Gift buyer segment → increases AOV for non-cubers</td></tr>
-            <tr><td>7</td><td>Special Offers</td><td><span class="status-badge status-good">Enhanced</span></td><td>Countdown timers + urgency → higher engagement time</td></tr>
-            <tr><td>8</td><td>Blog with Product CTAs</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Monetizes 43K blog visitors (18% traffic, &lt;0.1% revenue)</td></tr>
-            <tr><td>9</td><td>Newsletter Signup</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Builds email list &rarr; no email tool currently installed</td></tr>
-            <tr><td>10</td><td>Customer Reviews</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Verified purchase badges → social proof on homepage</td></tr>
-            <tr><td>11</td><td>Delivery Estimation</td><td><span class="status-badge status-critical">✨ NEW</span></td><td>Shipping transparency → fixes 38.7% checkout abandonment</td></tr>
-            <tr><td>12</td><td>Footer</td><td><span class="status-badge status-good">Enhanced</span></td><td>Payment trust + newsletter + quick links</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">1</span></td><td>Announcement Bar</td><td><span class="status-badge status-good">Enhanced</span></td><td>Urgency + free shipping threshold (&#8377;999)</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">2</span></td><td>Trust Bar</td><td><span class="status-badge status-critical">NEW</span></td><td>4 trust signals above fold &rarr; reduces bounce</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">3</span></td><td>Mega Menu</td><td><span class="status-badge status-critical">NEW</span></td><td>4-column category dropdown with brand navigation</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">4</span></td><td>Hero Banner</td><td><span class="status-badge status-good">Enhanced</span></td><td>Single focused CTA, limited-time offers</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">5</span></td><td>Bestsellers Grid</td><td><span class="status-badge status-good">Enhanced</span></td><td>Difficulty badges + wishlist + quick-view &rarr; fixes 5.3% ATC</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">6</span></td><td>Shop by Age</td><td><span class="status-badge status-critical">NEW</span></td><td>Gift buyer segmentation &rarr; increases AOV</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">7</span></td><td>Special Offers</td><td><span class="status-badge status-good">Enhanced</span></td><td>Countdown timers + coupon codes &rarr; urgency</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">8</span></td><td>Blog + Product CTAs</td><td><span class="status-badge status-critical">NEW</span></td><td>Monetizes 43K blog visitors (&lt;0.1% currently convert)</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">9</span></td><td>Newsletter Signup</td><td><span class="status-badge status-critical">NEW</span></td><td>Email capture &rarr; no email tool currently installed</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">10</span></td><td>Customer Reviews</td><td><span class="status-badge status-critical">NEW</span></td><td>Verified badges &rarr; social proof on homepage</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">11</span></td><td>Delivery Estimation</td><td><span class="status-badge status-critical">NEW</span></td><td>Pincode checker &rarr; fixes 38.7% checkout abandonment</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">12</span></td><td>Footer</td><td><span class="status-badge status-good">Enhanced</span></td><td>Payment badges + quick links + newsletter</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- PDP: Section-by-section breakdown -->
+      <div class="section-card mt-24" id="mockup-pdp" style="display:none;">
+        <h3 class="section-title">Product Page (PDP) &mdash; What Changed</h3>
+        <p class="section-subtitle">MoYu RS3M v5 &mdash; 11 numbered markers showing new features vs your current PDP.</p>
+        <table class="data-table">
+          <thead>
+            <tr><th style="width:36px;">#</th><th>Feature</th><th>Status</th><th>Why It Matters</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">1</span></td><td>Difficulty Badge</td><td><span class="status-badge status-critical">NEW</span></td><td>Metafield-powered skill indicator &rarr; beginners can self-select</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">2</span></td><td>Competition Badge</td><td><span class="status-badge status-critical">NEW</span></td><td>Auto-generated WCA eligibility badge from metafields</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">3</span></td><td>Pincode Checker</td><td><span class="status-badge status-critical">NEW</span></td><td>Real-time delivery estimation &rarr; currently no shipping info until checkout</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">4</span></td><td>Stock Urgency</td><td><span class="status-badge status-good">Enhanced</span></td><td>Dynamic &ldquo;Only X left&rdquo; counter &rarr; creates purchase urgency</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">5</span></td><td>PDP Trust Badges</td><td><span class="status-badge status-critical">NEW</span></td><td>4 trust signals on PDP &rarr; currently no trust elements</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">6</span></td><td>Frequently Bought Together</td><td><span class="status-badge status-critical">NEW</span></td><td>Smart bundles (cube+lube+bag) &rarr; +15-25% AOV</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">7</span></td><td>Compare Products</td><td><span class="status-badge status-critical">NEW</span></td><td>Side-by-side specs vs competing cubes &rarr; reduces choice paralysis</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">8</span></td><td>Product Video</td><td><span class="status-badge status-good">Enhanced</span></td><td>Embedded unboxing video &rarr; +40-80% PDP conversion</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">9</span></td><td>Customer Photos (UGC)</td><td><span class="status-badge status-critical">NEW</span></td><td>User-generated content gallery &rarr; authentic social proof</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">10</span></td><td>Back-in-Stock Signup</td><td><span class="status-badge status-critical">NEW</span></td><td>Email notification for OOS variants &rarr; recovers lost sales</td></tr>
+            <tr><td><span style="display:inline-flex;width:22px;height:22px;background:#7c3aed;color:#fff;border-radius:50%;font-size:10px;font-weight:700;align-items:center;justify-content:center;">11</span></td><td>Recently Viewed</td><td><span class="status-badge status-critical">NEW</span></td><td>Browsing history carousel &rarr; keeps visitors engaged longer</td></tr>
           </tbody>
         </table>
       </div>
@@ -1580,13 +1759,14 @@
       <div class="section-card">
         <h3 class="section-title">Mockup Notes</h3>
         <div class="info-callout">
-          <strong>This is a visual prototype, not a finished theme.</strong> It demonstrates proposed layout changes, new sections, and content strategy using your real product data. Actual implementation will use your Eurus theme customizer + custom Liquid/CSS development.
+          <strong>These are visual prototypes, not finished themes.</strong> They demonstrate proposed layout changes, new sections, and content strategy using your real product data. Actual implementation will use your Eurus theme customizer + custom Liquid/CSS development.
         </div>
         <ul style="margin-top:12px;color:var(--color-text-secondary);line-height:1.8;">
           <li>All product images, prices, and ratings are from your live store (cubelelo.com)</li>
-          <li>Purple <span style="color:#7c3aed;font-weight:700;">✨ NEW</span> badges mark sections that don&rsquo;t exist on your current homepage</li>
-          <li>Mobile responsive — use the viewport toggle above to preview both breakpoints</li>
-          <li>Each new section is tied to a specific funnel problem from our GA4 audit</li>
+          <li>Purple <span style="display:inline-flex;width:18px;height:18px;background:#7c3aed;color:#fff;border-radius:50%;font-size:9px;font-weight:700;align-items:center;justify-content:center;vertical-align:middle;">1</span> numbered markers show what&rsquo;s new or enhanced &mdash; hover for comparison details</li>
+          <li>Toggle between <strong>Homepage</strong> and <strong>PDP</strong> mockups using the buttons above</li>
+          <li>Mobile responsive &mdash; use the viewport toggle to preview both breakpoints</li>
+          <li>Each change is tied to a specific funnel problem from our GA4 &amp; CRO audit</li>
         </ul>
       </div>
     </section>
@@ -1729,7 +1909,7 @@
         <p class="section-subtitle">Where we go from here</p>
       </div>
 
-      <div class="section-card">
+      <div class="section-card" id="remaining-journey">
         <h3 class="section-title">Remaining Journey</h3>
         <p class="section-subtitle">Steps 1&ndash;4 complete (or in progress). Here&rsquo;s what&rsquo;s next.</p>
         <div class="next-steps-grid">
@@ -1766,7 +1946,192 @@
         </div>
       </div>
 
-      <div class="section-card">
+      <!-- ── GANTT CHART: IMPLEMENTATION ROADMAP ── -->
+      <div class="section-card" id="gantt-roadmap">
+        <h3 class="section-title">Implementation Roadmap</h3>
+        <p class="section-subtitle">12-week delivery plan from kickoff to post-launch monitoring</p>
+
+        <div class="gantt-wrapper">
+          <div class="gantt-chart">
+            <!-- Header row -->
+            <div class="gantt-header">
+              <div class="gantt-header-cell">Task</div>
+              <div class="gantt-header-cell">W1</div>
+              <div class="gantt-header-cell">W2</div>
+              <div class="gantt-header-cell">W3</div>
+              <div class="gantt-header-cell">W4</div>
+              <div class="gantt-header-cell">W5</div>
+              <div class="gantt-header-cell">W6</div>
+              <div class="gantt-header-cell">W7</div>
+              <div class="gantt-header-cell">W8</div>
+              <div class="gantt-header-cell">W9</div>
+              <div class="gantt-header-cell">W10</div>
+              <div class="gantt-header-cell">W11</div>
+              <div class="gantt-header-cell">W12</div>
+            </div>
+
+            <!-- Requirement Gathering: W1 -->
+            <div class="gantt-row">
+              <div class="gantt-task-name"><span class="task-icon">📋</span> Requirement Gathering</div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar req" style="width:100%;left:0;">W1</div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- Phase 1 Header: W1-3 -->
+            <div class="gantt-row phase-header">
+              <div class="gantt-task-name"><span class="task-icon">🔥</span> <strong>Phase 1: Quick Wins</strong></div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar phase-1" style="width:300%;left:0;"></div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- Phase 1 Sub: Klaviyo W1-2 -->
+            <div class="gantt-row">
+              <div class="gantt-task-name sub-task">Klaviyo setup + 3 email flows</div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar phase-1" style="width:200%;left:0;"></div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- Phase 1 Sub: Free shipping bar W1-2 -->
+            <div class="gantt-row">
+              <div class="gantt-task-name sub-task">Free shipping bar + FBT bundles</div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar phase-1" style="width:200%;left:0;"></div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- Phase 1 Sub: Trust badges W2-3 -->
+            <div class="gantt-row">
+              <div class="gantt-task-name sub-task">Trust badges + delivery widget</div>
+              <div class="gantt-cell"></div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar phase-1" style="width:200%;left:0;"></div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- Phase 1 Sub: Blog CTAs W2-3 -->
+            <div class="gantt-row">
+              <div class="gantt-task-name sub-task">Blog product CTAs</div>
+              <div class="gantt-cell"></div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar phase-1" style="width:200%;left:0;"></div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- Phase 1 Sub: GA4 W1-3 -->
+            <div class="gantt-row">
+              <div class="gantt-task-name sub-task">GA4 event fixes + audiences</div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar phase-1" style="width:300%;left:0;"></div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- Phase 2 Header: W4-8 -->
+            <div class="gantt-row phase-header">
+              <div class="gantt-task-name"><span class="task-icon">⚙️</span> <strong>Phase 2: Core Features</strong></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar phase-2" style="width:500%;left:0;"></div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- Phase 2 Sub: Metafield badges W4-5 -->
+            <div class="gantt-row">
+              <div class="gantt-task-name sub-task">Metafield badge system</div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar phase-2" style="width:200%;left:0;"></div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- Phase 2 Sub: Puzzle filters W4-6 -->
+            <div class="gantt-row">
+              <div class="gantt-task-name sub-task">Puzzle-specific filters</div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar phase-2" style="width:300%;left:0;"></div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- Phase 2 Sub: Desktop PDP W5-7 -->
+            <div class="gantt-row">
+              <div class="gantt-task-name sub-task">Desktop PDP optimization</div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar phase-2" style="width:300%;left:0;"></div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- Phase 2 Sub: Homepage sections W5-8 -->
+            <div class="gantt-row">
+              <div class="gantt-task-name sub-task">Homepage new sections</div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar phase-2" style="width:400%;left:0;"></div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- Phase 2 Sub: PageSpeed W6-8 -->
+            <div class="gantt-row">
+              <div class="gantt-task-name sub-task">PageSpeed optimization</div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar phase-2" style="width:300%;left:0;"></div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- Phase 2 Sub: Advanced search W4-5 -->
+            <div class="gantt-row">
+              <div class="gantt-task-name sub-task">Advanced search (Boost)</div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar phase-2" style="width:200%;left:0;"></div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- Phase 2 Sub: EMI W7-8 -->
+            <div class="gantt-row">
+              <div class="gantt-task-name sub-task">EMI integration (Razorpay)</div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar phase-2" style="width:200%;left:0;"></div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- QA & Testing: W7-9 -->
+            <div class="gantt-row">
+              <div class="gantt-task-name"><span class="task-icon">🧪</span> QA &amp; Testing</div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar qa" style="width:300%;left:0;">QA</div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- UAT: W9-10 -->
+            <div class="gantt-row">
+              <div class="gantt-task-name"><span class="task-icon">👥</span> UAT (Client Review)</div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar uat" style="width:200%;left:0;">UAT</div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- Go Live: W10 -->
+            <div class="gantt-row">
+              <div class="gantt-task-name"><span class="task-icon">🚀</span> Go Live</div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar launch" style="width:100%;left:0;">LIVE</div></div></div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div>
+            </div>
+
+            <!-- Post-Launch: W11-12 -->
+            <div class="gantt-row">
+              <div class="gantt-task-name"><span class="task-icon">📈</span> Post-Launch Monitoring</div>
+              <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+              <div class="gantt-cell"><div class="gantt-bar-track"><div class="gantt-bar monitor" style="width:200%;left:0;">Monitor</div></div></div>
+              <div class="gantt-cell"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="gantt-legend">
+          <div class="gantt-legend-item"><span class="gantt-legend-dot" style="background:linear-gradient(90deg,#06b6d4,#0891b2);"></span> Requirement Gathering</div>
+          <div class="gantt-legend-item"><span class="gantt-legend-dot" style="background:linear-gradient(90deg,#10b981,#059669);"></span> Phase 1: Quick Wins</div>
+          <div class="gantt-legend-item"><span class="gantt-legend-dot" style="background:linear-gradient(90deg,#3b82f6,#2563eb);"></span> Phase 2: Core Features</div>
+          <div class="gantt-legend-item"><span class="gantt-legend-dot" style="background:linear-gradient(90deg,#8b5cf6,#7c3aed);"></span> QA &amp; Testing</div>
+          <div class="gantt-legend-item"><span class="gantt-legend-dot" style="background:linear-gradient(90deg,#f59e0b,#d97706);"></span> UAT</div>
+          <div class="gantt-legend-item"><span class="gantt-legend-dot" style="background:linear-gradient(90deg,#e35d34,#c94d28);"></span> Go Live</div>
+          <div class="gantt-legend-item"><span class="gantt-legend-dot" style="background:linear-gradient(90deg,#64748b,#475569);"></span> Monitoring</div>
+        </div>
+      </div>
+
+      <div class="section-card" id="what-we-need">
         <h3 class="section-title">What We Need From You</h3>
         <div class="checklist-grid">
           <div class="checklist-item">
@@ -1827,19 +2192,89 @@
       }
     });
 
-    // Tab Navigation
+    // ── Tab Navigation (Enhanced for mega menu) ──
     function switchTab(tabId) {
+      // Switch tab content
       document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
       document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
       document.getElementById('tab-' + tabId).classList.add('active');
-      document.querySelector('[data-tab="' + tabId + '"]').classList.add('active');
+      var activeNav = document.querySelector('[data-tab="' + tabId + '"]');
+      if (activeNav) activeNav.classList.add('active');
       window.scrollTo(0, 0);
+
+      // Auto-expand the active tab's submenu, collapse others
+      document.querySelectorAll('.nav-item').forEach(function(item) {
+        if (item.dataset.tab === tabId) {
+          item.classList.add('expanded');
+        } else {
+          item.classList.remove('expanded');
+        }
+      });
+
       // Close mobile sidebar
       document.getElementById('sidebar').classList.remove('open');
       document.getElementById('sidebarOverlay').classList.remove('visible');
     }
 
-    // Sub-tab Navigation (Page-by-Page)
+    // ── Mega Menu: Toggle submenu expand/collapse ──
+    function toggleNavSubmenu(navItem) {
+      var wasExpanded = navItem.classList.contains('expanded');
+      // Close all submenus first
+      document.querySelectorAll('.nav-item').forEach(function(item) {
+        item.classList.remove('expanded');
+      });
+      // Toggle the clicked one
+      if (!wasExpanded) {
+        navItem.classList.add('expanded');
+      }
+    }
+
+    // ── Scroll to a specific section within a tab ──
+    function scrollToSection(tabId, sectionId, isSubTab) {
+      // First switch to the correct tab
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+      document.getElementById('tab-' + tabId).classList.add('active');
+      var activeNav = document.querySelector('[data-tab="' + tabId + '"]');
+      if (activeNav) {
+        activeNav.classList.add('active');
+        activeNav.classList.add('expanded');
+      }
+
+      // If it's a sub-tab (Conversion Audit), activate the correct sub-tab
+      if (isSubTab) {
+        var subTabContent = document.getElementById(sectionId);
+        if (subTabContent && subTabContent.classList.contains('sub-tab-content')) {
+          // Deactivate all sub-tabs
+          document.querySelectorAll('.sub-tab-content').forEach(c => c.classList.remove('active'));
+          document.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+          // Activate the target sub-tab content
+          subTabContent.classList.add('active');
+          // Find and activate the corresponding sub-tab button
+          var btns = document.querySelectorAll('.sub-tab');
+          btns.forEach(function(btn) {
+            var onclick = btn.getAttribute('onclick') || '';
+            if (onclick.indexOf(sectionId) !== -1) {
+              btn.classList.add('active');
+            }
+          });
+        }
+      }
+
+      // Close mobile sidebar
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('sidebarOverlay').classList.remove('visible');
+
+      // Smooth scroll to the section after a brief delay for tab switch to render
+      setTimeout(function() {
+        var target = document.getElementById(sectionId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+
+    // ── Sub-tab Navigation (Conversion Audit page-by-page tabs) ──
     function switchSubTab(btn, contentId) {
       btn.parentElement.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
       btn.classList.add('active');
@@ -1847,16 +2282,16 @@
       document.getElementById(contentId).classList.add('active');
     }
 
-    // Mobile Sidebar
+    // ── Mobile Sidebar Toggle ──
     function toggleSidebar() {
       document.getElementById('sidebar').classList.toggle('open');
       document.getElementById('sidebarOverlay').classList.toggle('visible');
     }
 
-    // Mockup Viewport Toggle
+    // ── Mockup Viewport Toggle ──
     function switchViewport(mode) {
-      const container = document.getElementById('mockupContainer');
-      const btns = document.querySelectorAll('.viewport-btn');
+      var container = document.getElementById('mockupContainer');
+      var btns = document.querySelectorAll('.viewport-btn');
       btns.forEach(b => b.classList.remove('active'));
       document.querySelector('[data-viewport="' + mode + '"]').classList.add('active');
       container.className = 'mockup-container ' + mode;
@@ -1864,6 +2299,48 @@
       var body = container.querySelector('.browser-body');
       if (body) body.scrollTop = 0;
     }
+
+    // ── Mockup Toggle (Homepage / PDP) ──
+    function switchMockup(type) {
+      var homepageFrame = document.getElementById('mockupIframe');
+      var pdpFrame = document.getElementById('pdpMockupIframe');
+      var homepageBtn = document.querySelector('[data-mockup="homepage"]');
+      var pdpBtn = document.querySelector('[data-mockup="pdp"]');
+      var homepageBreakdown = document.getElementById('homepage-breakdown');
+      var pdpBreakdown = document.getElementById('mockup-pdp');
+      if (type === 'homepage') {
+        if (homepageFrame) homepageFrame.style.display = 'block';
+        if (pdpFrame) pdpFrame.style.display = 'none';
+        if (homepageBtn) homepageBtn.classList.add('active');
+        if (pdpBtn) pdpBtn.classList.remove('active');
+        if (homepageBreakdown) homepageBreakdown.style.display = 'block';
+        if (pdpBreakdown) pdpBreakdown.style.display = 'none';
+        document.querySelector('.browser-url').textContent = 'cubelelo.com \u2014 Proposed Homepage (Eurus Improved)';
+      } else if (type === 'pdp') {
+        if (homepageFrame) homepageFrame.style.display = 'none';
+        if (pdpFrame) pdpFrame.style.display = 'block';
+        if (homepageBtn) homepageBtn.classList.remove('active');
+        if (pdpBtn) pdpBtn.classList.add('active');
+        if (homepageBreakdown) homepageBreakdown.style.display = 'none';
+        if (pdpBreakdown) pdpBreakdown.style.display = 'block';
+        document.querySelector('.browser-url').textContent = 'cubelelo.com \u2014 Proposed PDP (MoYu RS3M v5)';
+      }
+    }
+
+    // ── Scroll Animations (Intersection Observer) ──
+    (function() {
+      var animatedElements = document.querySelectorAll('.animate-on-scroll');
+      if (animatedElements.length === 0) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      animatedElements.forEach(function(el) { observer.observe(el); });
+    })();
   </script>
 
 </body>

@@ -52,6 +52,189 @@
     }
 
     /* ============================================================
+       COMPARISON MARKERS (numbered purple circles with tooltips)
+       ============================================================ */
+    .comparison-marker {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background: #7c3aed;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      z-index: 10;
+      top: 12px;
+      right: 12px;
+      box-shadow: 0 2px 12px rgba(124,58,237,0.4);
+      animation: markerPulse 2.5s infinite;
+      transition: transform 0.2s;
+    }
+    .comparison-marker:hover { transform: scale(1.15); }
+    @keyframes markerPulse {
+      0%, 100% { box-shadow: 0 2px 12px rgba(124,58,237,0.4); }
+      50% { box-shadow: 0 2px 12px rgba(124,58,237,0.4), 0 0 0 8px rgba(124,58,237,0.12); }
+    }
+    .marker-tooltip {
+      position: absolute;
+      bottom: calc(100% + 12px);
+      right: -10px;
+      background: #1d1d20;
+      color: #e2e8f0;
+      padding: 14px 18px;
+      border-radius: 10px;
+      font-size: 12px;
+      line-height: 1.6;
+      width: 280px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.25s ease;
+      z-index: 20;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      pointer-events: none;
+    }
+    .marker-tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      right: 20px;
+      border: 8px solid transparent;
+      border-top-color: #1d1d20;
+    }
+    .comparison-marker:hover .marker-tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(-4px);
+    }
+    .marker-tooltip .tooltip-title {
+      color: #a78bfa;
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .marker-tooltip .tooltip-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .marker-tooltip .tooltip-tag.new { background: rgba(124,58,237,0.2); color: #a78bfa; }
+    .marker-tooltip .tooltip-tag.enhanced { background: rgba(16,185,129,0.15); color: #10b981; }
+    .marker-tooltip .tooltip-current {
+      color: #94a3b8;
+      font-size: 11px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 8px;
+      margin-top: 8px;
+    }
+
+    /* ============================================================
+       MEGA MENU
+       ============================================================ */
+    .mega-nav {
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
+      position: relative;
+      z-index: 90;
+    }
+    .mega-nav-inner {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .mega-nav-item {
+      position: relative;
+      padding: 14px 20px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+      cursor: pointer;
+      transition: color 0.2s, background 0.2s;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .mega-nav-item:hover {
+      color: #1a8a7d;
+      background: #f0fdfa;
+    }
+    .mega-nav-item .nav-icon {
+      font-size: 15px;
+    }
+    .mega-nav-item .dropdown-arrow {
+      font-size: 10px;
+      transition: transform 0.2s;
+    }
+    .mega-nav-item:hover .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+
+    /* Mega Dropdown */
+    .mega-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-top: 3px solid #1a8a7d;
+      border-radius: 0 0 14px 14px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+      padding: 28px 32px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      width: 680px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: all 0.25s ease;
+      z-index: 100;
+    }
+    .mega-nav-item:hover .mega-dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .mega-col-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e2e8f0;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .mega-col-links {
+      list-style: none;
+    }
+    .mega-col-links li {
+      margin-bottom: 8px;
+    }
+    .mega-col-links a {
+      font-size: 13px;
+      color: #64748b;
+      transition: color 0.2s, padding-left 0.2s;
+      display: block;
+      padding: 2px 0;
+    }
+    .mega-col-links a:hover {
+      color: #1a8a7d;
+      padding-left: 4px;
+    }
+
+    /* ============================================================
        1. ANNOUNCEMENT BAR
        ============================================================ */
     .announcement-bar {
@@ -795,6 +978,9 @@
       .footer-grid { grid-template-columns: repeat(2, 1fr); }
       .hero h1 { font-size: 34px; }
       .hero-visual { width: 240px; height: 240px; font-size: 100px; }
+      .mega-nav-inner { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .mega-nav-inner::-webkit-scrollbar { display: none; }
+      .mega-dropdown { width: 520px; grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 20px; }
     }
 
     /* ============================================================
@@ -831,6 +1017,10 @@
       .section { padding: 40px 0; }
       .section-title { font-size: 18px; }
       .category-list { justify-content: flex-start; }
+      .mega-nav-item { padding: 12px 14px; font-size: 12px; }
+      .mega-dropdown { width: 300px; grid-template-columns: 1fr; gap: 16px; padding: 16px; }
+      .comparison-marker { width: 26px; height: 26px; font-size: 11px; top: 8px; right: 8px; }
+      .marker-tooltip { width: 220px; padding: 10px 14px; font-size: 11px; right: -4px; }
     }
     @media (max-width: 400px) {
       .product-grid { grid-template-columns: 1fr; }
@@ -843,7 +1033,16 @@
   <!-- ============================================================
        1. ANNOUNCEMENT BAR
        ============================================================ -->
-  <div class="announcement-bar">
+  <div class="announcement-bar" style="position:relative;">
+    <!-- Marker 1: Announcement Bar -->
+    <div class="comparison-marker" style="top:6px;right:12px;">1
+      <div class="marker-tooltip">
+        <span class="tooltip-tag enhanced">ENHANCED</span>
+        <span class="tooltip-title">Announcement Bar</span>
+        Urgency messaging + free shipping threshold (&#8377;999). Currently just brand name.
+        <div class="tooltip-current">Current site: Static bar showing only "Cubelelo" brand name with no promotional messaging or urgency.</div>
+      </div>
+    </div>
     <strong>SUB-3 WORLD RECORD in 3x3</strong> &nbsp;|&nbsp; Get <strong>10% OFF</strong> on GAN 12 using code &mdash; <strong>WRSUB3</strong>
   </div>
 
@@ -880,7 +1079,15 @@
 
   <!-- TRUST BAR -->
   <div class="trust-bar" style="position:relative;">
-    <span class="annotation">NEW</span>
+    <!-- Marker 2: Trust Bar -->
+    <div class="comparison-marker">2
+      <div class="marker-tooltip">
+        <span class="tooltip-tag new">NEW</span>
+        <span class="tooltip-title">Trust Bar</span>
+        4 trust signals above fold (free shipping, same-day dispatch, returns, 4.8&#9733; rating). Currently missing entirely.
+        <div class="tooltip-current">Current site: No trust bar exists. Visitors see no credibility signals above the fold.</div>
+      </div>
+    </div>
     <div class="container trust-bar-inner">
       <div class="trust-item"><span class="emoji">&#128666;</span> Free Shipping above &#8377;799</div>
       <div class="trust-item"><span class="emoji">&#9200;</span> Same-Day Dispatch</div>
@@ -890,57 +1097,87 @@
   </div>
 
   <!-- ============================================================
-       3. CATEGORY NAVIGATION
+       3. MEGA MENU NAVIGATION
        ============================================================ -->
-  <nav class="category-nav">
-    <div class="category-list">
-      <a class="category-item" href="#">
-        <div class="category-icon" style="background:#dcfce7;">&#129001;</div>
-        <span class="category-label">3x3</span>
-      </a>
-      <a class="category-item" href="#">
-        <div class="category-icon" style="background:#dbeafe;">&#128998;</div>
-        <span class="category-label">2x2</span>
-      </a>
-      <a class="category-item" href="#">
-        <div class="category-icon" style="background:#ffedd5;">&#128999;</div>
-        <span class="category-label">4x4</span>
-      </a>
-      <a class="category-item" href="#">
-        <div class="category-icon" style="background:#fee2e2;">&#128314;</div>
-        <span class="category-label">Pyraminx</span>
-      </a>
-      <a class="category-item" href="#">
-        <div class="category-icon" style="background:#fef9c3;">&#11088;</div>
-        <span class="category-label">Megaminx</span>
-      </a>
-      <a class="category-item" href="#">
-        <div class="category-icon" style="background:#e0e7ff;">&#128230;</div>
-        <span class="category-label">Big Cubes</span>
-      </a>
-      <a class="category-item" href="#">
-        <div class="category-icon" style="background:#f3e8ff;">&#128302;</div>
-        <span class="category-label">Shape Mods</span>
-      </a>
-      <a class="category-item" href="#">
-        <div class="category-icon" style="background:#ecfdf5;">&#9201;</div>
-        <span class="category-label">Timers</span>
-      </a>
-      <a class="category-item" href="#">
-        <div class="category-icon" style="background:#e0f2fe;">&#128167;</div>
-        <span class="category-label">Lubricants</span>
-      </a>
-      <a class="category-item" href="#">
-        <div class="category-icon" style="background:#fce7f3;">&#127873;</div>
-        <span class="category-label">Gift Boxes</span>
-      </a>
+  <nav class="mega-nav" style="position:relative;">
+    <!-- Marker 3: Mega Menu -->
+    <div class="comparison-marker" style="top:8px;right:24px;">3
+      <div class="marker-tooltip">
+        <span class="tooltip-tag new">NEW</span>
+        <span class="tooltip-title">Mega Menu Navigation</span>
+        4-column category dropdown with brands. Currently simple text links only.
+        <div class="tooltip-current">Current site: Basic horizontal text links with no dropdown or brand navigation.</div>
+      </div>
+    </div>
+    <div class="mega-nav-inner">
+      <div class="mega-nav-item">
+        <span class="nav-icon">&#9776;</span> All Categories
+        <span class="dropdown-arrow">&#9660;</span>
+        <!-- Mega Dropdown -->
+        <div class="mega-dropdown">
+          <div class="mega-col">
+            <div class="mega-col-title">&#129513; Speed Cubes</div>
+            <ul class="mega-col-links">
+              <li><a href="#">3x3 Speed Cubes</a></li>
+              <li><a href="#">2x2 Speed Cubes</a></li>
+              <li><a href="#">4x4 Speed Cubes</a></li>
+              <li><a href="#">5x5 Speed Cubes</a></li>
+              <li><a href="#">6x6 &amp; Above</a></li>
+            </ul>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col-title">&#128314; Non-WCA</div>
+            <ul class="mega-col-links">
+              <li><a href="#">Pyraminx</a></li>
+              <li><a href="#">Megaminx</a></li>
+              <li><a href="#">Square-1</a></li>
+              <li><a href="#">Skewb</a></li>
+              <li><a href="#">Shape Mods</a></li>
+            </ul>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col-title">&#9201; Accessories</div>
+            <ul class="mega-col-links">
+              <li><a href="#">Timers</a></li>
+              <li><a href="#">Lubricants</a></li>
+              <li><a href="#">Stands</a></li>
+              <li><a href="#">Bags &amp; Cases</a></li>
+              <li><a href="#">Mats</a></li>
+            </ul>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col-title">&#127942; Shop By Brand</div>
+            <ul class="mega-col-links">
+              <li><a href="#">GAN</a></li>
+              <li><a href="#">MoYu</a></li>
+              <li><a href="#">QiYi</a></li>
+              <li><a href="#">Drift</a></li>
+              <li><a href="#">DaYan</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a class="mega-nav-item" href="#">&#127942; Bestsellers</a>
+      <a class="mega-nav-item" href="#">&#10024; New Arrivals</a>
+      <a class="mega-nav-item" href="#">&#127991; Brands</a>
+      <a class="mega-nav-item" href="#">&#128293; Deals</a>
+      <a class="mega-nav-item" href="#">&#128218; Learn</a>
     </div>
   </nav>
 
   <!-- ============================================================
        4. HERO BANNER
        ============================================================ -->
-  <section class="hero">
+  <section class="hero" style="position:relative;">
+    <!-- Marker 4: Hero Banner -->
+    <div class="comparison-marker">4
+      <div class="marker-tooltip">
+        <span class="tooltip-tag enhanced">ENHANCED</span>
+        <span class="tooltip-title">Hero Banner</span>
+        Single focused CTA + limited-time offer. Currently static product slideshow.
+        <div class="tooltip-current">Current site: Rotating product image slideshow with no clear call-to-action or promotional urgency.</div>
+      </div>
+    </div>
     <div class="container hero-inner">
       <div class="hero-content">
         <h1>India's #1 <em>Speedcubing</em> Store</h1>
@@ -954,7 +1191,16 @@
   <!-- ============================================================
        5. BESTSELLERS
        ============================================================ -->
-  <section class="section">
+  <section class="section" style="position:relative;">
+    <!-- Marker 5: Bestsellers Grid -->
+    <div class="comparison-marker">5
+      <div class="marker-tooltip">
+        <span class="tooltip-tag enhanced">ENHANCED</span>
+        <span class="tooltip-title">Bestsellers Grid</span>
+        Difficulty badges, wishlist hearts, quick-view overlay. Currently plain product cards.
+        <div class="tooltip-current">Current site: Basic product cards with just image, title, and price. No difficulty level, no wishlist, no quick-view.</div>
+      </div>
+    </div>
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">&#127942; BESTSELLERS</h2>
@@ -1053,7 +1299,15 @@
        6. SHOP BY AGE
        ============================================================ -->
   <section class="section age-section" style="position:relative;">
-    <span class="annotation">NEW</span>
+    <!-- Marker 6: Shop by Age -->
+    <div class="comparison-marker">6
+      <div class="marker-tooltip">
+        <span class="tooltip-tag new">NEW</span>
+        <span class="tooltip-title">Shop by Age</span>
+        Gift buyer segmentation (3-5y, 6-8y, 9-12y, 13+). Currently no age-based navigation.
+        <div class="tooltip-current">Current site: No age-based browsing exists. Gift buyers have no way to filter by age group.</div>
+      </div>
+    </div>
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">&#127922; Shop by Age</h2>
@@ -1087,7 +1341,16 @@
   <!-- ============================================================
        7. SPECIAL OFFERS
        ============================================================ -->
-  <section class="offers-section">
+  <section class="offers-section" style="position:relative;">
+    <!-- Marker 7: Special Offers -->
+    <div class="comparison-marker">7
+      <div class="marker-tooltip">
+        <span class="tooltip-tag enhanced">ENHANCED</span>
+        <span class="tooltip-title">Special Offers</span>
+        Countdown timers + coupon codes. Currently no promotions section on homepage.
+        <div class="tooltip-current">Current site: No dedicated promotions or offers section on the homepage at all.</div>
+      </div>
+    </div>
     <div class="container">
       <h2 class="offers-title">&#128293; WELCOME OFFERS</h2>
       <div class="offers-grid">
@@ -1109,6 +1372,15 @@
        8. BLOG SECTION
        ============================================================ -->
   <section class="section blog-section" style="position:relative;">
+    <!-- Marker 8: Blog with Product CTAs -->
+    <div class="comparison-marker">8
+      <div class="marker-tooltip">
+        <span class="tooltip-tag new">NEW</span>
+        <span class="tooltip-title">Blog with Product CTAs</span>
+        Monetizes 43K blog visitors. Current blogs have zero "Shop Now" links.
+        <div class="tooltip-current">Current site: Blog articles exist but have no product links or "Shop Now" CTAs, missing revenue from 43K monthly blog visitors.</div>
+      </div>
+    </div>
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">&#128218; Learn &amp; Solve</h2>
@@ -1121,7 +1393,7 @@
             <span class="blog-category">Experience</span>
             <div class="blog-title">10 Fun Facts About the Mirror Cube</div>
             <div class="blog-meta">Jan 31, 2026 &bull; 4 min read</div>
-            <a href="#" class="blog-cta">Shop Related Products &rarr; <span class="annotation-inline">NEW</span></a>
+            <a href="#" class="blog-cta">Shop Related Products &rarr;</a>
           </div>
         </div>
         <div class="blog-card">
@@ -1130,7 +1402,7 @@
             <span class="blog-category">How To</span>
             <div class="blog-title">How to Solve a Pyraminx: Step-by-Step Guide</div>
             <div class="blog-meta">Jan 17, 2026 &bull; 7 min read</div>
-            <a href="#" class="blog-cta">Shop Related Products &rarr; <span class="annotation-inline">NEW</span></a>
+            <a href="#" class="blog-cta">Shop Related Products &rarr;</a>
           </div>
         </div>
         <div class="blog-card">
@@ -1139,7 +1411,7 @@
             <span class="blog-category">How To</span>
             <div class="blog-title">How To Solve a Mirror Cube?</div>
             <div class="blog-meta">Dec 22, 2025 &bull; 6 min read</div>
-            <a href="#" class="blog-cta">Shop Related Products &rarr; <span class="annotation-inline">NEW</span></a>
+            <a href="#" class="blog-cta">Shop Related Products &rarr;</a>
           </div>
         </div>
       </div>
@@ -1150,7 +1422,15 @@
        9. NEWSLETTER
        ============================================================ -->
   <section class="newsletter-section" style="position:relative;">
-    <span class="annotation">NEW</span>
+    <!-- Marker 9: Newsletter Signup -->
+    <div class="comparison-marker">9
+      <div class="marker-tooltip">
+        <span class="tooltip-tag new">NEW</span>
+        <span class="tooltip-title">Newsletter Signup</span>
+        Email capture widget. No email/SMS tool currently installed at all.
+        <div class="tooltip-current">Current site: Zero email capture anywhere on the site. No email/SMS marketing tool installed (confirmed from Shopify apps audit).</div>
+      </div>
+    </div>
     <div class="container">
       <div class="newsletter-title">&#127919; Join 50,000+ Cubers</div>
       <p class="newsletter-sub">Get exclusive deals, new arrival alerts, and cubing tips straight to your inbox</p>
@@ -1165,7 +1445,16 @@
   <!-- ============================================================
        10. CUSTOMER REVIEWS
        ============================================================ -->
-  <section class="section reviews-section">
+  <section class="section reviews-section" style="position:relative;">
+    <!-- Marker 10: Customer Reviews -->
+    <div class="comparison-marker">10
+      <div class="marker-tooltip">
+        <span class="tooltip-tag new">NEW</span>
+        <span class="tooltip-title">Customer Reviews</span>
+        Homepage social proof with verified badges. Reviews only visible on individual PDPs.
+        <div class="tooltip-current">Current site: Customer reviews only appear on individual product pages. No homepage social proof section exists.</div>
+      </div>
+    </div>
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">&#11088; What Our Cubers Say</h2>
@@ -1177,19 +1466,19 @@
           <div class="review-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
           <p class="review-text">"Pleasant experience buying cubes and accessories. Great collection and fast delivery. Will definitely come back for more!"</p>
           <div class="review-author">Varadharajan S.</div>
-          <div class="verified-badge">&#10003; Verified Purchase <span class="annotation-inline">NEW</span></div>
+          <div class="verified-badge">&#10003; Verified Purchase</div>
         </div>
         <div class="review-card">
           <div class="review-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
           <p class="review-text">"Very smooth and turns nicely, arrived very fast. Packaging was secure. Best place to buy cubes in India, hands down."</p>
           <div class="review-author">Sachin Gupta</div>
-          <div class="verified-badge">&#10003; Verified Purchase <span class="annotation-inline">NEW</span></div>
+          <div class="verified-badge">&#10003; Verified Purchase</div>
         </div>
         <div class="review-card">
           <div class="review-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
           <p class="review-text">"Using Cubelelo for 5-6 years now. Never had a single bad experience. Love the product range and customer service!"</p>
           <div class="review-author">Fardeen Saifi</div>
-          <div class="verified-badge">&#10003; Verified Purchase <span class="annotation-inline">NEW</span></div>
+          <div class="verified-badge">&#10003; Verified Purchase</div>
         </div>
       </div>
     </div>
@@ -1199,7 +1488,15 @@
        11. DELIVERY ESTIMATION
        ============================================================ -->
   <section class="delivery-section" style="position:relative;">
-    <span class="annotation">NEW</span>
+    <!-- Marker 11: Delivery Estimation -->
+    <div class="comparison-marker">11
+      <div class="marker-tooltip">
+        <span class="tooltip-tag new">NEW</span>
+        <span class="tooltip-title">Delivery Estimation</span>
+        Pincode checker on homepage. Shipping info only revealed at checkout currently.
+        <div class="tooltip-current">Current site: No delivery estimation anywhere before checkout. Shipping costs and delivery dates are only revealed at the final checkout step.</div>
+      </div>
+    </div>
     <div class="container">
       <div class="delivery-inner">
         <span class="delivery-label">&#128230; Enter your pincode to check delivery date</span>
@@ -1215,7 +1512,17 @@
   <!-- ============================================================
        12. FOOTER
        ============================================================ -->
-  <footer class="footer">
+  <footer class="footer" style="position:relative;">
+    <!-- Marker 12: Footer -->
+    <div class="comparison-marker">12
+      <div class="marker-tooltip" style="bottom:auto;top:calc(100% + 12px);">
+        <span class="tooltip-tag enhanced">ENHANCED</span>
+        <span class="tooltip-title">Footer</span>
+        Payment method badges, quick category links, newsletter. Currently minimal footer.
+        <div class="tooltip-current">Current site: Minimal footer with basic links only. No payment badges, no category quick-links, no newsletter signup.</div>
+        <style>.footer .marker-tooltip::after { top: auto; bottom: 100%; border-top-color: transparent; border-bottom-color: #1d1d20; }</style>
+      </div>
+    </div>
     <div class="container">
       <div class="footer-grid">
         <!-- About -->
