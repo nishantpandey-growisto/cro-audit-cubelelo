@@ -1344,8 +1344,8 @@
               id="mockupIframe"
               src="mockups/eurus-improved.html"
               title="Cubelelo Homepage Mockup — Eurus Improved"
-              style="width:100%;border:none;min-height:800px;"
-              onload="document.getElementById('mockupLoading').classList.add('hidden');(function resizeIframe(el,n){try{var h=el.contentWindow.document.documentElement.scrollHeight;if(h>100){el.style.height=h+'px';}else if(n<20){setTimeout(function(){resizeIframe(el,n+1);},300);}}catch(e){}})(this,0);"
+              style="width:100%;border:none;height:5000px;"
+              onload="document.getElementById('mockupLoading').classList.add('hidden');"
             ></iframe>
           </div>
         </div>
@@ -1619,9 +1619,9 @@
       btns.forEach(b => b.classList.remove('active'));
       document.querySelector('[data-viewport="' + mode + '"]').classList.add('active');
       container.className = 'mockup-container ' + mode;
-      // Re-measure iframe height after viewport switch
-      var el = document.getElementById('mockupIframe');
-      if (el) { setTimeout(function(){ try { var h = el.contentWindow.document.documentElement.scrollHeight; if(h>100) el.style.height=h+'px'; } catch(e){} }, 400); }
+      // Reset scroll position to top when switching viewport
+      var body = container.querySelector('.browser-body');
+      if (body) body.scrollTop = 0;
     }
   </script>
 

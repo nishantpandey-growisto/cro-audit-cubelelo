@@ -2380,6 +2380,10 @@ table {
 .browser-chrome .browser-body {
   background: var(--color-bg);
   position: relative;
+  height: 700px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .browser-chrome .browser-body iframe {
@@ -2453,6 +2457,11 @@ table {
 
 .mockup-container.mobile .browser-chrome .browser-url {
   font-size: 11px;
+}
+
+.mockup-container.mobile .browser-chrome .browser-body {
+  height: 680px;
+  border-radius: 0 0 24px 24px;
 }
 
 /* ============================================================
@@ -4609,6 +4618,10 @@ tr.subtotal-row td {
   .browser-chrome .browser-url {
     font-size: 11px;
     padding: 4px 8px;
+  }
+
+  .browser-chrome .browser-body {
+    height: 500px;
   }
 
   .pagespeed-grid {
