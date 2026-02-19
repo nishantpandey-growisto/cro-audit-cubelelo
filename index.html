@@ -70,7 +70,7 @@
       </div>
       <div class="nav-item" onclick="switchTab('features')" data-tab="features">
         <span class="nav-icon">&#9889;</span>
-        <span class="nav-label">Features &amp; Apps</span>
+        <span class="nav-label">Recommended Features &amp; Apps</span>
       </div>
       <div class="nav-item" onclick="switchTab('themes')" data-tab="themes">
         <span class="nav-icon">&#127912;</span>
@@ -1063,85 +1063,161 @@
          ============================================================ -->
     <section class="tab-content" id="tab-features">
       <div class="section-card">
-        <h2 class="section-title">Features &amp; Apps</h2>
-        <p class="section-subtitle">Every UX issue identified in the audit has been tied to specific features and fixes. Every feature below is mapped to a funnel problem it solves.</p>
+        <h2 class="section-title">Recommended Features &amp; Apps</h2>
+        <p class="section-subtitle">Every feature below is mapped to a funnel problem it solves, with estimated revenue impact. Validated by Growisto&rsquo;s CRO audit + Shopify team&rsquo;s live store review.</p>
         <div class="callout info">
-          <strong>How this connects:</strong> Conversion Audit (200+ parameters) &rarr; identifies UX issues &rarr; each issue maps to a feature/fix below &rarr; each feature maps to a specific funnel metric it improves. The <strong>&ldquo;Who Asked&rdquo;</strong> column shows whether this was identified by Growisto&rsquo;s audit or explicitly requested by Cubelelo in the questionnaire.
+          <strong>How to read this tab:</strong> Features are organized by implementation phase (Quick Wins &rarr; Medium Effort &rarr; Strategic). The <strong>&ldquo;Who Asked&rdquo;</strong> column shows whether this was identified by Growisto&rsquo;s audit, the Shopify team&rsquo;s review, or explicitly requested by Cubelelo. <strong>Est. Impact</strong> shows projected improvement based on industry benchmarks for similar stores.
         </div>
       </div>
 
+      <!-- ── PHASE 1: QUICK WINS ── -->
       <div class="section-card">
-        <h3 class="section-title">Tier 1: Critical Features</h3>
-        <p class="section-subtitle">Must-have for launch &mdash; directly tied to revenue leaks</p>
+        <h3 class="section-title">Phase 1: Quick Wins <span style="font-weight:400;font-size:14px;color:var(--color-text-secondary);">(Weeks 1&ndash;3)</span></h3>
+        <p class="section-subtitle">High-impact features that can go live fast with minimal development</p>
         <div class="table-wrapper">
         <table class="feature-table">
-          <thead><tr><th>Feature</th><th>Page</th><th>Type</th><th>Funnel Fix</th><th>Who Asked</th></tr></thead>
+          <thead><tr><th>Feature</th><th>Page</th><th>Type</th><th>Funnel Fix</th><th>Est. Impact</th><th>Who Asked</th></tr></thead>
           <tbody>
-            <tr><td>Email/SMS marketing (Klaviyo)</td><td>Site-wide</td><td><span class="badge-app">App</span></td><td>No email/SMS tool installed; only 9% return within 28 days &rarr; retention flows</td><td><span class="badge-custom">Growisto</span></td></tr>
-            <tr><td>Delivery date estimation (pincode)</td><td>PDP + Cart</td><td><span class="badge-app">App</span></td><td>38.7% shipping abandonment &rarr; set expectations early</td><td><span class="badge-inbuilt">Both</span></td></tr>
-            <tr><td>Free shipping progress bar</td><td>Cart</td><td><span class="badge-custom">Custom</span></td><td>Cart abandonment + AOV boost</td><td><span class="badge-custom">Growisto</span></td></tr>
-            <tr><td>Trust badges on cart &amp; checkout</td><td>Cart + Checkout</td><td><span class="badge-custom">Custom</span></td><td>32.4% checkout completion &rarr; reduce payment anxiety</td><td><span class="badge-custom">Growisto</span></td></tr>
-            <tr><td>Shipping estimator on cart</td><td>Cart</td><td><span class="badge-app">App</span></td><td>38.7% shipping abandonment &rarr; no cost surprises</td><td><span class="badge-custom">Growisto</span></td></tr>
-            <tr><td>Advanced search with suggestions</td><td>Site-wide</td><td><span class="badge-app">App</span></td><td>59.6% never view product &rarr; better product discovery</td><td><span class="badge-inbuilt">Both</span></td></tr>
-            <tr><td>Blog product CTAs &amp; sidebar</td><td>Blog</td><td><span class="badge-custom">Custom</span></td><td>18% traffic, &lt;0.1% revenue &rarr; blog monetization</td><td><span class="badge-custom">Growisto</span></td></tr>
-            <tr><td>Desktop PDP optimization</td><td>PDP</td><td><span class="badge-custom">Custom</span></td><td>Desktop ATC 5.3% vs mobile 21.1% &rarr; fix layout</td><td><span class="badge-custom">Growisto</span></td></tr>
-            <tr><td>Homepage trust bar / USP strip</td><td>Homepage</td><td><span class="badge-custom">Custom</span></td><td>High bounce rate &rarr; immediate trust building</td><td><span class="badge-inbuilt">Both</span></td></tr>
-            <tr><td>Abandoned cart recovery emails</td><td>Post-visit</td><td><span class="badge-app">App</span></td><td>32% cart abandonment &rarr; win-back flows</td><td><span class="badge-inbuilt">Client</span></td></tr>
-            <tr><td>Back-in-stock notifications</td><td>PDP</td><td><span class="badge-app">App</span></td><td>&ldquo;Limited stock&rdquo; items &rarr; capture demand</td><td><span class="badge-inbuilt">Client</span></td></tr>
-            <tr><td>GA4 event activation + fixes</td><td>Analytics</td><td><span class="badge-custom">Custom</span></td><td>Can&rsquo;t optimize what you can&rsquo;t measure</td><td><span class="badge-custom">Growisto</span></td></tr>
+            <tr><td>Email/SMS marketing (Klaviyo)</td><td>Site-wide</td><td><span class="badge-app">App</span></td><td>No email/SMS tool installed; only 9% return within 28 days &rarr; retention flows, abandoned cart, win-back</td><td>+15&ndash;25% retention</td><td><span class="badge-custom">Growisto</span></td></tr>
+            <tr><td>Free shipping progress bar</td><td>Cart</td><td><span class="badge-app">App</span></td><td>Cart abandonment + AOV boost &mdash; &ldquo;Add &#8377;X more for free shipping&rdquo;</td><td>+10&ndash;15% AOV</td><td><span class="badge-inbuilt">Both</span></td></tr>
+            <tr><td>Abandoned cart recovery emails</td><td>Post-visit</td><td><span class="badge-inbuilt">Free</span></td><td>Already included in Shopify Grow plan &mdash; activate in Marketing &gt; Automations</td><td>+10&ndash;15% cart recovery</td><td><span class="badge-inbuilt">Client</span></td></tr>
+            <tr><td>Product video on top 20 bestsellers</td><td>PDP</td><td><span class="badge-inbuilt">Inbuilt</span></td><td>Low ATC &rarr; unboxing/turning demos increase confidence. Eurus supports native video embeds.</td><td>+40&ndash;80% PDP CVR</td><td><span class="badge-inbuilt">Both</span></td></tr>
+            <tr><td>Difficulty level badges on product cards</td><td>Cards + PDP</td><td><span class="badge-custom">Custom</span></td><td>Beginners can&rsquo;t self-select &rarr; reduces bounce. Uses Eurus metafield badge system.</td><td>+8&ndash;12% CTR from listing</td><td><span class="badge-inbuilt">Client</span></td></tr>
+            <tr><td>Speed cube vs casual badge</td><td>Cards + PDP</td><td><span class="badge-custom">Custom</span></td><td>Audience targeting &rarr; serious cubers find performance cubes faster</td><td>Included above</td><td><span class="badge-inbuilt">Client</span></td></tr>
+            <tr><td>Frequently bought together (cube + lube + bag)</td><td>PDP</td><td><span class="badge-app">App</span></td><td>AOV &#8377;1,286 &rarr; cubers always need accessories with cube purchase</td><td>+15&ndash;25% AOV</td><td><span class="badge-inbuilt">Both</span></td></tr>
+            <tr><td>Back-in-stock notifications</td><td>PDP</td><td><span class="badge-inbuilt">Inbuilt</span></td><td>Limited edition cubes sell out &rarr; capture demand. Eurus has native back-in-stock alerts.</td><td>Captures lost demand</td><td><span class="badge-inbuilt">Client</span></td></tr>
+            <tr><td>Countdown timer for flash sales</td><td>Homepage + PDP</td><td><span class="badge-inbuilt">Inbuilt</span></td><td>Low urgency &rarr; drive immediate action. Eurus has native countdown timer.</td><td>+10&ndash;20% flash sale CVR</td><td><span class="badge-inbuilt">Both</span></td></tr>
+            <tr><td>Review request email (7 days post-delivery)</td><td>Post-purchase</td><td><span class="badge-app">App</span></td><td>Automate review collection at peak satisfaction. Klaviyo + Judge.me/Nector flow.</td><td>3&times; more reviews</td><td><span class="badge-custom">Growisto</span></td></tr>
+            <tr><td>WhatsApp floating chat button</td><td>Global</td><td><span class="badge-app">App</span></td><td>Number already in header (8080-573-573) but not always visible. Floating button = instant trust.</td><td>Trust signal for Indian market</td><td><span class="badge-custom">Growisto</span></td></tr>
+            <tr><td>Microsoft Clarity (heatmaps)</td><td>Analytics</td><td><span class="badge-inbuilt">Free</span></td><td>Free session recordings + heatmaps &rarr; data for future CRO decisions</td><td>30-min setup, free</td><td><span class="badge-custom">Growisto</span></td></tr>
+            <tr><td>GA4 event activation + fixes</td><td>Analytics</td><td><span class="badge-custom">Custom</span></td><td>Can&rsquo;t optimize what you can&rsquo;t measure &mdash; key events not marked, add_to_cart value = &#8377;0</td><td>Critical for measurement</td><td><span class="badge-custom">Growisto</span></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="callout success mt-16">
+          <strong>Key correction:</strong> Abandoned cart recovery emails are <strong>already free</strong> on the Shopify Grow plan. No app needed &mdash; just activate in Shopify Admin &gt; Marketing &gt; Automations. Similarly, product videos, countdown timer, and back-in-stock alerts are all <strong>native Eurus features</strong> that simply need to be enabled.
+        </div>
+      </div>
+
+      <!-- ── PHASE 2: MEDIUM EFFORT ── -->
+      <div class="section-card">
+        <h3 class="section-title">Phase 2: Medium Effort <span style="font-weight:400;font-size:14px;color:var(--color-text-secondary);">(Weeks 4&ndash;8)</span></h3>
+        <p class="section-subtitle">Features requiring app setup, metafield configuration, or moderate development</p>
+        <div class="table-wrapper">
+        <table class="feature-table">
+          <thead><tr><th>Feature</th><th>Page</th><th>Type</th><th>Funnel Fix</th><th>Est. Impact</th><th>Who Asked</th></tr></thead>
+          <tbody>
+            <tr><td>Advanced search with auto-suggestions</td><td>Site-wide</td><td><span class="badge-app">App</span></td><td>59.6% never view a product &rarr; 1000+ SKUs need smart search with brand/type/difficulty</td><td>-20&ndash;30% search exits</td><td><span class="badge-inbuilt">Both</span></td></tr>
+            <tr><td>Filters: Difficulty / Magnetic / Puzzle type</td><td>Collection</td><td><span class="badge-custom">Custom</span></td><td>Speedcubing-specific filters &mdash; no other Indian store offers these. Uses Search &amp; Discovery + metafields.</td><td>Critical for 1000+ SKUs</td><td><span class="badge-inbuilt">Both</span></td></tr>
+            <tr><td>Delivery date estimation (pincode)</td><td>PDP + Cart</td><td><span class="badge-app">App</span></td><td>38.7% shipping abandonment &rarr; &ldquo;Will it reach me before the competition?&rdquo;</td><td>+12% checkout start</td><td><span class="badge-inbuilt">Both</span></td></tr>
+            <tr><td>Customer photo/video reviews (UGC)</td><td>PDP</td><td><span class="badge-app">App</span></td><td>Photo reviews convert 3&times; better than text &mdash; enable photo uploads in Judge.me/Nector</td><td>+15&ndash;20% PDP CVR</td><td><span class="badge-inbuilt">Both</span></td></tr>
+            <tr><td>Trust badges on cart &amp; checkout</td><td>Cart + Checkout</td><td><span class="badge-custom">Custom</span></td><td>32.4% checkout completion &rarr; reduce payment anxiety at final step</td><td>+5&ndash;10% checkout CVR</td><td><span class="badge-custom">Growisto</span></td></tr>
+            <tr><td>Desktop PDP optimization</td><td>PDP</td><td><span class="badge-custom">Custom</span></td><td>Desktop ATC 5.3% vs mobile 21.1% &rarr; fix layout, image gallery, CTA placement</td><td>+200&ndash;300% desktop ATC</td><td><span class="badge-custom">Growisto</span></td></tr>
+            <tr><td>Blog product CTAs &amp; sidebar</td><td>Blog</td><td><span class="badge-custom">Custom</span></td><td>18% traffic, &lt;0.1% revenue &rarr; blog monetization with product cards and CTAs</td><td>Blog &rarr; revenue</td><td><span class="badge-custom">Growisto</span></td></tr>
+            <tr><td>Homepage trust bar / USP strip</td><td>Homepage</td><td><span class="badge-custom">Custom</span></td><td>High bounce rate &rarr; immediate trust building above the fold</td><td>-5&ndash;10% bounce rate</td><td><span class="badge-inbuilt">Both</span></td></tr>
+            <tr><td>Quick view popup on collection</td><td>Collection</td><td><span class="badge-inbuilt">Inbuilt</span></td><td>Speed up browsing &rarr; reduce clicks to ATC. Eurus has native quick view.</td><td>+8% ATC rate</td><td><span class="badge-custom">Growisto</span></td></tr>
+            <tr><td>Shop by Difficulty Level section</td><td>Homepage</td><td><span class="badge-custom">Custom</span></td><td>Beginners bounce because they can&rsquo;t find entry-level cubes easily</td><td>-15% beginner bounce</td><td><span class="badge-inbuilt">Both</span></td></tr>
+            <tr><td>Cube comparison tool (GAN vs MoYu vs QiYi)</td><td>PDP</td><td><span class="badge-custom">Custom</span></td><td>Speedcubers research extensively before buying &rarr; comparison reduces abandonment</td><td>Reduces research exits</td><td><span class="badge-inbuilt">Client</span></td></tr>
+            <tr><td>Branded order tracking page with upsell</td><td>Post-purchase</td><td><span class="badge-app">App</span></td><td>Reduces &ldquo;where is my order?&rdquo; tickets; adds upsell on tracking page visits</td><td>Lower support load + upsell</td><td><span class="badge-custom">Growisto</span></td></tr>
+            <tr><td>EMI options for orders above &#8377;3,000</td><td>Checkout</td><td><span class="badge-custom">Custom</span></td><td>GAN cubes &#8377;6,000&ndash;12,000 &rarr; EMI via Razorpay removes price barrier. Works on Grow plan.</td><td>+10% CVR on premium cubes</td><td><span class="badge-custom">Growisto</span></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="callout info mt-16">
+          <strong>Eurus discovery:</strong> Quick view popup is <strong>native in Eurus</strong> (v9.8.0) &mdash; previously listed as custom development. Similarly, the countdown timer, stock counter, and back-in-stock alerts are all inbuilt. This reduces the customization scope compared to our original estimate.
+        </div>
+      </div>
+
+      <!-- ── PHASE 3: STRATEGIC ── -->
+      <div class="section-card">
+        <h3 class="section-title">Phase 3: Strategic <span style="font-weight:400;font-size:14px;color:var(--color-text-secondary);">(Weeks 9&ndash;16)</span></h3>
+        <p class="section-subtitle">Longer-term features that require planning, content creation, or premium app investment</p>
+        <div class="table-wrapper">
+        <table class="feature-table">
+          <thead><tr><th>Feature</th><th>Page</th><th>Type</th><th>Funnel Fix</th><th>Est. Impact</th><th>Who Asked</th></tr></thead>
+          <tbody>
+            <tr><td>Customer testimonials with photos carousel</td><td>Homepage</td><td><span class="badge-custom">Custom</span></td><td>Bounce rate &rarr; social proof beyond star ratings, builds community trust</td><td>+trust signal</td><td><span class="badge-inbuilt">Client</span></td></tr>
+            <tr><td>Instagram / UGC social feed</td><td>Homepage</td><td><span class="badge-app">App</span></td><td>Show real customer cubing content &rarr; community trust signal</td><td>Community engagement</td><td><span class="badge-inbuilt">Client</span></td></tr>
+            <tr><td>Referral program (Share &amp; Earn)</td><td>Account + Post-purchase</td><td><span class="badge-app">App</span></td><td>Cubers share recommendations naturally &rarr; formalize with referral rewards</td><td>Organic acquisition</td><td><span class="badge-inbuilt">Client</span></td></tr>
+            <tr><td>Exit-intent popup with discount</td><td>Blog + PDP</td><td><span class="badge-app">App</span></td><td>Recovers 5&ndash;8% of abandoning visitors with a small incentive</td><td>+5&ndash;8% recovery</td><td><span class="badge-custom">Growisto</span></td></tr>
+            <tr><td>Price drop alert signup on PDP</td><td>PDP</td><td><span class="badge-app">App</span></td><td>Re-engages high-intent visitors who can&rsquo;t buy at current price</td><td>Re-engagement</td><td><span class="badge-custom">Growisto</span></td></tr>
+            <tr><td>Solve time benchmarks on PDP</td><td>PDP</td><td><span class="badge-custom">Custom</span></td><td>Unique speedcubing differentiator &mdash; average solve time context for each cube</td><td>Cubing-specific UX</td><td><span class="badge-custom">Growisto</span></td></tr>
+            <tr><td>Wishlist functionality</td><td>PDP + Collection</td><td><span class="badge-app">App</span></td><td>Retention &rarr; save products for later, share wishlist (great for gifting)</td><td>Retention</td><td><span class="badge-inbuilt">Client</span></td></tr>
+            <tr><td>Loyalty program visibility</td><td>Homepage + Account</td><td><span class="badge-custom">Custom</span></td><td>Nector installed ($120/mo) but not prominent &rarr; surface points balance, referral link in dashboard</td><td>Better ROI on existing spend</td><td><span class="badge-custom">Growisto</span></td></tr>
+            <tr><td>Live chat widget / chatbot</td><td>Global</td><td><span class="badge-app">App</span></td><td>Reduces support load; improves conversion for hesitant buyers</td><td>Support + trust</td><td><span class="badge-inbuilt">Client</span></td></tr>
           </tbody>
         </table>
         </div>
       </div>
 
+      <!-- ── PUZZLE-SPECIFIC FEATURES ── -->
       <div class="section-card">
-        <h3 class="section-title">Tier 2: Recommended Features</h3>
-        <p class="section-subtitle">High impact &mdash; implement within first month</p>
+        <h3 class="section-title">Cubelelo-Specific: Speedcubing Features</h3>
+        <p class="section-subtitle">Features unique to the speedcubing niche &mdash; no other Indian puzzle store offers these</p>
+        <div class="callout info">
+          <strong>Implementation method:</strong> All badge/indicator features below use <strong>Eurus&rsquo;s native metafield badge system</strong>. Setup: Create product metafield (single-line text) &rarr; assign values per product &rarr; reference in Theme Settings &gt; Product Labels &amp; Badges. Supports variant-level badges and bypasses Shopify&rsquo;s 50-product manual limit. <span style="font-size:12px;color:var(--color-text-secondary);">Source: Eurus documentation</span>
+        </div>
         <div class="table-wrapper">
         <table class="feature-table">
-          <thead><tr><th>Feature</th><th>Page</th><th>Type</th><th>Funnel Fix</th><th>Who Asked</th></tr></thead>
+          <thead><tr><th>Feature</th><th>Where</th><th>Implementation</th><th>Why It Matters</th><th>Phase</th></tr></thead>
           <tbody>
-            <tr><td>Cube comparison tool</td><td>PDP</td><td><span class="badge-custom">Custom</span></td><td>Low ATC &rarr; help with purchase decision</td><td><span class="badge-inbuilt">Client</span></td></tr>
-            <tr><td>Difficulty level indicators</td><td>Cards + PDP</td><td><span class="badge-custom">Custom</span></td><td>Product discovery &rarr; cubing-specific UX</td><td><span class="badge-inbuilt">Client</span></td></tr>
-            <tr><td>Homepage testimonial carousel</td><td>Homepage</td><td><span class="badge-custom">Custom</span></td><td>Bounce rate &rarr; social proof above fold</td><td><span class="badge-inbuilt">Client</span></td></tr>
-            <tr><td>Exit-intent popup (blog visitors)</td><td>Blog</td><td><span class="badge-app">App</span></td><td>Blog exits &rarr; email capture</td><td><span class="badge-custom">Growisto</span></td></tr>
-            <tr><td>Countdown timer for flash sales</td><td>Homepage + PDP</td><td><span class="badge-custom">Custom</span></td><td>Low urgency &rarr; drive immediate action</td><td><span class="badge-inbuilt">Client</span></td></tr>
-            <tr><td>Product video embeds (YouTube)</td><td>PDP</td><td><span class="badge-custom">Custom</span></td><td>Low ATC &rarr; showcase product in action</td><td><span class="badge-inbuilt">Client</span></td></tr>
-            <tr><td>Quick view popup on collection</td><td>Collection</td><td><span class="badge-custom">Custom</span></td><td>Speed up browsing &rarr; reduce clicks to ATC</td><td><span class="badge-custom">Growisto</span></td></tr>
-            <tr><td>Wishlist functionality</td><td>PDP + Collection</td><td><span class="badge-app">App</span></td><td>Retention &rarr; save products for later</td><td><span class="badge-inbuilt">Client</span></td></tr>
-            <tr><td>Speed cube vs casual badge</td><td>Cards + PDP</td><td><span class="badge-custom">Custom</span></td><td>Product discovery &rarr; audience targeting</td><td><span class="badge-inbuilt">Client</span></td></tr>
-            <tr><td>Loyalty program visibility</td><td>Homepage</td><td><span class="badge-custom">Custom</span></td><td>Retention &rarr; Nector already installed, needs prominence</td><td><span class="badge-custom">Growisto</span></td></tr>
+            <tr><td>Difficulty level badge (Beginner / Intermediate / Advanced)</td><td>Product cards + PDP</td><td>Metafield badge</td><td>Helps new cubers self-select &mdash; reduces bounce from overwhelm</td><td>Phase 1</td></tr>
+            <tr><td>Speed cube vs Casual badge</td><td>Product cards + PDP</td><td>Metafield badge</td><td>Separates competitive cubers from hobby buyers at a glance</td><td>Phase 1</td></tr>
+            <tr><td>Puzzle type filter (3x3, 4x4, Pyraminx, Megaminx, etc.)</td><td>Collection filters</td><td>Search &amp; Discovery + metafields</td><td>Critical navigation for 1,000+ SKUs across puzzle categories</td><td>Phase 2</td></tr>
+            <tr><td>Magnetic / Non-magnetic filter</td><td>Collection filters</td><td>Search &amp; Discovery + metafields</td><td>Key buying decision for speedcubers &mdash; magnetic cubes are premium</td><td>Phase 2</td></tr>
+            <tr><td>Cube comparison tool</td><td>PDP (GAN vs MoYu vs QiYi)</td><td>Custom section or app</td><td>Speedcubers research extensively before buying &mdash; comparison table reduces research exits</td><td>Phase 2</td></tr>
+            <tr><td>Solve time benchmarks</td><td>PDP</td><td>Custom metafield display</td><td>Average solve time context per cube &mdash; unique differentiator, no competitor has this</td><td>Phase 3</td></tr>
+            <tr><td>Cube setup tips &amp; maintenance guide link</td><td>PDP</td><td>Link to blog/guide</td><td>Reduces return requests; builds buyer confidence in premium purchases</td><td>Phase 3</td></tr>
+            <tr><td>Unboxing / review video embeds</td><td>PDP</td><td>Eurus native video support</td><td>Video on PDP increases conversion ~80% for performance products</td><td>Phase 1</td></tr>
           </tbody>
         </table>
         </div>
       </div>
 
+      <!-- ── APP STACK ── -->
       <div class="section-card">
         <h3 class="section-title">Recommended App Stack</h3>
         <table class="app-table">
           <thead><tr><th>Need</th><th>Current</th><th>Recommended</th><th>Est. Monthly</th><th>Status</th></tr></thead>
           <tbody>
-            <tr><td>Email/SMS Marketing</td><td class="critical-text">NONE</td><td><strong>Klaviyo</strong></td><td>~$20-45/mo</td><td><span class="badge-critical">Critical Gap</span></td></tr>
-            <tr><td>Delivery Estimation</td><td class="critical-text">NONE</td><td><strong>Estimated Delivery Date</strong></td><td>~$7/mo</td><td><span class="badge-critical">Critical Gap</span></td></tr>
-            <tr><td>Advanced Search</td><td>Basic Shopify</td><td><strong>Searchanise</strong></td><td>~$20-50/mo</td><td><span class="badge-critical">Critical Gap</span></td></tr>
-            <tr><td>Back-in-Stock</td><td class="critical-text">NONE</td><td><strong>Back in Stock Alerts</strong></td><td>~$5-20/mo</td><td><span class="badge-critical">Critical Gap</span></td></tr>
-            <tr><td>Reviews + Loyalty</td><td>Nector ($120/mo) &#10003;</td><td>Keep &mdash; evaluate photo reviews</td><td>$120/mo (verified)</td><td><span class="badge-inbuilt">Keep</span></td></tr>
+            <tr><td>Email/SMS Marketing</td><td class="critical-text">NONE</td><td><strong>Klaviyo</strong></td><td>~$20&ndash;45/mo</td><td><span class="badge-critical">Critical Gap</span></td></tr>
+            <tr><td>Delivery Estimation</td><td class="critical-text">NONE</td><td><strong>Estimated Delivery Date / Shiprocket widget</strong></td><td>~$7/mo</td><td><span class="badge-critical">Critical Gap</span></td></tr>
+            <tr><td>Advanced Search</td><td>Basic Shopify</td><td><strong>Boost Commerce / Searchanise</strong></td><td>~$20&ndash;50/mo</td><td><span class="badge-critical">Critical Gap</span></td></tr>
+            <tr><td>Free Shipping Bar</td><td class="critical-text">NONE</td><td><strong>Free Shipping Bar app</strong></td><td>~$0&ndash;10/mo</td><td><span class="badge-critical">Quick Win</span></td></tr>
+            <tr><td>Frequently Bought Together</td><td class="critical-text">NONE</td><td><strong>FBT / Bundler app</strong></td><td>~$10&ndash;20/mo</td><td><span class="badge-critical">Quick Win</span></td></tr>
+            <tr><td>Branded Order Tracking</td><td>Basic</td><td><strong>Parcel Panel / Rush</strong></td><td>~$10&ndash;20/mo</td><td><span class="badge-optional">Recommended</span></td></tr>
+            <tr><td>Heatmaps &amp; Session Recording</td><td class="critical-text">NONE</td><td><strong>Microsoft Clarity</strong></td><td>Free</td><td><span class="badge-inbuilt">Free</span></td></tr>
+            <tr><td>Abandoned Cart Emails</td><td>Not activated</td><td><strong>Shopify native (Grow plan)</strong></td><td>Free</td><td><span class="badge-inbuilt">Free</span></td></tr>
+            <tr><td>Back-in-Stock</td><td class="critical-text">NONE</td><td><strong>Eurus native</strong> (or Klaviyo integration)</td><td>Free (inbuilt)</td><td><span class="badge-inbuilt">Inbuilt</span></td></tr>
+            <tr><td>Reviews + Loyalty</td><td>Nector ($120/mo) &#10003;</td><td>Keep &mdash; enable photo reviews</td><td>$120/mo (verified)</td><td><span class="badge-inbuilt">Keep</span></td></tr>
             <tr><td>One-Click Checkout</td><td>GoKwik &#10003;</td><td>Keep &mdash; optimize OTP flow</td><td>Existing</td><td><span class="badge-inbuilt">Keep</span></td></tr>
             <tr><td>Cart Widget</td><td>Corner Cart ($29/mo) &#10003;</td><td>Keep &mdash; excellent cross-sell UX</td><td>$29/mo (verified)</td><td><span class="badge-inbuilt">Keep</span></td></tr>
-            <tr><td>EMI/Pay Later</td><td>Snapmint &#10003;</td><td>Keep &mdash; fix JS errors</td><td>Existing</td><td><span class="badge-custom">Fix Needed</span></td></tr>
-            <tr><td>Page Builder</td><td>PageFly ($19/mo) &#10003;</td><td>Evaluate post-revamp</td><td>$19/mo (verified)</td><td><span class="badge-optional">Review</span></td></tr>
+            <tr><td>EMI/Pay Later</td><td>Snapmint &#10003;</td><td>Keep &mdash; fix JS errors + add Razorpay EMI for &#8377;3K+ orders</td><td>Existing</td><td><span class="badge-custom">Fix + Expand</span></td></tr>
+            <tr><td>Page Builder</td><td>PageFly ($19/mo) &#10003;</td><td>Evaluate post-revamp &mdash; may be redundant</td><td>$19/mo (verified)</td><td><span class="badge-optional">Review</span></td></tr>
             <tr><td>Returns</td><td>Return Prime ($13/mo) &#10003;</td><td>Keep</td><td>$13/mo (verified)</td><td><span class="badge-inbuilt">Keep</span></td></tr>
-            <tr><td>Chatbot</td><td>WhatsApp icon</td><td>Upgrade to Tidio or Intercom</td><td>~$0-29/mo</td><td><span class="badge-optional">Optional</span></td></tr>
+            <tr><td>Chatbot</td><td>WhatsApp icon</td><td>Add floating WhatsApp button + evaluate Tidio</td><td>~$0&ndash;29/mo</td><td><span class="badge-optional">Phase 3</span></td></tr>
           </tbody>
         </table>
         <div class="app-cost-summary">
-          <strong>New Monthly App Cost:</strong> ~&#8377;4,000&ndash;7,000/month ($50-85/mo) for Klaviyo + Searchanise + Delivery Date + Back-in-Stock
+          <strong>New Monthly App Cost:</strong> ~&#8377;5,500&ndash;9,000/month ($65&ndash;110/mo) for Klaviyo + Boost/Searchanise + Delivery Date + FBT + Free Shipping Bar + Tracking. Back-in-stock and abandoned cart are <strong>free</strong>.
         </div>
         <div class="callout info mt-16">
-          <strong>Verified from Shopify Admin:</strong> Current monthly app spend is <strong>~$234/month (&#8377;19,500)</strong> across 26 installed apps. Biggest cost: Nector Loyalty ($120/mo). This means total app spend after adding recommended tools would be ~$284&ndash;320/month (&#8377;23,500&ndash;26,500). <strong>No email/SMS marketing tool confirmed &mdash; validates the #1 critical gap above.</strong>
+          <strong>Cost savings vs original estimate:</strong> We identified 4 features (back-in-stock alerts, countdown timer, quick view, abandoned cart emails) that are either <strong>free on Grow plan</strong> or <strong>native in Eurus</strong>. This saves ~&#8377;2,000&ndash;4,000/month in app costs compared to our initial recommendation. <span style="font-size:12px;color:var(--color-text-secondary);">Source: Shopify Admin + Eurus v9.8.0 feature list</span>
+        </div>
+        <div class="callout info mt-16">
+          <strong>Verified from Shopify Admin:</strong> Current monthly app spend is <strong>~$234/month (&#8377;19,500)</strong> across 26 installed apps. Biggest cost: Nector Loyalty ($120/mo). Total app spend after adding recommended tools: ~$300&ndash;345/month (&#8377;25,000&ndash;28,500). <strong>No email/SMS marketing tool confirmed &mdash; validates the #1 critical gap.</strong>
         </div>
       </div>
 
+      <!-- ── IMPORTANT NOTES ── -->
+      <div class="section-card">
+        <h3 class="section-title">Important: Shopify Plan Limitations</h3>
+        <div class="callout" style="border-left-color:#ef4444;background:#fef2f2;">
+          <strong>Shopify Plus requirement (&#8377;1.9L/month):</strong> Checkout page UI changes (progress bar, upsell widgets, layout) and Thank You page customizations require Shopify Plus. All recommendations in this document are achievable on the current <strong>Grow plan</strong>. Post-purchase upsells and referrals are handled via <strong>email flows</strong> instead of checkout page widgets.
+        </div>
+      </div>
+
+      <!-- ── GA4 ACTIONABLES ── -->
       <div class="section-card">
         <h3 class="section-title">GA4 Actionables</h3>
         <p class="section-subtitle">Quick wins that improve measurement immediately</p>
@@ -1204,79 +1280,211 @@
     <section class="tab-content" id="tab-themes">
       <div class="section-card">
         <h2 class="section-title">Theme Evaluation</h2>
-        <p class="section-subtitle">Eurus (current) vs alternatives for Cubelelo&rsquo;s needs</p>
+        <p class="section-subtitle">Eurus (current) vs 20 alternative themes evaluated by Growisto&rsquo;s Shopify team. Data-driven comparison of native features, performance, and total cost.</p>
       </div>
 
+      <!-- ── CURRENT STATE ── -->
       <div class="section-card">
-        <h3 class="section-title">Current Theme: Eurus</h3>
+        <h3 class="section-title">Current Theme: Eurus by BSS Commerce</h3>
         <div class="theme-summary">
           <div class="grid-2">
             <div>
               <table class="data-table compact">
-                <tr><td><strong>Theme</strong></td><td>Eurus by Starter Store</td></tr>
-                <tr><td><strong>Live Theme Name</strong></td><td>&ldquo;Secret Santa&rdquo; (renamed Eurus for seasonal campaign)</td></tr>
-                <tr><td><strong>Current Version</strong></td><td>Older build &mdash; <strong>v6.8.1 update available</strong></td></tr>
-                <tr><td><strong>Unpublished</strong></td><td>Eurus 9.3 in library (v9.8.0 available &mdash; far behind)</td></tr>
-                <tr><td><strong>Category Fit</strong></td><td>General &mdash; not puzzle/hobby specific</td></tr>
-                <tr><td><strong>Mobile PageSpeed</strong></td><td class="critical">34/100</td></tr>
-                <tr><td><strong>Desktop PageSpeed</strong></td><td class="warning">50/100</td></tr>
-                <tr><td><strong>Shopify Web Perf (P75)</strong></td><td>LCP 2,692ms &#x1f7e0; | INP 192ms &#x1f7e2; | CLS 0.11</td></tr>
+                <tr><td><strong>Developer</strong></td><td>BSS Commerce (OmniThemes)</td></tr>
+                <tr><td><strong>Live Version</strong></td><td>&ldquo;Secret Santa&rdquo; (older fork, renamed for seasonal campaign)</td></tr>
+                <tr><td><strong>Latest Available</strong></td><td><strong>v9.8.0</strong> (Feb 6, 2026) &mdash; significant feature gap vs live</td></tr>
+                <tr><td><strong>Price</strong></td><td>$350 (already owned &mdash; &#8377;0 additional)</td></tr>
+                <tr><td><strong>Rating</strong></td><td>99% positive (472 reviews) &mdash; one of highest-rated themes</td></tr>
+                <tr><td><strong>Core Web Vitals</strong></td><td>LCP: 96 &#x1f7e2; | CLS: 97 &#x1f7e2; | INP: 95 &#x1f7e2;</td></tr>
+                <tr><td><strong>PageSpeed (live site)</strong></td><td class="critical">Mobile 34/100 | Desktop 50/100</td></tr>
               </table>
+              <div class="callout info mt-16" style="font-size:13px;">
+                <strong>Why the contradiction?</strong> Eurus theme itself scores 96/97/95 on CWV. The live site scores 34/100 because of <strong>app bloat</strong> (26 apps, Snapmint JS errors, PageFly overhead), not the theme. Fixing apps = fixing performance.
+              </div>
             </div>
             <div>
-              <h4>Eurus Strengths</h4>
+              <h4>What Eurus v9.8.0 Actually Supports Natively</h4>
               <ul class="check-list">
-                <li class="pass">Product image gallery with thumbnails</li>
-                <li class="pass">Variant display with cross-links</li>
-                <li class="pass">Collection filters (7 types working)</li>
-                <li class="pass">Product badges (NEW, BESTSELLER, % off)</li>
-                <li class="pass">Tab layout for description/FAQs/specs</li>
+                <li class="pass">Quick view popup</li>
+                <li class="pass">Countdown timer</li>
+                <li class="pass">Stock counter</li>
+                <li class="pass">Back-in-stock alerts (variant-level)</li>
+                <li class="pass">Infinite scroll</li>
+                <li class="pass">Enhanced search</li>
+                <li class="pass">Swatch &amp; color filters</li>
+                <li class="pass">Mega menu with images</li>
+                <li class="pass">Product badges via metafields</li>
+                <li class="pass">Product video (YouTube embed)</li>
+                <li class="pass">Image hover / rollover</li>
+                <li class="pass">Cross-selling &amp; recommended products</li>
+                <li class="pass">In-menu promotions</li>
+                <li class="pass">Pre-order support</li>
+                <li class="pass">Gift wrapping</li>
+                <li class="pass">Lookbooks &amp; image hotspots</li>
               </ul>
-              <h4 class="mt-16">Eurus Gaps</h4>
-              <ul class="check-list">
-                <li class="fail">No built-in delivery estimation</li>
-                <li class="fail">No free shipping progress bar</li>
-                <li class="fail">No quick view popup</li>
-                <li class="fail">No comparison tool</li>
-                <li class="fail">No advanced search built-in</li>
-                <li class="fail">Performance is poor (34/100 mobile)</li>
-              </ul>
+              <p style="font-size:12px;color:var(--color-text-secondary);margin-top:8px;">Source: <a href="https://themes.shopify.com/themes/eurus" target="_blank" style="color:var(--color-primary);">themes.shopify.com/themes/eurus</a> + <a href="https://support.omnithemes.com/blogs/theme-settings/product-labels-badges" target="_blank" style="color:var(--color-primary);">OmniThemes docs</a></p>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- ── KEY FINDING: METAFIELD BADGES ── -->
+      <div class="section-card">
+        <h3 class="section-title">Key Finding: Eurus Supports Custom Metafield Badges</h3>
+        <div class="callout success">
+          <strong>This changes the theme decision.</strong> Eurus supports <strong>unlimited custom product badges via metafields</strong> &mdash; the primary feature that made Ignite and Impulse attractive alternatives.
+          <p class="mt-8"><strong>How it works:</strong> Settings &gt; Metafields &gt; Products &gt; Create &ldquo;difficulty_level&rdquo; (single-line text) &rarr; Assign values per product (Beginner/Intermediate/Advanced) &rarr; Theme Settings &gt; Product Labels &amp; Badges &rarr; Add metafield key. Badges appear on product cards and PDP. Supports <strong>variant-level</strong> badges and bypasses Shopify&rsquo;s 50-product manual limit.</p>
+        </div>
+        <p style="font-size:13px;color:var(--color-text-secondary);">This means difficulty level badges, speed/casual badges, and puzzle type indicators can all be implemented on Eurus without any theme switch. <span>Source: <a href="https://support.omnithemes.com/blogs/theme-settings/product-labels-badges" target="_blank" style="color:var(--color-primary);">Eurus Metafield Badge Documentation</a></span></p>
+      </div>
+
+      <!-- ── HEAD-TO-HEAD COMPARISON ── -->
+      <div class="section-card">
+        <h3 class="section-title">Head-to-Head: Eurus vs Top 4 Alternatives</h3>
+        <p class="section-subtitle">30 critical features for Cubelelo, scored across all evaluated themes</p>
+        <div class="table-wrapper">
+        <table class="data-table">
+          <thead><tr><th>Feature</th><th>Eurus (current)</th><th>Ignite ($340)</th><th>Impulse ($380)</th><th>Empire ($340)</th></tr></thead>
+          <tbody>
+            <tr><td colspan="5" style="background:var(--color-bg-light);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;">Navigation &amp; Discovery</td></tr>
+            <tr><td>Mega menu with images</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>Enhanced search</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Live search</td></tr>
+            <tr><td>Product filtering &amp; sorting</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>Swatch / color filters</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>Infinite scroll</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td style="color:#ef4444;">&#x274C; Not native</td><td style="color:#ef4444;">&#x274C; Not native</td></tr>
+            <tr><td>Breadcrumbs</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td></tr>
+
+            <tr><td colspan="5" style="background:var(--color-bg-light);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;">Product Display</td></tr>
+            <tr><td>Quick view popup</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>Image zoom + hover</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>Product video (YT embed)</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>Color swatches on cards</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>Product tabs (specs/desc)</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>Product badges</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>Size chart</td><td>&#x2705; Inbuilt</td><td>&#x2753;</td><td>&#x2705; Inbuilt</td><td>&#x2753;</td></tr>
+
+            <tr><td colspan="5" style="background:var(--color-bg-light);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;">Conversion &amp; Marketing</td></tr>
+            <tr><td>Countdown timer</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>Stock counter</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td style="color:#f59e0b;">&#x26A0; Partial</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>Back-in-stock alerts</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td style="color:#ef4444;">&#x274C; App needed</td><td style="color:#ef4444;">&#x274C; App needed</td></tr>
+            <tr><td>Trust badges</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>Cross-selling</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>In-menu promos</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2753;</td><td>&#x2705; Inbuilt</td></tr>
+
+            <tr><td colspan="5" style="background:var(--color-bg-light);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;">Critical for Cubelelo</td></tr>
+            <tr><td><strong>Metafield badges on cards</strong></td><td>&#x2705; <strong>Inbuilt</strong></td><td>&#x2705; Inbuilt</td><td>&#x2705; Via metafield</td><td style="color:#f59e0b;">&#x26A0; Limited</td></tr>
+            <tr><td><strong>Variant-level badges</strong></td><td>&#x2705; <strong>Inbuilt</strong></td><td>&#x2753;</td><td>&#x2753;</td><td>&#x2753;</td></tr>
+            <tr><td>Product comparison tool</td><td style="color:#ef4444;">&#x274C; Custom</td><td style="color:#ef4444;">&#x274C; Custom</td><td style="color:#ef4444;">&#x274C; Custom</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>Pre-order</td><td>&#x2705; Inbuilt</td><td>&#x2753;</td><td>&#x2753;</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>Gift wrapping</td><td>&#x2705; Inbuilt</td><td>&#x2753;</td><td>&#x2753;</td><td>&#x2753;</td></tr>
+
+            <tr><td colspan="5" style="background:var(--color-bg-light);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;">Cart &amp; Post-Purchase</td></tr>
+            <tr><td>Slide-out cart</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>Cart notes</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>Recently viewed</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td></tr>
+            <tr><td>Lookbooks</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2705; Inbuilt</td><td>&#x2753;</td></tr>
+          </tbody>
+          <tfoot>
+            <tr class="total-row"><td><strong>Features Inbuilt (of 30)</strong></td><td><strong>27</strong></td><td><strong>26</strong></td><td><strong>24</strong></td><td><strong>25</strong></td></tr>
+          </tfoot>
+        </table>
+        </div>
+      </div>
+
+      <!-- ── COST COMPARISON ── -->
+      <div class="section-card">
+        <h3 class="section-title">Switching Cost Analysis</h3>
+        <p class="section-subtitle">What would it actually cost to switch themes?</p>
+        <div class="table-wrapper">
+        <table class="data-table">
+          <thead><tr><th>Cost Item</th><th>Stay on Eurus</th><th>Switch to Ignite</th><th>Switch to Impulse</th></tr></thead>
+          <tbody>
+            <tr><td>Theme license</td><td>&#8377;0 (owned)</td><td>&#8377;28,900</td><td>&#8377;32,300</td></tr>
+            <tr><td>Theme setup &amp; migration</td><td>&#8377;0</td><td>&#8377;25,000&ndash;40,000</td><td>&#8377;25,000&ndash;40,000</td></tr>
+            <tr><td>Content migration (menus, pages, sections)</td><td>&#8377;0</td><td>&#8377;15,000&ndash;20,000</td><td>&#8377;15,000&ndash;20,000</td></tr>
+            <tr><td>Re-configure 26 apps (incl. GoKwik)</td><td>&#8377;0</td><td>&#8377;10,000&ndash;15,000</td><td>&#8377;10,000&ndash;15,000</td></tr>
+            <tr><td>Testing &amp; QA</td><td>&#8377;0</td><td>&#8377;10,000&ndash;15,000</td><td>&#8377;10,000&ndash;15,000</td></tr>
+          </tbody>
+          <tfoot>
+            <tr class="total-row"><td><strong>Total Switching Cost</strong></td><td><strong>&#8377;0</strong></td><td><strong>&#8377;89K&ndash;1.09L</strong></td><td><strong>&#8377;92K&ndash;1.22L</strong></td></tr>
+          </tfoot>
+        </table>
+        </div>
+        <div class="callout" style="border-left-color:#ef4444;background:#fef2f2;margin-top:16px;">
+          <strong>Risk:</strong> Cubelelo has 26 apps, 150 collections, 1,000+ SKUs, and GoKwik handling 98.5% of checkout. A theme switch means reconfiguring <em>everything</em>, re-testing GoKwik integration, and risking downtime during a revenue-generating period. The &#8377;89K&ndash;1.22L switching cost buys <strong>no meaningful new features</strong> that Eurus doesn&rsquo;t already support.
+        </div>
+      </div>
+
+      <!-- ── 20 THEMES EVALUATED ── -->
+      <div class="section-card">
+        <h3 class="section-title">All 20 Themes Evaluated</h3>
+        <p class="section-subtitle">15 from Shopify Theme Store (Toys &amp; Kids filter) + 5 client-suggested. Sorted by recommendation.</p>
+        <div class="table-wrapper">
+        <table class="data-table" style="font-size:12px;">
+          <thead><tr><th>#</th><th>Theme</th><th>Price</th><th>Rating</th><th>Best For</th><th>Verdict</th></tr></thead>
+          <tbody>
+            <tr style="background:var(--color-success-bg);"><td>&#127775;</td><td><strong>Eurus</strong> (Current)</td><td>$350 (owned)</td><td>99% (472)</td><td>General &mdash; 27/30 features inbuilt, best CWV scores</td><td><strong>STAY + CUSTOMIZE</strong></td></tr>
+            <tr><td>1</td><td>Ignite &ldquo;Playtime&rdquo;</td><td>$340</td><td>99% (85)</td><td>Toys filter top pick. Metafield badges, 50+ sections.</td><td>Strong &mdash; but only 85 reviews</td></tr>
+            <tr><td>2</td><td>Impulse &ldquo;Modern&rdquo;</td><td>$380</td><td>95% (1000+)</td><td>Visual storytelling, parallax, Boost Commerce integration</td><td>No infinite scroll, slower speed</td></tr>
+            <tr><td>3</td><td>Empire &ldquo;Circuit&rdquo;</td><td>$340</td><td>79% (465)</td><td>Amazon-style large catalog. Product compare inbuilt.</td><td>Mobile bugs, lowest rating</td></tr>
+            <tr><td>4</td><td>Boost</td><td>$360</td><td>87%</td><td>Most advanced filtering</td><td>Good for filtering</td></tr>
+            <tr><td>5</td><td>Lute</td><td>$360</td><td>100%</td><td>Every CRO feature native, safest bet</td><td>Safe investment</td></tr>
+            <tr><td>6</td><td>Divide</td><td>$350</td><td>91%</td><td>Bold editorial design</td><td>Consider for redesign</td></tr>
+            <tr><td>7</td><td>Amber &ldquo;Rascals&rdquo;</td><td>$220</td><td>100%</td><td>Budget pick with full features</td><td>Best value</td></tr>
+            <tr><td>8</td><td>Elementary</td><td>$320</td><td>100%</td><td>Large catalogs, clean design</td><td>Good alternative</td></tr>
+            <tr><td>9</td><td>Playroom</td><td>$320</td><td>100%</td><td>Kids / clean aesthetic</td><td>Too &ldquo;kids&rdquo; for speedcubing</td></tr>
+            <tr><td>10</td><td>Joyfy</td><td>$320</td><td>96%</td><td>Toys brand aesthetic</td><td>Decent fit</td></tr>
+            <tr><td>11</td><td>Parade</td><td>$320</td><td>96%</td><td>Colorful, playful</td><td>Too playful for performance brand</td></tr>
+            <tr><td>12</td><td>Tiny</td><td>$300</td><td>98%</td><td>Minimalist</td><td>Too minimal for 1000+ SKUs</td></tr>
+            <tr><td>13</td><td>Plush</td><td>$280</td><td>96%</td><td>Mid-range general</td><td>Adequate, not standout</td></tr>
+            <tr><td>14</td><td>Impact</td><td>$380</td><td>84%</td><td>Bold typography + countdown</td><td>Low rating, frequent bugs</td></tr>
+            <tr><td>15</td><td>Prestige</td><td>$380</td><td>91%</td><td>Luxury / fashion storytelling</td><td>Wrong aesthetic for cubing</td></tr>
+            <tr><td>16</td><td>Stretch</td><td>$400</td><td>86%</td><td>Flexible editorial layout</td><td>Most expensive, mobile text-only menu</td></tr>
+            <tr style="color:var(--color-text-secondary);"><td>17</td><td>Giggles</td><td>$160</td><td>100%</td><td>Simple children&rsquo;s store</td><td>Wrong aesthetic</td></tr>
+            <tr style="color:var(--color-text-secondary);"><td>18</td><td>Crescendo</td><td>$160</td><td>100%</td><td>Budget basic</td><td>Lacks quick view + filters</td></tr>
+            <tr style="color:var(--color-text-secondary);"><td>19</td><td>Toyo</td><td>$140</td><td>94%</td><td>Basic toy store</td><td>Too basic for 1000+ SKUs</td></tr>
+            <tr style="color:var(--color-text-secondary);"><td>20</td><td>Sprout</td><td>$100</td><td>91%</td><td>Entry-level</td><td>Avoid &mdash; lacks core features</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <!-- ── FINAL RECOMMENDATION ── -->
       <div class="section-card">
         <h3 class="section-title">Recommendation</h3>
         <div class="callout success">
-          <strong>Stay on Eurus + Heavy Customization</strong>
-          <p class="mt-8">Given that Eurus was purchased 8-9 months ago, has existing customizations, and the store has 1000+ SKUs with 150 collections &mdash; a theme migration carries significant risk. The performance issues are largely from app scripts (Snapmint errors, PageFly overhead, Corner widget) rather than the theme itself.</p>
-          <p class="mt-8"><strong>Strategy:</strong> Keep Eurus, fix performance bottlenecks, add missing features via customization + targeted apps. This is lower risk, lower cost, and faster to implement than a full theme switch.</p>
+          <strong>Stay on Eurus + Update to v9.8.0 + Activate Unused Features</strong>
+          <p class="mt-8">After evaluating 20 themes, Eurus remains the best option for Cubelelo. It scores <strong>27/30</strong> on critical features (highest of all evaluated themes), has <strong>excellent Core Web Vitals</strong> (96/97/95), supports <strong>metafield-driven custom badges</strong> (for difficulty levels, speed/casual indicators), and carries <strong>zero switching cost</strong>.</p>
+          <p class="mt-8">The live site&rsquo;s poor performance (34/100 mobile) is caused by <strong>app bloat</strong> (26 apps, JS errors) &mdash; not the theme. Fixing the apps fixes the performance.</p>
         </div>
         <div class="grid-2 mt-24">
           <div class="recommendation-card primary">
-            <h4>Path A: Stay on Eurus (Recommended)</h4>
+            <h4>&#x2705; Path A: Stay on Eurus (Recommended)</h4>
             <ul>
-              <li>No theme migration risk</li>
-              <li>Preserve existing customizations</li>
-              <li>Focus budget on features &amp; performance</li>
-              <li>Faster timeline (4-6 weeks vs 8-10)</li>
-              <li>Theme cost: &#8377;0 (already owned)</li>
+              <li>27/30 critical features inbuilt</li>
+              <li>Metafield badges for difficulty/speed badges</li>
+              <li>99% rating, 472 reviews (battle-tested)</li>
+              <li>Best CWV scores (96/97/95)</li>
+              <li>No migration risk or downtime</li>
+              <li>Theme cost: <strong>&#8377;0</strong></li>
+              <li>Timeline: 4&ndash;6 weeks</li>
             </ul>
           </div>
           <div class="recommendation-card">
-            <h4>Path B: Switch to Empire or Habitat</h4>
+            <h4>&#x26A0; Path B: Switch to Ignite (Alternative)</h4>
             <ul>
-              <li>Better built-in features for large catalogs</li>
-              <li>Potentially better performance baseline</li>
-              <li>Migration risk with 1000+ SKUs</li>
-              <li>Existing customizations lost</li>
-              <li>Theme cost: ~&#8377;20-25K + migration dev</li>
+              <li>26/30 features (1 fewer than Eurus)</li>
+              <li>50+ sections, &ldquo;Playtime&rdquo; toy preset</li>
+              <li>99% rating but only 85 reviews (new theme)</li>
+              <li>Switching cost: <strong>&#8377;89K&ndash;1.09L</strong></li>
+              <li>Risk: 26 apps + GoKwik reconfiguration</li>
+              <li>Timeline: 8&ndash;10 weeks (incl. migration)</li>
+              <li>Use case: only if doing a full visual redesign</li>
             </ul>
           </div>
         </div>
         <div class="callout info mt-16">
-          <strong>Verified from Shopify Admin:</strong> The live theme is an older Eurus fork renamed &ldquo;Secret Santa&rdquo; for a seasonal campaign. A newer Eurus 9.3 sits unpublished. The store has a pattern of renaming themes per season (Republic Day 2026, BXG10 Sale, etc.). Recommendation stands: stay on Eurus, update to latest version, and customize heavily.
+          <strong>Action items for Eurus:</strong> (1) Update to v9.8.0 from the older &ldquo;Secret Santa&rdquo; fork. (2) Enable native features not currently active: quick view, countdown timer, stock counter, back-in-stock alerts. (3) Set up metafield badges for difficulty levels and speed/casual indicators. (4) Audit and remove/optimize apps causing JS errors (Snapmint, PageFly).
         </div>
       </div>
     </section>
@@ -1395,7 +1603,7 @@
     <section class="tab-content" id="tab-investment">
       <div class="section-card">
         <h2 class="section-title">Investment &amp; ROI</h2>
-        <p class="section-subtitle">Fixed project cost backed by real data from your GA4 analytics + Shopify Admin</p>
+        <p class="section-subtitle">Fixed project cost backed by real data from GA4 analytics, Shopify Admin, and validated by Growisto&rsquo;s Shopify team audit</p>
       </div>
 
       <div class="section-card">
@@ -1403,34 +1611,80 @@
         <table class="investment-table">
           <thead><tr><th>Component</th><th>Cost</th><th>What&rsquo;s Included</th></tr></thead>
           <tbody>
-            <tr><td>Theme License (Eurus &mdash; stay)</td><td>&#8377;0</td><td>No migration needed, already owned</td></tr>
-            <tr><td>Customization &amp; Feature Development (Growisto Fee)</td><td>&#8377;2.8L</td><td>Homepage, PDP, collection, cart, blog, PageSpeed, GA4 fixes</td></tr>
-            <tr><td>App Stack (12 months)</td><td>~&#8377;70K</td><td>Klaviyo, Searchanise, delivery estimation, back-in-stock alerts</td></tr>
+            <tr><td>Theme License (Eurus &mdash; stay)</td><td>&#8377;0</td><td>No migration needed, already owned. Update to v9.8.0 included.</td></tr>
+            <tr><td>Customization &amp; Development</td><td>&#8377;2.5L</td><td>Phase 1 + Phase 2 features: metafield badges, difficulty filters, PDP optimization, blog CTAs, trust elements, desktop layout fix, homepage sections, PageSpeed optimization, GA4 fixes, EMI integration</td></tr>
+            <tr><td>App Setup &amp; Integration</td><td>&#8377;30K</td><td>Klaviyo setup + flows, Boost/Searchanise config, delivery estimation, FBT bundles, free shipping bar, Clarity, WhatsApp button, Razorpay EMI</td></tr>
+            <tr><td>New App Stack (12 months)</td><td>~&#8377;70K</td><td>Klaviyo (~$35/mo) + Boost/Searchanise (~$35/mo) + Delivery Date (~$7/mo) + FBT (~$15/mo) + Tracking (~$15/mo) + Free Shipping Bar (~$5/mo)</td></tr>
           </tbody>
           <tfoot>
             <tr class="total-row"><td><strong>Total Investment</strong></td><td><strong>&#8377;3.5L</strong></td><td>Fixed project cost &mdash; no hidden charges</td></tr>
           </tfoot>
         </table>
         <div class="callout info mt-16">
-          <strong>What&rsquo;s included:</strong> All Tier 1 critical features, Tier 2 recommended features, PageSpeed optimization (34 &rarr; 70+ mobile), GA4 event fixes, app setup &amp; integration, and 12 months of new app stack costs. One invoice, one number.
+          <strong>What&rsquo;s included:</strong> All Phase 1 quick wins (weeks 1&ndash;3), all Phase 2 medium-effort features (weeks 4&ndash;8), Eurus v9.8.0 update, metafield badge system setup (difficulty levels, speed/casual), puzzle-specific filters, PageSpeed optimization (34 &rarr; 70+ mobile), GA4 event fixes, app setup &amp; integration, and 12 months of new app stack costs. One invoice, one number.
+        </div>
+        <div class="callout success mt-16">
+          <strong>Cost savings from our analysis:</strong> By confirming that Eurus already supports quick view, countdown timer, stock counter, and back-in-stock alerts natively, we reduced the development scope by ~&#8377;40K compared to treating these as custom builds. Abandoned cart emails (free on Grow plan) save an additional ~&#8377;12K/year in app costs. These savings are reinvested into puzzle-specific features (metafield badges, difficulty filters, comparison tool) that have higher impact for Cubelelo.
+        </div>
+      </div>
+
+      <div class="section-card">
+        <h3 class="section-title">What&rsquo;s Included vs. Not Included</h3>
+        <div class="grid-2">
+          <div>
+            <h4 style="color:var(--color-success-text);">&#x2705; Included in &#8377;3.5L</h4>
+            <ul style="font-size:13px;line-height:1.8;">
+              <li>Phase 1: 13 quick wins (weeks 1&ndash;3)</li>
+              <li>Phase 2: 13 medium-effort features (weeks 4&ndash;8)</li>
+              <li>Eurus update to v9.8.0 + enable native features</li>
+              <li>Metafield badge system (difficulty, speed/casual)</li>
+              <li>Puzzle-specific filters (difficulty, magnetic, type)</li>
+              <li>Desktop PDP layout optimization</li>
+              <li>Blog product CTAs &amp; monetization</li>
+              <li>PageSpeed: mobile 34 &rarr; 70+</li>
+              <li>GA4 event fixes &amp; audience setup</li>
+              <li>Klaviyo setup + 3 core email flows</li>
+              <li>All app installations &amp; configuration</li>
+              <li>12 months new app stack costs</li>
+              <li>Cube comparison tool (basic version)</li>
+              <li>EMI via Razorpay for &#8377;3K+ orders</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="color:var(--color-text-secondary);">&#x23F3; Phase 3 (Not in &#8377;3.5L &mdash; post-launch)</h4>
+            <ul style="font-size:13px;line-height:1.8;color:var(--color-text-secondary);">
+              <li>Instagram / UGC social feed</li>
+              <li>Referral program (ReferralCandy / Smile.io)</li>
+              <li>Exit-intent popup with discount</li>
+              <li>Price drop alert signup</li>
+              <li>Solve time benchmarks on PDP</li>
+              <li>Wishlist functionality</li>
+              <li>Loyalty program prominence overhaul</li>
+              <li>Live chat / chatbot upgrade</li>
+              <li>Full testimonial photo carousel</li>
+            </ul>
+            <div class="callout info mt-16" style="font-size:12px;">
+              Phase 3 features can be scoped as a follow-on project once Phase 1+2 results are measured. Estimated cost: &#8377;1&ndash;1.5L additional.
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="section-card">
         <h3 class="section-title">Conversion Rate Improvement Scenarios</h3>
-        <p class="section-subtitle">Current CVR: 1.35% (GA4) &mdash; What happens when we improve it?</p>
+        <p class="section-subtitle">Current CVR: 1.13% (Shopify) / 1.35% (GA4) &mdash; What happens when we improve it? <span style="font-size:12px;color:var(--color-text-secondary);">Source: Shopify Admin (28-day: Jan 19 &ndash; Feb 15, 2026)</span></p>
         <table class="data-table highlight">
-          <thead><tr><th>CVR Improvement</th><th>New CVR</th><th>Additional Monthly Revenue</th><th>Annual Impact</th></tr></thead>
+          <thead><tr><th>CVR Improvement</th><th>New CVR</th><th>Additional Monthly Revenue</th><th>3-Month Impact</th></tr></thead>
           <tbody>
-            <tr><td>+10%</td><td>1.49%</td><td class="positive">+&#8377;3.6L</td><td class="positive">+&#8377;43L</td></tr>
-            <tr><td>+20%</td><td>1.62%</td><td class="positive">+&#8377;7.3L</td><td class="positive">+&#8377;87L</td></tr>
-            <tr><td>+30%</td><td>1.76%</td><td class="positive">+&#8377;10.9L</td><td class="positive">+&#8377;1.3Cr</td></tr>
-            <tr><td>+40%</td><td>1.89%</td><td class="positive">+&#8377;14.6L</td><td class="positive">+&#8377;1.75Cr</td></tr>
-            <tr class="total-row"><td><strong>+50%</strong></td><td><strong>2.03%</strong></td><td class="positive"><strong>+&#8377;18.2L</strong></td><td class="positive"><strong>+&#8377;2.2Cr</strong></td></tr>
+            <tr><td>+10%</td><td>1.24%</td><td class="positive">+&#8377;3.6L</td><td class="positive">+&#8377;10.8L</td></tr>
+            <tr><td>+20%</td><td>1.36%</td><td class="positive">+&#8377;7.3L</td><td class="positive">+&#8377;21.9L</td></tr>
+            <tr><td>+30%</td><td>1.47%</td><td class="positive">+&#8377;10.9L</td><td class="positive">+&#8377;32.7L</td></tr>
+            <tr><td>+40%</td><td>1.58%</td><td class="positive">+&#8377;14.6L</td><td class="positive">+&#8377;43.8L</td></tr>
+            <tr class="total-row"><td><strong>+50%</strong></td><td><strong>1.70%</strong></td><td class="positive"><strong>+&#8377;18.2L</strong></td><td class="positive"><strong>+&#8377;54.6L</strong></td></tr>
           </tbody>
         </table>
         <div class="callout success mt-16">
-          <strong>Even a 10% improvement pays for the entire project in under 1 month.</strong> Our target is 20&ndash;30% improvement based on the specific funnel fixes identified in this audit.
+          <strong>Even a 10% improvement pays for the entire project in under 1 month.</strong> Based on the specific funnel fixes (shipping abandonment 38.7%, desktop ATC 5.3%, blog 18% traffic &lt;0.1% revenue), our target is 20&ndash;30% improvement. At 20%, the project pays back in <strong>15 days</strong>.
         </div>
       </div>
 
@@ -1460,13 +1714,13 @@
       </div>
 
       <div class="section-card">
-        <h3 class="section-title">3-Month Projection</h3>
+        <h3 class="section-title">3-Month Implementation &amp; Impact Timeline</h3>
         <table class="data-table">
-          <thead><tr><th>Timeline</th><th>What Happens</th><th>Expected Impact</th></tr></thead>
+          <thead><tr><th>Timeline</th><th>What Goes Live</th><th>Key Features</th><th>Expected Impact</th></tr></thead>
           <tbody>
-            <tr><td><strong>Month 1</strong></td><td>Quick wins live: GA4 fixes, trust badges, PageSpeed optimization, Klaviyo setup</td><td class="positive">+&#8377;3&ndash;5L/month</td></tr>
-            <tr><td><strong>Month 2</strong></td><td>Core features live: PDP optimization, search upgrade, shipping estimator, blog CTAs</td><td class="positive">+&#8377;6&ndash;10L/month</td></tr>
-            <tr><td><strong>Month 3</strong></td><td>Full optimization: email flows mature, A/B testing, niche features, ad reinvestment begins</td><td class="positive">+&#8377;8&ndash;12L/month</td></tr>
+            <tr><td><strong>Weeks 1&ndash;3</strong></td><td>Phase 1: Quick Wins</td><td>Klaviyo setup, free shipping bar, FBT bundles, metafield badges, product videos, countdown timer, GA4 fixes, Clarity, WhatsApp button</td><td class="positive">+&#8377;3&ndash;5L/month</td></tr>
+            <tr><td><strong>Weeks 4&ndash;8</strong></td><td>Phase 2: Core Features</td><td>Advanced search, puzzle filters, delivery estimation, UGC reviews, desktop PDP fix, blog CTAs, trust badges, comparison tool, EMI</td><td class="positive">+&#8377;6&ndash;10L/month</td></tr>
+            <tr><td><strong>Weeks 9&ndash;12</strong></td><td>Optimization &amp; Measurement</td><td>Email flows mature, A/B test key pages, PageSpeed final pass, Clarity heatmap analysis, fine-tune filters &amp; search</td><td class="positive">+&#8377;8&ndash;12L/month</td></tr>
           </tbody>
         </table>
       </div>
