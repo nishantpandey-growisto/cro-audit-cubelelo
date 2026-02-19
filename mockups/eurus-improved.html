@@ -54,6 +54,9 @@
     /* ============================================================
        COMPARISON MARKERS (numbered purple circles with tooltips)
        ============================================================ */
+    /* Ensure any section containing a marker allows tooltip overflow */
+    [style*="position:relative"] { overflow: visible !important; }
+
     .comparison-marker {
       position: absolute;
       width: 32px;
@@ -67,7 +70,7 @@
       font-size: 13px;
       font-weight: 700;
       cursor: pointer;
-      z-index: 10;
+      z-index: 100;
       top: 12px;
       right: 12px;
       box-shadow: 0 2px 12px rgba(124,58,237,0.4);
@@ -93,7 +96,7 @@
       opacity: 0;
       visibility: hidden;
       transition: all 0.25s ease;
-      z-index: 20;
+      z-index: 200;
       box-shadow: 0 8px 32px rgba(0,0,0,0.3);
       pointer-events: none;
     }
@@ -413,7 +416,6 @@
       background: linear-gradient(135deg, #1a8a7d 0%, #0f5e55 60%, #1e293b 100%);
       padding: 64px 0;
       position: relative;
-      overflow: hidden;
     }
     .hero::after {
       content: '';
@@ -1036,12 +1038,13 @@
   <div class="announcement-bar" style="position:relative;">
     <!-- Marker 1: Announcement Bar -->
     <div class="comparison-marker" style="top:6px;right:12px;">1
-      <div class="marker-tooltip">
+      <div class="marker-tooltip" style="bottom:auto;top:calc(100% + 12px);">
         <span class="tooltip-tag enhanced">ENHANCED</span>
         <span class="tooltip-title">Announcement Bar</span>
         Urgency messaging + free shipping threshold (&#8377;999). Currently just brand name.
         <div class="tooltip-current">Current site: Static bar showing only "Cubelelo" brand name with no promotional messaging or urgency.</div>
       </div>
+      <style>.announcement-bar .marker-tooltip::after { top: auto; bottom: 100%; border-top-color: transparent; border-bottom-color: #1d1d20; }</style>
     </div>
     <strong>SUB-3 WORLD RECORD in 3x3</strong> &nbsp;|&nbsp; Get <strong>10% OFF</strong> on GAN 12 using code &mdash; <strong>WRSUB3</strong>
   </div>
@@ -1081,12 +1084,13 @@
   <div class="trust-bar" style="position:relative;">
     <!-- Marker 2: Trust Bar -->
     <div class="comparison-marker">2
-      <div class="marker-tooltip">
+      <div class="marker-tooltip" style="bottom:auto;top:calc(100% + 12px);">
         <span class="tooltip-tag new">NEW</span>
         <span class="tooltip-title">Trust Bar</span>
         4 trust signals above fold (free shipping, same-day dispatch, returns, 4.8&#9733; rating). Currently missing entirely.
         <div class="tooltip-current">Current site: No trust bar exists. Visitors see no credibility signals above the fold.</div>
       </div>
+      <style>.trust-bar .marker-tooltip::after { top: auto; bottom: 100%; border-top-color: transparent; border-bottom-color: #1d1d20; }</style>
     </div>
     <div class="container trust-bar-inner">
       <div class="trust-item"><span class="emoji">&#128666;</span> Free Shipping above &#8377;799</div>
