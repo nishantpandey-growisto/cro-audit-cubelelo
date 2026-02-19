@@ -1341,10 +1341,11 @@
               <div class="loading-text">Loading mockup&hellip;</div>
             </div>
             <iframe
+              id="mockupIframe"
               src="mockups/eurus-improved.html"
               title="Cubelelo Homepage Mockup — Eurus Improved"
-              style="width:100%;border:none;height:800px;"
-              onload="document.getElementById('mockupLoading').classList.add('hidden');try{this.style.height=this.contentWindow.document.documentElement.scrollHeight+'px';}catch(e){}"
+              style="width:100%;border:none;min-height:800px;"
+              onload="document.getElementById('mockupLoading').classList.add('hidden');(function resizeIframe(el,n){try{var h=el.contentWindow.document.documentElement.scrollHeight;if(h>100){el.style.height=h+'px';}else if(n<20){setTimeout(function(){resizeIframe(el,n+1);},300);}}catch(e){}})(this,0);"
             ></iframe>
           </div>
         </div>
@@ -1403,8 +1404,8 @@
           <thead><tr><th>Component</th><th>Cost</th><th>What&rsquo;s Included</th></tr></thead>
           <tbody>
             <tr><td>Theme License (Eurus &mdash; stay)</td><td>&#8377;0</td><td>No migration needed, already owned</td></tr>
-            <tr><td>Customization &amp; Feature Development</td><td>Included</td><td>Homepage, PDP, collection, cart, blog, PageSpeed, GA4 fixes</td></tr>
-            <tr><td>App Stack (12 months)</td><td>Included</td><td>Klaviyo, Searchanise, delivery estimation, back-in-stock alerts</td></tr>
+            <tr><td>Customization &amp; Feature Development (Growisto Fee)</td><td>&#8377;2.8L</td><td>Homepage, PDP, collection, cart, blog, PageSpeed, GA4 fixes</td></tr>
+            <tr><td>App Stack (12 months)</td><td>~&#8377;70K</td><td>Klaviyo, Searchanise, delivery estimation, back-in-stock alerts</td></tr>
           </tbody>
           <tfoot>
             <tr class="total-row"><td><strong>Total Investment</strong></td><td><strong>&#8377;3.5L</strong></td><td>Fixed project cost &mdash; no hidden charges</td></tr>
@@ -1611,13 +1612,16 @@
       document.getElementById('sidebarOverlay').classList.toggle('visible');
     }
 
-    // Mockup Viewport Toggle (CSS-only approach — no iframe height manipulation)
+    // Mockup Viewport Toggle
     function switchViewport(mode) {
       const container = document.getElementById('mockupContainer');
       const btns = document.querySelectorAll('.viewport-btn');
       btns.forEach(b => b.classList.remove('active'));
       document.querySelector('[data-viewport="' + mode + '"]').classList.add('active');
       container.className = 'mockup-container ' + mode;
+      // Re-measure iframe height after viewport switch
+      var el = document.getElementById('mockupIframe');
+      if (el) { setTimeout(function(){ try { var h = el.contentWindow.document.documentElement.scrollHeight; if(h>100) el.style.height=h+'px'; } catch(e){} }, 400); }
     }
   </script>
 
