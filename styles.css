@@ -1916,31 +1916,29 @@ table {
    21. Status Indicators
    ============================================================ */
 
-.status-pass {
-  color: var(--color-success);
-  font-weight: 600;
+.status-pass,
+.status-warn,
+.status-fail {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  vertical-align: middle;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
 }
 
-.status-pass::before {
-  content: '\2705 ';
+.status-pass {
+  background: #16a34a;
 }
 
 .status-warn {
-  color: var(--color-warning);
-  font-weight: 600;
-}
-
-.status-warn::before {
-  content: '\1F7E1 ';
+  background: #eab308;
 }
 
 .status-fail {
-  color: var(--color-danger);
-  font-weight: 600;
-}
-
-.status-fail::before {
-  content: '\1F534 ';
+  background: #dc2626;
 }
 
 /* Status dot variant (no emoji) */
@@ -3660,7 +3658,79 @@ table {
   margin-top: 16px;
 }
 
-/* --- Tab 2: Funnel Percentage & Drop Labels --- */
+/* --- Funnel V2 (label-outside-bar layout) --- */
+.funnel-v2 {
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  border: 1px solid var(--color-border);
+}
+
+.funnel-v2-row {
+  margin-bottom: 6px;
+}
+
+.funnel-v2-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+  padding: 0 2px;
+}
+
+.funnel-v2-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.funnel-v2-num {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.funnel-v2-track {
+  height: 36px;
+  background: var(--color-border-light);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.funnel-v2-fill {
+  height: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  min-width: 56px;
+  transition: width 0.8s ease;
+}
+
+.funnel-v2-fill span {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.funnel-v2-fill.stage-1 { background: #367588; }
+.funnel-v2-fill.stage-2 { background: #3b82f6; }
+.funnel-v2-fill.stage-3 { background: #8b5cf6; }
+.funnel-v2-fill.stage-4 { background: #f59e0b; }
+.funnel-v2-fill.stage-5 { background: #ef4444; }
+.funnel-v2-fill.stage-6 { background: #10b981; }
+
+.funnel-v2-drop {
+  font-size: 12px;
+  color: var(--color-danger);
+  padding: 4px 0 6px 4px;
+  font-weight: 500;
+}
+
+/* --- Tab 2: Funnel Percentage & Drop Labels (legacy) --- */
 .funnel-pct {
   font-size: 14px;
   font-weight: 600;

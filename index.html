@@ -70,7 +70,7 @@
       </div>
       <div class="nav-item" onclick="switchTab('features')" data-tab="features">
         <span class="nav-icon">&#9889;</span>
-        <span class="nav-label">Recommended Features &amp; Apps</span>
+        <span class="nav-label">Features &amp; Apps</span>
       </div>
       <div class="nav-item" onclick="switchTab('themes')" data-tab="themes">
         <span class="nav-icon">&#127912;</span>
@@ -538,37 +538,25 @@
 
         <h3 class="section-title mt-24">Shopify Conversion Funnel</h3>
         <p class="section-subtitle">Only 19 of 2,894 orders used Shopify&rsquo;s native checkout &mdash; GoKwik handles the rest</p>
-        <div class="funnel-container">
-          <div class="funnel-step">
-            <div class="funnel-bar" style="width:100%">
-              <span class="funnel-label">Sessions (Shopify)</span>
-              <span class="funnel-count">256,848</span>
-            </div>
-            <span class="funnel-pct">100%</span>
+        <div class="funnel-v2">
+          <div class="funnel-v2-row">
+            <div class="funnel-v2-info"><span class="funnel-v2-name">Sessions (Shopify)</span><span class="funnel-v2-num">256,848</span></div>
+            <div class="funnel-v2-track"><div class="funnel-v2-fill stage-1" style="width:100%"><span>100%</span></div></div>
           </div>
-          <div class="funnel-drop">&#9660; 93.8% don&rsquo;t add to cart</div>
-          <div class="funnel-step">
-            <div class="funnel-bar" style="width:6.16%;">
-              <span class="funnel-label">Added to Cart</span>
-              <span class="funnel-count">15,823</span>
-            </div>
-            <span class="funnel-pct">6.16%</span>
+          <div class="funnel-v2-drop">&#9660; 93.8% don&rsquo;t add to cart</div>
+          <div class="funnel-v2-row">
+            <div class="funnel-v2-info"><span class="funnel-v2-name">Added to Cart</span><span class="funnel-v2-num">15,823</span></div>
+            <div class="funnel-v2-track"><div class="funnel-v2-fill stage-2" style="width:100%"><span>6.16%</span></div></div>
           </div>
-          <div class="funnel-drop">&#9660; 71.4% don&rsquo;t reach checkout</div>
-          <div class="funnel-step">
-            <div class="funnel-bar" style="width:1.76%; min-width: 120px;">
-              <span class="funnel-label">Reached Checkout</span>
-              <span class="funnel-count">4,521</span>
-            </div>
-            <span class="funnel-pct">1.76%</span>
+          <div class="funnel-v2-drop">&#9660; 71.4% don&rsquo;t reach checkout</div>
+          <div class="funnel-v2-row">
+            <div class="funnel-v2-info"><span class="funnel-v2-name">Reached Checkout</span><span class="funnel-v2-num">4,521</span></div>
+            <div class="funnel-v2-track"><div class="funnel-v2-fill stage-3" style="width:100%"><span>1.76%</span></div></div>
           </div>
-          <div class="funnel-drop">&#9660; 99.6% complete via GoKwik (not Shopify native)</div>
-          <div class="funnel-step">
-            <div class="funnel-bar purchase" style="width:1.13%; min-width: 100px;">
-              <span class="funnel-label">All Orders (GoKwik + Native)</span>
-              <span class="funnel-count">2,894</span>
-            </div>
-            <span class="funnel-pct">1.13%</span>
+          <div class="funnel-v2-drop">&#9660; 99.6% complete via GoKwik (not Shopify native)</div>
+          <div class="funnel-v2-row">
+            <div class="funnel-v2-info"><span class="funnel-v2-name">All Orders (GoKwik + Native)</span><span class="funnel-v2-num">2,894</span></div>
+            <div class="funnel-v2-track"><div class="funnel-v2-fill stage-4" style="width:100%"><span>1.13%</span></div></div>
           </div>
         </div>
         <div class="callout info mt-16">
@@ -579,45 +567,30 @@
       <div class="section-card">
         <h2 class="section-title">Purchase Funnel (GA4)</h2>
         <p class="section-subtitle">154,054 sessions &rarr; 2,079 purchases (28-day period) &mdash; behavioral events only</p>
-        <div class="funnel-container">
-          <div class="funnel-step">
-            <div class="funnel-bar" style="width:100%">
-              <span class="funnel-label">Sessions</span>
-              <span class="funnel-count">154,054</span>
-            </div>
-            <span class="funnel-pct">100%</span>
+        <div class="funnel-v2">
+          <div class="funnel-v2-row">
+            <div class="funnel-v2-info"><span class="funnel-v2-name">Sessions</span><span class="funnel-v2-num">154,054</span></div>
+            <div class="funnel-v2-track"><div class="funnel-v2-fill stage-1" style="width:100%"><span>100%</span></div></div>
           </div>
-          <div class="funnel-drop">&#9660; 59.6% never view a product</div>
-          <div class="funnel-step">
-            <div class="funnel-bar" style="width:40.4%">
-              <span class="funnel-label">View Product</span>
-              <span class="funnel-count">62,240</span>
-            </div>
-            <span class="funnel-pct">40.4%</span>
+          <div class="funnel-v2-drop">&#9660; 59.6% never view a product</div>
+          <div class="funnel-v2-row">
+            <div class="funnel-v2-info"><span class="funnel-v2-name">View Product</span><span class="funnel-v2-num">62,240</span></div>
+            <div class="funnel-v2-track"><div class="funnel-v2-fill stage-2" style="width:40.4%"><span>40.4%</span></div></div>
           </div>
-          <div class="funnel-drop">&#9660; 84.8% view but don&rsquo;t add to cart</div>
-          <div class="funnel-step">
-            <div class="funnel-bar" style="width:15.2%; min-width: 120px;">
-              <span class="funnel-label">Add to Cart</span>
-              <span class="funnel-count">9,457</span>
-            </div>
-            <span class="funnel-pct">6.1%</span>
+          <div class="funnel-v2-drop">&#9660; 84.8% view but don&rsquo;t add to cart</div>
+          <div class="funnel-v2-row">
+            <div class="funnel-v2-info"><span class="funnel-v2-name">Add to Cart</span><span class="funnel-v2-num">9,457</span></div>
+            <div class="funnel-v2-track"><div class="funnel-v2-fill stage-3" style="width:15.2%"><span>6.1%</span></div></div>
           </div>
-          <div class="funnel-drop">&#9660; 32% abandon cart before checkout</div>
-          <div class="funnel-step">
-            <div class="funnel-bar" style="width:10.3%; min-width: 120px;">
-              <span class="funnel-label">Begin Checkout</span>
-              <span class="funnel-count">6,427</span>
-            </div>
-            <span class="funnel-pct">4.2%</span>
+          <div class="funnel-v2-drop">&#9660; 32% abandon cart before checkout</div>
+          <div class="funnel-v2-row">
+            <div class="funnel-v2-info"><span class="funnel-v2-name">Begin Checkout</span><span class="funnel-v2-num">6,427</span></div>
+            <div class="funnel-v2-track"><div class="funnel-v2-fill stage-4" style="width:10.3%"><span>4.2%</span></div></div>
           </div>
-          <div class="funnel-drop">&#9660; 67.6% abandon during checkout</div>
-          <div class="funnel-step">
-            <div class="funnel-bar purchase" style="width:3.3%; min-width: 100px;">
-              <span class="funnel-label">Purchase</span>
-              <span class="funnel-count">2,079</span>
-            </div>
-            <span class="funnel-pct">1.35%</span>
+          <div class="funnel-v2-drop">&#9660; 67.6% abandon during checkout</div>
+          <div class="funnel-v2-row">
+            <div class="funnel-v2-info"><span class="funnel-v2-name">Purchase</span><span class="funnel-v2-num">2,079</span></div>
+            <div class="funnel-v2-track"><div class="funnel-v2-fill stage-5" style="width:3.3%"><span>1.35%</span></div></div>
           </div>
         </div>
       </div>
@@ -750,10 +723,10 @@
       <div class="section-card">
         <h2 class="section-title">Conversion Audit</h2>
         <p class="section-subtitle">200+ parameter audit across all page types and systems</p>
-        <div class="scoring-legend" style="display:flex;gap:16px;margin:12px 0 4px;flex-wrap:wrap;">
-          <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;"><span class="status-pass" style="font-size:1rem;">&#10003;</span> <strong>2</strong> = Fully implemented</span>
-          <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;"><span class="status-warn" style="font-size:1rem;">&#9888;</span> <strong>1</strong> = Partial / needs improvement</span>
-          <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;"><span class="status-fail" style="font-size:1rem;">&#10007;</span> <strong>0</strong> = Missing / not implemented</span>
+        <div class="scoring-legend" style="display:flex;gap:20px;margin:12px 0 4px;flex-wrap:wrap;">
+          <span style="display:inline-flex;align-items:center;gap:8px;font-size:0.85rem;"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#16a34a;"></span> Fully implemented</span>
+          <span style="display:inline-flex;align-items:center;gap:8px;font-size:0.85rem;"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#eab308;"></span> Partial / needs improvement</span>
+          <span style="display:inline-flex;align-items:center;gap:8px;font-size:0.85rem;"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#dc2626;"></span> Missing / not implemented</span>
         </div>
         <div class="sub-tabs">
           <button class="sub-tab active" onclick="switchSubTab(this, 'homepage-analysis')">Homepage</button>
@@ -1090,7 +1063,7 @@
          ============================================================ -->
     <section class="tab-content" id="tab-features">
       <div class="section-card">
-        <h2 class="section-title">Recommended Features &amp; Apps</h2>
+        <h2 class="section-title">Features &amp; Apps</h2>
         <p class="section-subtitle">Every UX issue identified in the audit has been tied to specific features and fixes. Every feature below is mapped to a funnel problem it solves.</p>
         <div class="callout info">
           <strong>How this connects:</strong> Conversion Audit (200+ parameters) &rarr; identifies UX issues &rarr; each issue maps to a feature/fix below &rarr; each feature maps to a specific funnel metric it improves. The <strong>&ldquo;Who Asked&rdquo;</strong> column shows whether this was identified by Growisto&rsquo;s audit or explicitly requested by Cubelelo in the questionnaire.
@@ -1100,6 +1073,7 @@
       <div class="section-card">
         <h3 class="section-title">Tier 1: Critical Features</h3>
         <p class="section-subtitle">Must-have for launch &mdash; directly tied to revenue leaks</p>
+        <div class="table-wrapper">
         <table class="feature-table">
           <thead><tr><th>Feature</th><th>Page</th><th>Type</th><th>Funnel Fix</th><th>Who Asked</th></tr></thead>
           <tbody>
@@ -1117,11 +1091,13 @@
             <tr><td>GA4 event activation + fixes</td><td>Analytics</td><td><span class="badge-custom">Custom</span></td><td>Can&rsquo;t optimize what you can&rsquo;t measure</td><td><span class="badge-custom">Growisto</span></td></tr>
           </tbody>
         </table>
+        </div>
       </div>
 
       <div class="section-card">
         <h3 class="section-title">Tier 2: Recommended Features</h3>
         <p class="section-subtitle">High impact &mdash; implement within first month</p>
+        <div class="table-wrapper">
         <table class="feature-table">
           <thead><tr><th>Feature</th><th>Page</th><th>Type</th><th>Funnel Fix</th><th>Who Asked</th></tr></thead>
           <tbody>
@@ -1137,6 +1113,7 @@
             <tr><td>Loyalty program visibility</td><td>Homepage</td><td><span class="badge-custom">Custom</span></td><td>Retention &rarr; Nector already installed, needs prominence</td><td><span class="badge-custom">Growisto</span></td></tr>
           </tbody>
         </table>
+        </div>
       </div>
 
       <div class="section-card">
