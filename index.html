@@ -82,10 +82,6 @@
           <span class="nav-chevron" onclick="event.stopPropagation();toggleNavSubmenu(this.closest('.nav-item'))">▶</span>
         </div>
         <div class="nav-submenu">
-          <div class="nav-sub-item" onclick="scrollToSection('next-steps','remaining-journey')">
-            <span class="nav-sub-icon">📋</span>
-            <span>Remaining Journey</span>
-          </div>
           <div class="nav-sub-item" onclick="scrollToSection('next-steps','gantt-roadmap')">
             <span class="nav-sub-icon">📊</span>
             <span>Implementation Roadmap</span>
@@ -225,6 +221,29 @@
         </div>
       </div>
 
+      <!-- 9. Commercials & Next Steps (expandable) -->
+      <div class="nav-item" data-tab="commercials">
+        <div class="nav-item-header" onclick="switchTab('commercials')">
+          <span class="nav-icon">📝</span>
+          <span class="nav-label">Commercials &amp; Next Steps</span>
+          <span class="nav-chevron" onclick="event.stopPropagation();toggleNavSubmenu(this.closest('.nav-item'))">▶</span>
+        </div>
+        <div class="nav-submenu">
+          <div class="nav-sub-item" onclick="scrollToSection('commercials','remaining-journey')">
+            <span class="nav-sub-icon">📋</span>
+            <span>Remaining Journey</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('commercials','project-cost')">
+            <span class="nav-sub-icon">💰</span>
+            <span>Project Cost</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('commercials','scope-details')">
+            <span class="nav-sub-icon">📦</span>
+            <span>Included vs Not</span>
+          </div>
+        </div>
+      </div>
+
     </div>
     <div class="sidebar-footer">
       <p>Prepared by <strong>Growisto</strong></p>
@@ -353,6 +372,14 @@
             </div>
             <span class="toc-arrow">&#8594;</span>
           </div>
+          <div class="toc-card" onclick="switchTab('commercials')">
+            <div class="toc-number">8</div>
+            <div class="toc-body">
+              <h3>Commercials &amp; Next Steps</h3>
+              <p>Project cost, scope details, and the path forward to kickoff</p>
+            </div>
+            <span class="toc-arrow">&#8594;</span>
+          </div>
         </div>
       </div>
 
@@ -465,68 +492,6 @@
         </div>
       </div>
 
-      <div class="section-card">
-        <h3 class="section-title">Project Cost</h3>
-        <table class="investment-table">
-          <thead><tr><th>Component</th><th>Cost</th><th>What&rsquo;s Included</th></tr></thead>
-          <tbody>
-            <tr><td>Theme License (Eurus)</td><td>&#8377;0</td><td>Already purchased &mdash; switching from Warehouse costs no license fee. Eurus v9.8.0 setup included.</td></tr>
-            <tr><td>Customization &amp; Development</td><td>&#8377;2.8L</td><td>Includes Warehouse &rarr; Eurus theme migration + Phase 1 &amp; Phase 2 features: metafield badges, difficulty filters, PDP optimization, blog CTAs, trust elements, desktop layout fix, homepage sections, PageSpeed optimization, GA4 fixes, EMI integration. <em>Includes app setup:</em> Klaviyo setup + flows, Boost/Searchanise config, delivery estimation, FBT bundles, free shipping bar, Clarity, WhatsApp button, Razorpay EMI.</td></tr>
-            <tr><td>New App Stack (12 months)</td><td>~&#8377;70K</td><td>Klaviyo (~$35/mo) + Boost/Searchanise (~$35/mo) + Delivery Date (~$7/mo) + FBT (~$15/mo) + Tracking (~$15/mo) + Free Shipping Bar (~$5/mo)</td></tr>
-          </tbody>
-          <tfoot>
-            <tr class="total-row"><td><strong>Total Investment</strong></td><td><strong>&#8377;3.5L</strong></td><td>Fixed project cost &mdash; no hidden charges</td></tr>
-          </tfoot>
-        </table>
-        <div class="callout info mt-16">
-          <strong>What&rsquo;s included:</strong> Warehouse &rarr; Eurus migration + v9.8.0 configuration, all Phase 1 quick wins (weeks 1&ndash;3), all Phase 2 medium-effort features (weeks 4&ndash;8), metafield badge system setup (difficulty levels, speed/casual), puzzle-specific filters, PageSpeed optimization (34 &rarr; 70+ mobile), GA4 event fixes, all app installations &amp; configuration (Klaviyo, Boost/Searchanise, delivery estimation, FBT, etc.), and 12 months of new app stack costs. One invoice, one number.
-        </div>
-        <div class="callout success mt-16">
-          <strong>Cost savings from Warehouse &rarr; Eurus switch:</strong> By switching from Warehouse to Eurus, we gain countdown timer, back-in-stock alerts, infinite scroll, and variant-level metafield badges as native features &mdash; saving ~&#8377;40K in custom development compared to building these on Warehouse. Quick view is native on both themes. Abandoned cart emails (free on Grow plan) save an additional ~&#8377;12K/year in app costs. These savings are reinvested into puzzle-specific features (metafield badges, difficulty filters, comparison tool) that have higher impact for Cubelelo.
-        </div>
-      </div>
-
-      <div class="section-card">
-        <h3 class="section-title">What&rsquo;s Included vs. Not Included</h3>
-        <div class="grid-2">
-          <div>
-            <h4 style="color:var(--color-success-text);">&#x2705; Included in &#8377;3.5L</h4>
-            <ul style="font-size:13px;line-height:1.8;">
-              <li>Phase 1: 13 quick wins (weeks 1&ndash;3)</li>
-              <li>Phase 2: 13 medium-effort features (weeks 4&ndash;8)</li>
-              <li>Warehouse &rarr; Eurus migration + activate native features</li>
-              <li>Metafield badge system (difficulty, speed/casual)</li>
-              <li>Puzzle-specific filters (difficulty, magnetic, type)</li>
-              <li>Desktop PDP layout optimization</li>
-              <li>Blog product CTAs &amp; monetization</li>
-              <li>PageSpeed: mobile 34 &rarr; 70+</li>
-              <li>GA4 event fixes &amp; audience setup</li>
-              <li>Klaviyo setup + 3 core email flows</li>
-              <li>All app installations &amp; configuration</li>
-              <li>12 months new app stack costs</li>
-              <li>Cube comparison tool (basic version)</li>
-              <li>EMI via Razorpay for &#8377;3K+ orders</li>
-            </ul>
-          </div>
-          <div>
-            <h4 style="color:var(--color-text-secondary);">&#x23F3; Phase 3 (Not in &#8377;3.5L &mdash; post-launch)</h4>
-            <ul style="font-size:13px;line-height:1.8;color:var(--color-text-secondary);">
-              <li>Instagram / UGC social feed</li>
-              <li>Referral program (ReferralCandy / Smile.io)</li>
-              <li>Exit-intent popup with discount</li>
-              <li>Price drop alert signup</li>
-              <li>Solve time benchmarks on PDP</li>
-              <li>Wishlist functionality</li>
-              <li>Loyalty program prominence overhaul</li>
-              <li>Live chat / chatbot upgrade</li>
-              <li>Full testimonial photo carousel</li>
-            </ul>
-            <div class="callout info mt-16" style="font-size:12px;">
-              Phase 3 features can be scoped as a follow-on project once Phase 1+2 results are measured. Estimated cost: &#8377;1&ndash;1.5L additional.
-            </div>
-          </div>
-        </div>
-      </div>
 
     </section>
 
@@ -537,43 +502,6 @@
       <div class="section-card">
         <h2 class="section-title">Roadmap</h2>
         <p class="section-subtitle">How we get from here to launch &mdash; 12-week phased delivery</p>
-      </div>
-
-      <div class="section-card" id="remaining-journey">
-        <h3 class="section-title">Remaining Journey</h3>
-        <p class="section-subtitle">Steps 1&ndash;4 complete (or in progress). Here&rsquo;s what&rsquo;s next.</p>
-        <div class="next-steps-grid">
-          <div class="step-card" style="opacity:0.6;">
-            <div class="step-number" style="background:var(--color-success);">&#10003;</div>
-            <h3>Discovery</h3>
-            <p>Call, questionnaire, Shopify + GA4 access granted.</p>
-            <span class="step-timeline">Done</span>
-          </div>
-          <div class="step-card" style="opacity:0.6;">
-            <div class="step-number" style="background:var(--color-success);">&#10003;</div>
-            <h3>CRO Audit &amp; Analysis</h3>
-            <p>200+ parameter audit, GA4 + Shopify data, funnel analysis.</p>
-            <span class="step-timeline">Done</span>
-          </div>
-          <div class="step-card" style="opacity:0.6;">
-            <div class="step-number" style="background:var(--color-success);">&#10003;</div>
-            <h3>Feature &amp; Theme Planning</h3>
-            <p>Feature recommendations, theme evaluation, homepage mockup.</p>
-            <span class="step-timeline">Done</span>
-          </div>
-          <div class="step-card" style="border-color:var(--color-tertiary);">
-            <div class="step-number">4</div>
-            <h3>Plan Walkthrough</h3>
-            <p>This call &mdash; review findings, align on scope &amp; priorities.</p>
-            <span class="step-timeline">Today</span>
-          </div>
-          <div class="step-card">
-            <div class="step-number">5</div>
-            <h3>Agreement &amp; Implementation</h3>
-            <p>Scope lock, development kickoff, 3-month delivery with weekly updates.</p>
-            <span class="step-timeline">After alignment</span>
-          </div>
-        </div>
       </div>
 
       <!-- ── GANTT CHART: IMPLEMENTATION ROADMAP ── -->
@@ -2187,6 +2115,122 @@
       </div>
     </section>
 
+
+    <!-- ============================================================
+         TAB 9: COMMERCIALS & NEXT STEPS
+         ============================================================ -->
+    <section class="tab-content" id="tab-commercials">
+      <div class="section-card">
+        <h2 class="section-title">Commercials &amp; Next Steps</h2>
+        <p class="section-subtitle">Investment details and how we move forward together</p>
+      </div>
+
+      <div class="section-card" id="remaining-journey">
+        <h3 class="section-title">Remaining Journey</h3>
+        <p class="section-subtitle">Steps 1&ndash;4 complete (or in progress). Here&rsquo;s what&rsquo;s next.</p>
+        <div class="next-steps-grid">
+          <div class="step-card" style="opacity:0.6;">
+            <div class="step-number" style="background:var(--color-success);">&#10003;</div>
+            <h3>Discovery</h3>
+            <p>Call, questionnaire, Shopify + GA4 access granted.</p>
+            <span class="step-timeline">Done</span>
+          </div>
+          <div class="step-card" style="opacity:0.6;">
+            <div class="step-number" style="background:var(--color-success);">&#10003;</div>
+            <h3>CRO Audit &amp; Analysis</h3>
+            <p>200+ parameter audit, GA4 + Shopify data, funnel analysis.</p>
+            <span class="step-timeline">Done</span>
+          </div>
+          <div class="step-card" style="opacity:0.6;">
+            <div class="step-number" style="background:var(--color-success);">&#10003;</div>
+            <h3>Feature &amp; Theme Planning</h3>
+            <p>Feature recommendations, theme evaluation, homepage mockup.</p>
+            <span class="step-timeline">Done</span>
+          </div>
+          <div class="step-card" style="border-color:var(--color-tertiary);">
+            <div class="step-number">4</div>
+            <h3>Plan Walkthrough</h3>
+            <p>This call &mdash; review findings, align on scope &amp; priorities.</p>
+            <span class="step-timeline">Today</span>
+          </div>
+          <div class="step-card">
+            <div class="step-number">5</div>
+            <h3>Agreement &amp; Implementation</h3>
+            <p>Scope lock, development kickoff, 3-month delivery with weekly updates.</p>
+            <span class="step-timeline">After alignment</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-card" id="project-cost">
+        <h3 class="section-title">Project Cost</h3>
+        <table class="investment-table">
+          <thead><tr><th>Component</th><th>Cost</th><th>What&rsquo;s Included</th></tr></thead>
+          <tbody>
+            <tr><td>Theme License (Eurus)</td><td>&#8377;0</td><td>Already purchased &mdash; switching from Warehouse costs no license fee. Eurus v9.8.0 setup included.</td></tr>
+            <tr><td>Customization &amp; Development</td><td>&#8377;2.8L</td><td>Includes Warehouse &rarr; Eurus theme migration + Phase 1 &amp; Phase 2 features: metafield badges, difficulty filters, PDP optimization, blog CTAs, trust elements, desktop layout fix, homepage sections, PageSpeed optimization, GA4 fixes, EMI integration. <em>Includes app setup:</em> Klaviyo setup + flows, Boost/Searchanise config, delivery estimation, FBT bundles, free shipping bar, Clarity, WhatsApp button, Razorpay EMI.</td></tr>
+            <tr><td>New App Stack (12 months)</td><td>~&#8377;70K</td><td>Klaviyo (~$35/mo) + Boost/Searchanise (~$35/mo) + Delivery Date (~$7/mo) + FBT (~$15/mo) + Tracking (~$15/mo) + Free Shipping Bar (~$5/mo)</td></tr>
+          </tbody>
+          <tfoot>
+            <tr class="total-row"><td><strong>Total Investment</strong></td><td><strong>&#8377;3.5L</strong></td><td>Fixed project cost &mdash; no hidden charges</td></tr>
+          </tfoot>
+        </table>
+        <div class="callout info mt-16">
+          <strong>What&rsquo;s included:</strong> Warehouse &rarr; Eurus migration + v9.8.0 configuration, all Phase 1 quick wins (weeks 1&ndash;3), all Phase 2 medium-effort features (weeks 4&ndash;8), metafield badge system setup (difficulty levels, speed/casual), puzzle-specific filters, PageSpeed optimization (34 &rarr; 70+ mobile), GA4 event fixes, all app installations &amp; configuration (Klaviyo, Boost/Searchanise, delivery estimation, FBT, etc.), and 12 months of new app stack costs. One invoice, one number.
+        </div>
+        <div class="callout success mt-16">
+          <strong>Cost savings from Warehouse &rarr; Eurus switch:</strong> By switching from Warehouse to Eurus, we gain countdown timer, back-in-stock alerts, infinite scroll, and variant-level metafield badges as native features &mdash; saving ~&#8377;40K in custom development compared to building these on Warehouse. Quick view is native on both themes. Abandoned cart emails (free on Grow plan) save an additional ~&#8377;12K/year in app costs. These savings are reinvested into puzzle-specific features (metafield badges, difficulty filters, comparison tool) that have higher impact for Cubelelo.
+        </div>
+      </div>
+
+      <div class="section-card" id="scope-details">
+        <h3 class="section-title">What&rsquo;s Included vs. Not Included</h3>
+        <div class="grid-2">
+          <div>
+            <h4 style="color:var(--color-success-text);">&#x2705; Included in &#8377;3.5L</h4>
+            <ul style="font-size:13px;line-height:1.8;">
+              <li>Phase 1: 13 quick wins (weeks 1&ndash;3)</li>
+              <li>Phase 2: 13 medium-effort features (weeks 4&ndash;8)</li>
+              <li>Warehouse &rarr; Eurus migration + activate native features</li>
+              <li>Metafield badge system (difficulty, speed/casual)</li>
+              <li>Puzzle-specific filters (difficulty, magnetic, type)</li>
+              <li>Desktop PDP layout optimization</li>
+              <li>Blog product CTAs &amp; monetization</li>
+              <li>PageSpeed: mobile 34 &rarr; 70+</li>
+              <li>GA4 event fixes &amp; audience setup</li>
+              <li>Klaviyo setup + 3 core email flows</li>
+              <li>All app installations &amp; configuration</li>
+              <li>12 months new app stack costs</li>
+              <li>Cube comparison tool (basic version)</li>
+              <li>EMI via Razorpay for &#8377;3K+ orders</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="color:var(--color-text-secondary);">&#x23F3; Phase 3 (Not in &#8377;3.5L &mdash; post-launch)</h4>
+            <ul style="font-size:13px;line-height:1.8;color:var(--color-text-secondary);">
+              <li>Instagram / UGC social feed</li>
+              <li>Referral program (ReferralCandy / Smile.io)</li>
+              <li>Exit-intent popup with discount</li>
+              <li>Price drop alert signup</li>
+              <li>Solve time benchmarks on PDP</li>
+              <li>Wishlist functionality</li>
+              <li>Loyalty program prominence overhaul</li>
+              <li>Live chat / chatbot upgrade</li>
+              <li>Full testimonial photo carousel</li>
+            </ul>
+            <div class="callout info mt-16" style="font-size:12px;">
+              Phase 3 features can be scoped as a follow-on project once Phase 1+2 results are measured. Estimated cost: &#8377;1&ndash;1.5L additional.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-card">
+        <p style="text-align:center;color:var(--color-text-secondary);margin:0;">
+          <strong>Growisto</strong> &mdash; <a href="mailto:growth@growisto.com" style="color:var(--color-primary);">growth@growisto.com</a>
+        </p>
+      </div>
+    </section>
   </main>
 
   <!-- ============================================================
