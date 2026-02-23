@@ -438,6 +438,7 @@
       <!-- Top 5 Revenue Leaks (moved from Overview) -->
       <div class="section-card">
         <h2 class="section-title">Top 5 Revenue Leaks</h2>
+        <p class="section-subtitle">Based on GA4 + Shopify Admin data &mdash; 28-day period: Jan 19 &ndash; Feb 15, 2026</p>
         <div class="leak-list">
           <div class="leak-item">
             <span class="leak-rank">1</span>
@@ -668,7 +669,7 @@
         </div>
 
         <h3 class="section-title mt-24">Shopify Conversion Funnel</h3>
-        <p class="section-subtitle">Only 19 of 2,894 orders used Shopify&rsquo;s native checkout &mdash; GoKwik handles the rest</p>
+        <p class="section-subtitle">Only 19 of 2,894 orders used Shopify&rsquo;s native checkout &mdash; GoKwik handles the rest <span style="font-size:12px;color:var(--color-text-secondary);">Source: Shopify Admin (28-day: Jan 19 &ndash; Feb 15, 2026)</span></p>
         <div class="funnel-v2">
           <div class="funnel-v2-row">
             <div class="funnel-v2-info"><span class="funnel-v2-name">Sessions (Shopify)</span><span class="funnel-v2-num">256,848</span></div>
@@ -728,7 +729,7 @@
 
       <div class="section-card" id="device-perf">
         <h2 class="section-title">Device Performance</h2>
-        <p class="section-subtitle">Desktop conversion is catastrophically low</p>
+        <p class="section-subtitle">Desktop conversion is catastrophically low <span style="font-size:12px;color:var(--color-text-secondary);">Source: GA4 (28-day: Jan 19 &ndash; Feb 15, 2026)</span></p>
         <div class="grid-3">
           <div class="metric-card">
             <div class="metric-value">1.77%</div>
@@ -756,6 +757,7 @@
 
       <div class="section-card" id="pagespeed">
         <h2 class="section-title">PageSpeed &amp; Core Web Vitals</h2>
+        <p class="section-subtitle">Source: Google PageSpeed Insights &mdash; tested Feb 17, 2026 on cubelelo.com homepage</p>
         <div class="grid-2">
           <div class="pagespeed-card">
             <h3>Mobile</h3>
@@ -801,7 +803,7 @@
 
       <div class="section-card">
         <h2 class="section-title">Checkout Journey</h2>
-        <p class="section-subtitle">Source: GA4 checkout events &mdash; Biggest leak: 38.7% abandon at shipping step</p>
+        <p class="section-subtitle">Source: GA4 checkout events (28-day: Jan 19 &ndash; Feb 15, 2026) &mdash; Biggest leak: 38.7% abandon at shipping step</p>
         <div class="checkout-funnel">
           <div class="checkout-step">
             <div class="checkout-bar" style="width:100%">Begin Checkout</div>
@@ -830,6 +832,7 @@
 
       <div class="section-card">
         <h2 class="section-title">Revenue Impact Summary</h2>
+        <p class="section-subtitle">Projections based on GA4 + Shopify Admin data (28-day: Jan 19 &ndash; Feb 15, 2026) and industry benchmarks</p>
         <table class="data-table highlight">
           <thead>
             <tr><th>Funnel Area</th><th>Current</th><th>Target</th><th>Monthly Impact</th></tr>
@@ -853,7 +856,7 @@
     <section class="tab-content" id="tab-page-analysis">
       <div class="section-card">
         <h2 class="section-title">Conversion Audit</h2>
-        <p class="section-subtitle">200+ parameter audit across all page types and systems</p>
+        <p class="section-subtitle">200+ parameter audit across all page types and systems <span style="font-size:12px;color:var(--color-text-secondary);">Conducted: Feb 17&ndash;19, 2026</span></p>
         <div class="scoring-legend" style="display:flex;gap:20px;margin:12px 0 4px;flex-wrap:wrap;">
           <span style="display:inline-flex;align-items:center;gap:8px;font-size:0.85rem;"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#16a34a;"></span> Fully implemented</span>
           <span style="display:inline-flex;align-items:center;gap:8px;font-size:0.85rem;"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#eab308;"></span> Partial / needs improvement</span>
@@ -875,11 +878,11 @@
       <div class="sub-tab-content active" id="homepage-analysis">
         <div class="section-card">
           <h3 class="section-title">Homepage Audit</h3>
-          <p class="section-subtitle">Homepage drives 41% of revenue from 15.5% of sessions &mdash; optimization here has outsized impact</p>
+          <p class="section-subtitle">Homepage drives 41% of revenue from 15.5% of sessions &mdash; optimization here has outsized impact <span style="font-size:12px;color:var(--color-text-secondary);">Audited: Feb 17, 2026</span></p>
           <table class="audit-table">
             <thead><tr><th>ID</th><th>Parameter</th><th>Score</th><th>Finding</th></tr></thead>
             <tbody>
-              <tr><td>HP-01</td><td>Hero banner slider</td><td><span class="status-pass">2</span></td><td>5 slides, product-focused (GAN, Moyu promotions)</td></tr>
+              <tr><td>HP-01</td><td>Hero banner slider</td><td><span class="status-pass">2</span></td><td>5 product-focused slides with promotional text, pricing, and CTA buttons overlaid on hero images (GAN, MoYu, limited editions). Each slide includes product details and call-to-action.</td></tr>
               <tr><td>HP-02</td><td>Value proposition above fold</td><td><span class="status-pass">2</span></td><td>&ldquo;India&rsquo;s No.1 Puzzle Store&rdquo; + announcement bar with discount</td></tr>
               <tr><td>HP-03</td><td>Category navigation</td><td><span class="status-pass">2</span></td><td>Horizontal category icons carousel (3x3, 4x4, 2x2, etc.)</td></tr>
               <tr><td>HP-04</td><td>Bestsellers section</td><td><span class="status-pass">2</span></td><td>Product grid with cards, ratings, badges</td></tr>
@@ -887,20 +890,20 @@
               <tr><td>HP-06</td><td>Trust badges / USP bar</td><td><span class="status-warn">1</span></td><td>Minimal &mdash; no dedicated trust bar, only &ldquo;Fast Delivery + Easy Returns&rdquo; on PDP</td></tr>
               <tr><td>HP-07</td><td>Institution/Client logos</td><td><span class="status-fail">0</span></td><td>Not present &mdash; no brand partner logos or press mentions</td></tr>
               <tr><td>HP-08</td><td>Press mentions</td><td><span class="status-fail">0</span></td><td>Not present</td></tr>
-              <tr><td>HP-09</td><td>Customer reviews carousel</td><td><span class="status-warn">1</span></td><td>Reviews on individual products but no homepage testimonial carousel</td></tr>
+              <tr><td>HP-09</td><td>Customer reviews carousel</td><td><span class="status-warn">1</span></td><td>Product reviews with star ratings present on homepage product cards. However, no dedicated customer testimonials carousel with photos and cuber success stories for deeper trust building.</td></tr>
               <tr><td>HP-10</td><td>Newsletter signup</td><td><span class="status-warn">1</span></td><td>Footer newsletter present but not prominent; no email platform connected</td></tr>
               <tr><td>HP-11</td><td>Social media feed</td><td><span class="status-fail">0</span></td><td>Not present on homepage</td></tr>
               <tr><td>HP-12</td><td>Urgency/Scarcity elements</td><td><span class="status-warn">1</span></td><td>Sale badges on products but no countdown timer or flash sale widget</td></tr>
               <tr><td>HP-13</td><td>Exit intent popup</td><td><span class="status-fail">0</span></td><td>Not present</td></tr>
               <tr><td>HP-14</td><td>Advanced search</td><td><span class="status-warn">1</span></td><td>Basic Shopify search &mdash; no autocomplete, no product suggestions</td></tr>
-              <tr><td>HP-15</td><td>Blog/Content section</td><td><span class="status-fail">0</span></td><td>No blog feature on homepage despite blog driving 18% of traffic</td></tr>
+              <tr><td>HP-15</td><td>Blog/Content section</td><td><span class="status-warn">1</span></td><td>Blog exists and drives 18% of traffic (43K sessions/mo), but homepage blog section lacks product CTAs and monetization. Blog pages have no embedded product cards or &ldquo;Shop the cube in this tutorial&rdquo; links.</td></tr>
               <tr><td>HP-16</td><td>Micro-animations on CTA</td><td><span class="status-fail">0</span></td><td>No CTA animations; buttons are static</td></tr>
             </tbody>
           </table>
           <div class="audit-summary">
             <span class="status-pass">2 = 5 Pass</span>
-            <span class="status-warn">1 = 5 Partial</span>
-            <span class="status-fail">0 = 6 Missing</span>
+            <span class="status-warn">1 = 6 Partial</span>
+            <span class="status-fail">0 = 5 Missing</span>
           </div>
         </div>
       </div>
@@ -909,7 +912,7 @@
       <div class="sub-tab-content" id="collection-analysis">
         <div class="section-card">
           <h3 class="section-title">Collection Page Audit</h3>
-          <p class="section-subtitle">Bestsellers collection: 37 products, 7 filter types</p>
+          <p class="section-subtitle">Bestsellers collection: 37 products, 7 filter types <span style="font-size:12px;color:var(--color-text-secondary);">Audited: Feb 17, 2026</span></p>
           <table class="audit-table">
             <thead><tr><th>ID</th><th>Parameter</th><th>Score</th><th>Finding</th></tr></thead>
             <tbody>
@@ -924,15 +927,15 @@
               <tr><td>CP-09</td><td>Quick view popup</td><td><span class="status-fail">0</span></td><td>Not present &mdash; must click through to PDP</td></tr>
               <tr><td>CP-10</td><td>Wishlist on cards</td><td><span class="status-fail">0</span></td><td>No wishlist icon on product cards</td></tr>
               <tr><td>CP-11</td><td>Grid/List toggle</td><td><span class="status-fail">0</span></td><td>Grid view only, no toggle</td></tr>
-              <tr><td>CP-12</td><td>Infinite scroll</td><td><span class="status-fail">0</span></td><td>Pagination used, not infinite scroll</td></tr>
+              <tr><td>CP-12</td><td>Infinite scroll</td><td><span class="status-pass">2</span></td><td>Infinite scroll active &mdash; products load automatically as user scrolls. Eurus theme supports this natively.</td></tr>
               <tr><td>CP-13</td><td>Product comparison</td><td><span class="status-fail">0</span></td><td>Not present (client requested this feature)</td></tr>
               <tr><td>CP-14</td><td>Stock status badges</td><td><span class="status-pass">2</span></td><td>&ldquo;Limited stock available&rdquo; and &ldquo;In stock&rdquo; shown</td></tr>
             </tbody>
           </table>
           <div class="audit-summary">
-            <span class="status-pass">2 = 8 Pass</span>
+            <span class="status-pass">2 = 9 Pass</span>
             <span class="status-warn">1 = 1 Partial</span>
-            <span class="status-fail">0 = 5 Missing</span>
+            <span class="status-fail">0 = 4 Missing</span>
           </div>
         </div>
       </div>
@@ -941,7 +944,7 @@
       <div class="sub-tab-content" id="pdp-analysis">
         <div class="section-card">
           <h3 class="section-title">Product Detail Page Audit</h3>
-          <p class="section-subtitle">GAN 356 ME 3x3 &mdash; 2025 New Year Edition</p>
+          <p class="section-subtitle">GAN 356 ME 3x3 &mdash; 2025 New Year Edition <span style="font-size:12px;color:var(--color-text-secondary);">Audited: Feb 17, 2026</span></p>
           <table class="audit-table">
             <thead><tr><th>ID</th><th>Parameter</th><th>Score</th><th>Finding</th></tr></thead>
             <tbody>
@@ -986,7 +989,7 @@
       <div class="sub-tab-content" id="cart-analysis">
         <div class="section-card">
           <h3 class="section-title">Cart Page / Drawer Audit</h3>
-          <p class="section-subtitle">Cart drawer powered by Corner widget</p>
+          <p class="section-subtitle">Cart drawer powered by Corner widget <span style="font-size:12px;color:var(--color-text-secondary);">Audited: Feb 17, 2026</span></p>
           <table class="audit-table">
             <thead><tr><th>ID</th><th>Parameter</th><th>Score</th><th>Finding</th></tr></thead>
             <tbody>
@@ -1015,7 +1018,7 @@
             <span class="status-fail">0 = 5 Missing</span>
           </div>
           <div class="callout danger mt-16">
-            <strong>Missing shipping estimator + delivery date in cart directly contributes to 38.7% shipping-step checkout abandonment.</strong> Users don&rsquo;t know shipping costs or delivery timeline until they reach checkout.
+            <strong>Missing shipping estimator + delivery date in cart directly contributes to 38.7% shipping-step checkout abandonment.</strong> Users don&rsquo;t know shipping costs or delivery timeline until they reach checkout. <span style="font-size:12px;color:var(--color-text-secondary);">Source: GA4 checkout events (Jan 19 &ndash; Feb 15, 2026)</span>
           </div>
         </div>
       </div>
@@ -1024,7 +1027,7 @@
       <div class="sub-tab-content" id="checkout-analysis">
         <div class="section-card">
           <h3 class="section-title">Checkout Flow Audit</h3>
-          <p class="section-subtitle">GoKwik-powered checkout &mdash; 32.4% completion rate</p>
+          <p class="section-subtitle">GoKwik-powered checkout &mdash; 32.4% completion rate <span style="font-size:12px;color:var(--color-text-secondary);">Source: GA4 (Jan 19 &ndash; Feb 15, 2026)</span></p>
           <table class="audit-table">
             <thead><tr><th>ID</th><th>Parameter</th><th>Score</th><th>Finding</th></tr></thead>
             <tbody>
@@ -1056,7 +1059,7 @@
       <div class="sub-tab-content" id="seo-analysis">
         <div class="section-card">
           <h3 class="section-title">Technical SEO Audit</h3>
-          <p class="section-subtitle">Lighthouse SEO Score: 92/100</p>
+          <p class="section-subtitle">Lighthouse SEO Score: 92/100 <span style="font-size:12px;color:var(--color-text-secondary);">Tested: Feb 17, 2026</span></p>
           <table class="audit-table">
             <thead><tr><th>ID</th><th>Parameter</th><th>Score</th><th>Finding</th></tr></thead>
             <tbody>
@@ -1092,6 +1095,7 @@
       <div class="sub-tab-content" id="tracking-analysis">
         <div class="section-card">
           <h3 class="section-title">Tracking &amp; Analytics Audit</h3>
+          <p class="section-subtitle" style="margin-top:-8px;">Source: Page source inspection + GA4 Admin review <span style="font-size:12px;color:var(--color-text-secondary);">Audited: Feb 17&ndash;18, 2026</span></p>
           <table class="audit-table">
             <thead><tr><th>ID</th><th>Parameter</th><th>Score</th><th>Finding</th></tr></thead>
             <tbody>
@@ -1118,7 +1122,7 @@
             <span class="status-fail">0 = 4 Missing</span>
           </div>
           <div class="callout danger mt-16">
-            <strong>Critical: No email/SMS marketing platform installed.</strong> Shopify data confirms 36% lifetime returning customers, but GA4 shows only 9% return within 28 days. No email/SMS tools to nurture repeat buying. Klaviyo alone could drive +&#8377;1.8L/month in repeat revenue.
+            <strong>Critical: No email/SMS marketing platform installed.</strong> Shopify data confirms 36% lifetime returning customers, but GA4 shows only 9% return within 28 days (Jan 19 &ndash; Feb 15, 2026). No email/SMS tools to nurture repeat buying. Klaviyo alone could drive +&#8377;1.8L/month in repeat revenue.
           </div>
         </div>
       </div>
@@ -1127,7 +1131,7 @@
       <div class="sub-tab-content" id="performance-analysis">
         <div class="section-card">
           <h3 class="section-title">Performance Audit</h3>
-          <p class="section-subtitle">Source: Google PageSpeed Insights &amp; Lighthouse &mdash; every 1s delay = ~7% conversion loss</p>
+          <p class="section-subtitle">Source: Google PageSpeed Insights &amp; Lighthouse (tested Feb 17, 2026) &mdash; every 1s delay = ~7% conversion loss</p>
           <div class="grid-2">
             <div class="pagespeed-card">
               <h3>Mobile</h3>
@@ -1220,7 +1224,7 @@
             <tr><td>Countdown timer for flash sales</td><td>Homepage + PDP</td><td><span class="badge-inbuilt">Inbuilt</span></td><td>Low urgency &rarr; drive immediate action. Eurus has native countdown timer.</td><td>+10&ndash;20% flash sale CVR</td><td><span class="badge-inbuilt">Both</span></td></tr>
             <tr><td>Review request email (7 days post-delivery)</td><td>Post-purchase</td><td><span class="badge-app">App</span></td><td>Automate review collection at peak satisfaction. Klaviyo + Judge.me/Nector flow.</td><td>3&times; more reviews</td><td><span class="badge-custom">Growisto</span></td></tr>
             <tr><td>WhatsApp floating chat button</td><td>Global</td><td><span class="badge-app">App</span></td><td>Number already in header (8080-573-573) but not always visible. Floating button = instant trust.</td><td>Trust signal for Indian market</td><td><span class="badge-custom">Growisto</span></td></tr>
-            <tr><td>Microsoft Clarity (heatmaps)</td><td>Analytics</td><td><span class="badge-inbuilt">Free</span></td><td>Free session recordings + heatmaps &rarr; data for future CRO decisions</td><td>30-min setup, free</td><td><span class="badge-custom">Growisto</span></td></tr>
+            <tr><td>Microsoft Clarity + Hotjar (heatmaps)</td><td>Analytics</td><td><span class="badge-inbuilt">Free</span></td><td>Already installed on site &mdash; both Clarity and Hotjar scripts detected. Ensure teams are actively reviewing session recordings and heatmaps for CRO decisions.</td><td>Already active</td><td><span class="badge-custom">Growisto</span></td></tr>
             <tr><td>GA4 event activation + fixes</td><td>Analytics</td><td><span class="badge-custom">Custom</span></td><td>Can&rsquo;t optimize what you can&rsquo;t measure &mdash; key events not marked, add_to_cart value = &#8377;0</td><td>Critical for measurement</td><td><span class="badge-custom">Growisto</span></td></tr>
           </tbody>
         </table>
@@ -1317,7 +1321,7 @@
             <tr><td>Free Shipping Bar</td><td class="critical-text">NONE</td><td><strong>Free Shipping Bar app</strong></td><td>~$0&ndash;10/mo</td><td><span class="badge-critical">Quick Win</span></td></tr>
             <tr><td>Frequently Bought Together</td><td class="critical-text">NONE</td><td><strong>FBT / Bundler app</strong></td><td>~$10&ndash;20/mo</td><td><span class="badge-critical">Quick Win</span></td></tr>
             <tr><td>Branded Order Tracking</td><td>Basic</td><td><strong>Parcel Panel / Rush</strong></td><td>~$10&ndash;20/mo</td><td><span class="badge-optional">Recommended</span></td></tr>
-            <tr><td>Heatmaps &amp; Session Recording</td><td class="critical-text">NONE</td><td><strong>Microsoft Clarity</strong></td><td>Free</td><td><span class="badge-inbuilt">Free</span></td></tr>
+            <tr><td>Heatmaps &amp; Session Recording</td><td>Clarity + Hotjar &#10003;</td><td>Keep both &mdash; already installed and active</td><td>Free</td><td><span class="badge-inbuilt">Keep</span></td></tr>
             <tr><td>Abandoned Cart Emails</td><td>Not activated</td><td><strong>Shopify native (Grow plan)</strong></td><td>Free</td><td><span class="badge-inbuilt">Free</span></td></tr>
             <tr><td>Back-in-Stock</td><td class="critical-text">NONE</td><td><strong>Eurus native</strong> (or Klaviyo integration)</td><td>Free (inbuilt)</td><td><span class="badge-inbuilt">Inbuilt</span></td></tr>
             <tr><td>Reviews + Loyalty</td><td>Nector ($120/mo) &#10003;</td><td>Keep &mdash; enable photo reviews</td><td>$120/mo (verified)</td><td><span class="badge-inbuilt">Keep</span></td></tr>
