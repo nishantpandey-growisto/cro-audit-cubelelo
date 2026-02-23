@@ -229,10 +229,6 @@
           <span class="nav-chevron" onclick="event.stopPropagation();toggleNavSubmenu(this.closest('.nav-item'))">▶</span>
         </div>
         <div class="nav-submenu">
-          <div class="nav-sub-item" onclick="scrollToSection('commercials','remaining-journey')">
-            <span class="nav-sub-icon">📋</span>
-            <span>Remaining Journey</span>
-          </div>
           <div class="nav-sub-item" onclick="scrollToSection('commercials','project-cost')">
             <span class="nav-sub-icon">💰</span>
             <span>Project Cost</span>
@@ -240,6 +236,10 @@
           <div class="nav-sub-item" onclick="scrollToSection('commercials','scope-details')">
             <span class="nav-sub-icon">📦</span>
             <span>Included vs Not</span>
+          </div>
+          <div class="nav-sub-item" onclick="scrollToSection('commercials','remaining-journey')">
+            <span class="nav-sub-icon">📋</span>
+            <span>Remaining Journey</span>
           </div>
         </div>
       </div>
@@ -292,22 +292,22 @@
             <div class="journey-label">Feature &amp; Theme Planning</div>
             <div class="journey-detail">Feature recommendations, theme evaluation, mockup</div>
           </div>
+          <div class="journey-connector done"></div>
+          <div class="journey-step completed">
+            <div class="journey-node"><span class="journey-check">&#10003;</span></div>
+            <div class="journey-label">Plan Walkthrough &amp; Alignment</div>
+            <div class="journey-detail">Reviewed findings, aligned on scope</div>
+          </div>
           <div class="journey-connector active"></div>
           <div class="journey-step current">
-            <div class="journey-node"><span class="journey-num">4</span></div>
-            <div class="journey-label">Plan Walkthrough &amp; Alignment</div>
-            <div class="journey-detail">Review findings, align on priorities &amp; scope</div>
-            <span class="journey-badge">You are here</span>
-          </div>
-          <div class="journey-connector upcoming"></div>
-          <div class="journey-step upcoming-step">
             <div class="journey-node"><span class="journey-num">5</span></div>
             <div class="journey-label">Agreement &amp; Implementation</div>
             <div class="journey-detail">Scope lock, development, launch</div>
+            <span class="journey-badge">Next step</span>
           </div>
         </div>
         <div class="callout success mt-16">
-          <strong>Steps 1&ndash;3 complete.</strong> This report contains the full output of our discovery, audit, and planning work. Today&rsquo;s call is Step 4 &mdash; we walk through the findings together and align on scope.
+          <strong>Steps 1&ndash;4 complete.</strong> This report contains the full output of our discovery, audit, and planning work. Next step: finalize scope and kick off implementation.
         </div>
       </div>
 
@@ -2125,43 +2125,6 @@
         <p class="section-subtitle">Investment details and how we move forward together</p>
       </div>
 
-      <div class="section-card" id="remaining-journey">
-        <h3 class="section-title">Remaining Journey</h3>
-        <p class="section-subtitle">Steps 1&ndash;4 complete (or in progress). Here&rsquo;s what&rsquo;s next.</p>
-        <div class="next-steps-grid">
-          <div class="step-card" style="opacity:0.6;">
-            <div class="step-number" style="background:var(--color-success);">&#10003;</div>
-            <h3>Discovery</h3>
-            <p>Call, questionnaire, Shopify + GA4 access granted.</p>
-            <span class="step-timeline">Done</span>
-          </div>
-          <div class="step-card" style="opacity:0.6;">
-            <div class="step-number" style="background:var(--color-success);">&#10003;</div>
-            <h3>CRO Audit &amp; Analysis</h3>
-            <p>200+ parameter audit, GA4 + Shopify data, funnel analysis.</p>
-            <span class="step-timeline">Done</span>
-          </div>
-          <div class="step-card" style="opacity:0.6;">
-            <div class="step-number" style="background:var(--color-success);">&#10003;</div>
-            <h3>Feature &amp; Theme Planning</h3>
-            <p>Feature recommendations, theme evaluation, homepage mockup.</p>
-            <span class="step-timeline">Done</span>
-          </div>
-          <div class="step-card" style="border-color:var(--color-tertiary);">
-            <div class="step-number">4</div>
-            <h3>Plan Walkthrough</h3>
-            <p>This call &mdash; review findings, align on scope &amp; priorities.</p>
-            <span class="step-timeline">Today</span>
-          </div>
-          <div class="step-card">
-            <div class="step-number">5</div>
-            <h3>Agreement &amp; Implementation</h3>
-            <p>Scope lock, development kickoff, 3-month delivery with weekly updates.</p>
-            <span class="step-timeline">After alignment</span>
-          </div>
-        </div>
-      </div>
-
       <div class="section-card" id="project-cost">
         <h3 class="section-title">Project Cost</h3>
         <table class="investment-table">
@@ -2221,6 +2184,43 @@
             <div class="callout info mt-16" style="font-size:12px;">
               Phase 3 features can be scoped as a follow-on project once Phase 1+2 results are measured. Estimated cost: &#8377;1&ndash;1.5L additional.
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-card" id="remaining-journey">
+        <h3 class="section-title">Remaining Journey</h3>
+        <p class="section-subtitle">Steps 1&ndash;4 complete. One step remaining.</p>
+        <div class="next-steps-grid">
+          <div class="step-card" style="opacity:0.6;">
+            <div class="step-number" style="background:var(--color-success);">&#10003;</div>
+            <h3>Discovery</h3>
+            <p>Call, questionnaire, Shopify + GA4 access granted.</p>
+            <span class="step-timeline">Done</span>
+          </div>
+          <div class="step-card" style="opacity:0.6;">
+            <div class="step-number" style="background:var(--color-success);">&#10003;</div>
+            <h3>CRO Audit &amp; Analysis</h3>
+            <p>200+ parameter audit, GA4 + Shopify data, funnel analysis.</p>
+            <span class="step-timeline">Done</span>
+          </div>
+          <div class="step-card" style="opacity:0.6;">
+            <div class="step-number" style="background:var(--color-success);">&#10003;</div>
+            <h3>Feature &amp; Theme Planning</h3>
+            <p>Feature recommendations, theme evaluation, homepage mockup.</p>
+            <span class="step-timeline">Done</span>
+          </div>
+          <div class="step-card" style="opacity:0.6;">
+            <div class="step-number" style="background:var(--color-success);">&#10003;</div>
+            <h3>Plan Walkthrough</h3>
+            <p>Reviewed findings, aligned on scope &amp; priorities.</p>
+            <span class="step-timeline">Done</span>
+          </div>
+          <div class="step-card" style="border-color:var(--color-tertiary);">
+            <div class="step-number">5</div>
+            <h3>Agreement &amp; Implementation</h3>
+            <p>Scope lock, development kickoff, 3-month delivery with weekly updates.</p>
+            <span class="step-timeline">Next</span>
           </div>
         </div>
       </div>
